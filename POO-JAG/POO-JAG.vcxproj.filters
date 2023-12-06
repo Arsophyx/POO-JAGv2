@@ -53,6 +53,30 @@
     <ClInclude Include="ville.h">
       <Filter>Header Files\Head</Filter>
     </ClInclude>
+    <ClInclude Include="article.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CAD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ville.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="integrer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse_facturation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse_livraison.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -79,15 +103,31 @@
     <ClCompile Include="CAD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
     <ClCompile Include="CLservices.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
     <ClCompile Include="Personnel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ville.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
+    <ClCompile Include="integrer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adresse_facturation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adresse_livraison.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adresse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico">
