@@ -6,13 +6,13 @@ namespace NS_Comp_Mappage {
 	{
 	private:
 		System::String^ sSql;
-		int id_personnel;
+		int^ id_personnel;
 		System::String^ nom_personnel;
 		System::String^ prenom_personnel;
 		System::String^ priseposte_personnel;
 		System::String^ adresse_personnel;
 		System::String^ codepostal;
-		int id_superieur;
+		int^ id_superieur;
 
 	public:
 		System::String^ ajouter_personnel(void);

@@ -6,7 +6,7 @@ namespace NS_Comp_Mappage {
 	{
 	private:
 		System::String^ sSql;
-		int id_ville;
+		int^ id_ville;
 		System::String^ nom_ville;
 		System::String^ codepostal_ville;
 
