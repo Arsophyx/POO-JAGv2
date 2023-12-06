@@ -1,5 +1,5 @@
 //article.h
-
+#include "CAD.h"
 #pragma once
 namespace NS_Comp_Mappage {
 	ref class article
@@ -14,6 +14,7 @@ namespace NS_Comp_Mappage {
 		int stock_article;
 
 	public:
+		
 		System::String^ ajouter_article(void);
 		System::String^ modifier_article(void);
 		System::String^ supprimer_article(void);

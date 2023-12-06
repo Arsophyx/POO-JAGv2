@@ -1,5 +1,5 @@
 //personnel.h
-
+#include "CAD.h"
 #pragma once
 namespace NS_Comp_Mappage {
 	ref class personnel

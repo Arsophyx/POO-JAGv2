@@ -130,26 +130,84 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="afficherarticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="afficherclient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="affichercommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="afficherpersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ajouterarticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ajouterclient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ajoutercommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Ajouterpersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="article.h" />
     <ClInclude Include="CAD.h" />
     <ClInclude Include="client.h" />
+    <ClInclude Include="CLservices.h" />
     <ClInclude Include="commande.h" />
     <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="modifierclient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="modifiercommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="modifierpersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="supprimerarticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="supprimerclient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="supprimercommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="supprimerpersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ville.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="afficherarticle.cpp" />
+    <ClCompile Include="afficherclient.cpp" />
+    <ClCompile Include="affichercommande.cpp" />
+    <ClCompile Include="afficherpersonnel.cpp" />
+    <ClCompile Include="ajouterarticle.cpp" />
+    <ClCompile Include="ajouterclient.cpp" />
+    <ClCompile Include="ajoutercommande.cpp" />
+    <ClCompile Include="Ajouterpersonnel.cpp" />
     <ClCompile Include="article.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CAD.cpp" />
     <ClCompile Include="client.cpp" />
+    <ClCompile Include="CLservices.cpp" />
     <ClCompile Include="commande.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="modifierclient.cpp" />
+    <ClCompile Include="modifiercommande.cpp" />
+    <ClCompile Include="modifierpersonnel.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -157,6 +215,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="supprimerarticle.cpp" />
+    <ClCompile Include="supprimerclient.cpp" />
+    <ClCompile Include="supprimercommande.cpp" />
+    <ClCompile Include="supprimerpersonnel.cpp" />
     <ClCompile Include="ville.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -170,8 +232,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ajouterpersonnel.resx">
+      <DependentUpon>Ajouterpersonnel.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supprimerpersonnel.resx">
+      <DependentUpon>supprimerpersonnel.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
