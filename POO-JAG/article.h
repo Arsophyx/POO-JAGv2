@@ -5,12 +5,12 @@ namespace NS_Comp_Mappage {
 	ref class article{
 	private:
 		System::String^ sSql;
-		int id_article;
+		int^ id_article;
 		System::String^ nom_article;
-		float ht_article;
-		float tva_article;
-		int seuilreaprovissionement_article;
-		int stock_article;
+		float^ ht_article;
+		float^ tva_article;
+		int^ seuilreaprovissionement_article;
+		int^ stock_article;
 
 	public:
 		System::String^ ajouter_article(void);
