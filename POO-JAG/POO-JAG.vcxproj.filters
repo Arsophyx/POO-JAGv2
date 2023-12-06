@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Head">
+      <UniqueIdentifier>{1ffc95e2-9193-44dc-b8fc-c777e03771b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -20,19 +23,58 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Form1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="article.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="CAD.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
     <ClInclude Include="client.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="CLservices.h">
+      <Filter>Header Files\Head</Filter>
     </ClInclude>
     <ClInclude Include="commande.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="ville.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="article.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CAD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ville.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="integrer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse_facturation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse_livraison.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="article.h">
@@ -85,6 +127,37 @@
     <ClCompile Include="statistiques.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="article.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CAD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+
+    <ClCompile Include="CLservices.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+
+    <ClCompile Include="Personnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ville.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+
+    <ClCompile Include="integrer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adresse_facturation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adresse_livraison.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adresse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico">
