@@ -140,6 +140,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="statistiques.h" />
     <ClInclude Include="ville.h" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +158,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="statistiques.cpp" />
     <ClCompile Include="ville.cpp" />
   </ItemGroup>
   <ItemGroup>
