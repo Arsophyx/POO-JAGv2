@@ -1,10 +1,18 @@
 #pragma once
 #include "client.h"
-ref class adresse_facturation{
-private:
+#include "adresse.h"
 
-	
-public :
+namespace NS_Comp_Mappage {
 
-};
+    ref class adresse_facturation {
+    private:
+        adresse^ ptrid_adresse;
+        client^ ptrid_client;
 
+    public:
+        void setptrid_client(client^);
+        client^ getptrid_client(void);
+        void setptrid_adresse(adresse^);
+        adresse^ getptrid_adresse(void);
+    };
+}

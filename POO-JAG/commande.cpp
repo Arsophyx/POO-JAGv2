@@ -25,8 +25,8 @@ void NS_Comp_Mappage::commande::setsoldereglement_commande(int^) {
 	this->soldereglement_commande = soldereglement_commande;
 }
 
-void NS_Comp_Mappage::commande::setid_client(int^ id_client) {
-	this->id_client = id_client;
+void NS_Comp_Mappage::commande::setptrid_client(client^ ptrid_client) {
+	this->ptrid_client = ptrid_client;
 }
 
 void NS_Comp_Mappage::commande::setreference_commande(String^ reference_commande) {
@@ -57,8 +57,8 @@ int^ NS_Comp_Mappage::commande::getsoldereglement_commande(void) {
 	return this->soldereglement_commande;
 }
 
-int^ NS_Comp_Mappage::commande::getid_client(void) {
-	return this->id_client;
+NS_Comp_Mappage::client^ NS_Comp_Mappage::commande::getptrid_client(void) {
+	return this->ptrid_client;
 }
 
 String^ NS_Comp_Mappage::commande::getreference_commande(void) {
