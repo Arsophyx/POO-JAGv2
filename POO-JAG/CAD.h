@@ -1,9 +1,7 @@
 #pragma once
 
-namespace NS_Comp_Data
-{
-    ref class CLcad
-    {
+namespace NS_Comp_Data{
+    ref class CLcad{
     private:
         System::String^ sSql;
         System::String^ sCnx;

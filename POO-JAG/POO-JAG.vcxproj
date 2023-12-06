@@ -130,6 +130,9 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="adresse.h" />
+    <ClInclude Include="adresse_facturation.h" />
+    <ClInclude Include="adresse_livraison.h" />
     <ClInclude Include="article.h" />
     <ClInclude Include="CAD.h" />
     <ClInclude Include="client.h" />
@@ -137,12 +140,16 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="integrer.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ville.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="adresse.cpp" />
+    <ClCompile Include="adresse_facturation.cpp" />
+    <ClCompile Include="adresse_livraison.cpp" />
     <ClCompile Include="article.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CAD.cpp" />
@@ -150,6 +157,7 @@
     <ClCompile Include="commande.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="integrer.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

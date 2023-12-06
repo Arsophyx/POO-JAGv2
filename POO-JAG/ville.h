@@ -12,11 +12,11 @@ namespace NS_Comp_Mappage {
 
 	public:
 
-		void setid_ville(int);
+		void setid_ville(int^);
 		void setnom_ville(System::String^);
 		void setcodepostal_ville(System::String^);
 
-		int getid_ville(void);
+		int^ getid_ville(void);
 		System::String^ getnom_ville(void);
 		System::String^ getcodepostal_ville(void);
 	};
