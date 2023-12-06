@@ -193,6 +193,7 @@
     <ClInclude Include="supprimerpersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="statistiques.h" />
     <ClInclude Include="ville.h" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +232,7 @@
     <ClCompile Include="supprimerclient.cpp" />
     <ClCompile Include="supprimercommande.cpp" />
     <ClCompile Include="supprimerpersonnel.cpp" />
+    <ClCompile Include="statistiques.cpp" />
     <ClCompile Include="ville.cpp" />
   </ItemGroup>
   <ItemGroup>
