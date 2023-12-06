@@ -23,7 +23,7 @@ System::String^ NS_Comp_Mappage::personnel::afficher_personnel(void)
 	return "SELECT [id_personnel], [nom_personnel], [prenom_personnel], [priseposte_personnel], [adresse_personnel], [codepostal], [id_superieur] FROM [dbo].[TB_P6];";
 }
 
-void NS_Comp_Mappage::personnel::setid_personnel(int id_personnel)
+void NS_Comp_Mappage::personnel::setid_personnel(int^ id_personnel)
 {
 	this->id_personnel = id_personnel;
 }
@@ -53,16 +53,16 @@ void NS_Comp_Mappage::personnel::setcodepostal(System::String^ codepostal)
 	this->codepostal = codepostal;
 }
 
-void NS_Comp_Mappage::personnel::setid_superieur(int id_superieur)
+void NS_Comp_Mappage::personnel::setid_superieur(int^ id_superieur)
 {
 	this->id_superieur = id_superieur;
 }
 
 
-int  NS_Comp_Mappage::personnel::getid_personnel(void) { return this->id_personnel; }
+int^  NS_Comp_Mappage::personnel::getid_personnel(void) { return this->id_personnel; }
 System::String^ NS_Comp_Mappage::personnel::getnom_personnel(void) { return this->nom_personnel; }
 System::String^ NS_Comp_Mappage::personnel::getprenom_personnel(void) { return this->prenom_personnel; }
 System::String^ NS_Comp_Mappage::personnel::getpriseposte_personnel(void) { return this->priseposte_personnel; }
 System::String^ NS_Comp_Mappage::personnel::getadresse_personnel(void) { return this->adresse_personnel; }
 System::String^ NS_Comp_Mappage::personnel::getcodepostal(void) { return this->codepostal; }
-int NS_Comp_Mappage::personnel::getid_superieur(void) { return this->id_superieur; }
+int^ NS_Comp_Mappage::personnel::getid_superieur(void) { return this->id_superieur; }
