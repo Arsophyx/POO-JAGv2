@@ -1,5 +1,10 @@
+//commande.h
 #pragma once
+
+#include "CAD.h"
+
 #include"client.h"
+
 using namespace System;
 namespace NS_Comp_Mappage {
 	ref class commande{

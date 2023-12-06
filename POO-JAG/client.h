@@ -1,4 +1,6 @@
+//client.h
 #pragma once
+#include "CAD.h"
 using namespace System;
 namespace NS_Comp_Mappage {
 	ref class client{
