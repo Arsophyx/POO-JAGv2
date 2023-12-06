@@ -1,21 +1,18 @@
 #include "pch.h"
 #include "adresse_facturation.h"
 
-void NS_Comp_Mappage::adresse::setid_adresse(int^ id_adresse) {
-	this->id_adresse = id_adresse;
+void NS_Comp_Mappage::adresse_facturation::setptrid_client(client^ ptrid_client) {
+	this->ptrid_client = ptrid_client;
 }
-void NS_Comp_Mappage::adresse::setnom_adresse(String^) {
-	this->nom_adresse = nom_adresse;
+
+NS_Comp_Mappage::client^ NS_Comp_Mappage::adresse_facturation::getptrid_client(void) {
+	return this->ptrid_client;
 }
-void NS_Comp_Mappage::adresse::setid_ville(int^ id_ville) {
-	this->id_ville = id_ville;
+
+void NS_Comp_Mappage::adresse_facturation::setptrid_adresse(adresse^ ptrid_adresse) {
+	this->ptrid_adresse = ptrid_adresse;
 }
-int^ NS_Comp_Mappage::adresse::getid_adresse(void) {
-	return this->id_adresse;
-}
-String^ NS_Comp_Mappage::adresse::getnom_adresse(void) {
-	return this->nom_adresse;
-}
-int^ NS_Comp_Mappage::adresse::getid_ville(void) {
-	return this->id_ville;
+
+NS_Comp_Mappage::adresse^ NS_Comp_Mappage::adresse_facturation::getptrid_adresse(void) {
+	return this->ptrid_adresse;
 }

@@ -1,11 +1,12 @@
 #pragma once
+#include"client.h"
 using namespace System;
 namespace NS_Comp_Mappage {
 	ref class commande{
 	private:
 		int^ id_commande;
 		int^ soldereglement_commande;
-		int^ id_client;
+		client^ ptrid_client;
 		String^ reference_commande;
 		String^ moyenpayement_commande;
 		String^ dateemmission_commande;
@@ -19,7 +20,7 @@ namespace NS_Comp_Mappage {
 		String^ afficher(void);
 		void setid_commande(int^);
 		void setsoldereglement_commande(int^);
-		void setid_client(int^);
+		void setptrid_client(client^);
 		void setreference_commande(String^);
 		void setmoyenpayement_commande(String^);
 		void setdateemission_commande(String^);
@@ -27,7 +28,7 @@ namespace NS_Comp_Mappage {
 		void setdatelivraison_commande(String^);
 		int^ getid_commande(void);
 		int^ getsoldereglement_commande(void);
-		int^ getid_client(void);
+		client^ getptrid_client(void);
 		String^ getreference_commande(void);
 		String^ getmoyenpayement_commande(void);
 		String^ getdatemission_commande(void);
