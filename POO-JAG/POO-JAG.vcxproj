@@ -130,7 +130,6 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-
     <ClInclude Include="afficherarticle.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -155,11 +154,9 @@
     <ClInclude Include="Ajouterpersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-
     <ClInclude Include="adresse.h" />
     <ClInclude Include="adresse_facturation.h" />
     <ClInclude Include="adresse_livraison.h" />
-
     <ClInclude Include="article.h" />
     <ClInclude Include="CAD.h" />
     <ClInclude Include="client.h" />
@@ -168,7 +165,9 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-
+    <ClInclude Include="modifierarticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="modifierclient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -178,9 +177,7 @@
     <ClInclude Include="modifierpersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-
     <ClInclude Include="integrer.h" />
-
     <ClInclude Include="pch.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="Resource.h" />
@@ -200,7 +197,6 @@
     <ClInclude Include="ville.h" />
   </ItemGroup>
   <ItemGroup>
-
     <ClCompile Include="afficherarticle.cpp" />
     <ClCompile Include="afficherclient.cpp" />
     <ClCompile Include="affichercommande.cpp" />
@@ -209,11 +205,9 @@
     <ClCompile Include="ajouterclient.cpp" />
     <ClCompile Include="ajoutercommande.cpp" />
     <ClCompile Include="Ajouterpersonnel.cpp" />
-
     <ClCompile Include="adresse.cpp" />
     <ClCompile Include="adresse_facturation.cpp" />
     <ClCompile Include="adresse_livraison.cpp" />
-
     <ClCompile Include="article.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CAD.cpp" />
@@ -222,13 +216,11 @@
     <ClCompile Include="commande.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Form1.cpp" />
-
+    <ClCompile Include="modifierarticle.cpp" />
     <ClCompile Include="modifierclient.cpp" />
     <ClCompile Include="modifiercommande.cpp" />
     <ClCompile Include="modifierpersonnel.cpp" />
-
     <ClCompile Include="integrer.cpp" />
-
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -254,12 +246,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ajouterarticle.resx">
+      <DependentUpon>ajouterarticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajouterclient.resx">
+      <DependentUpon>ajouterclient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajoutercommande.resx">
+      <DependentUpon>ajoutercommande.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ajouterpersonnel.resx">
       <DependentUpon>Ajouterpersonnel.h</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifierarticle.resx">
+      <DependentUpon>modifierarticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifierclient.resx">
+      <DependentUpon>modifierclient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifierpersonnel.resx">
+      <DependentUpon>modifierpersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supprimerarticle.resx">
+      <DependentUpon>supprimerarticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supprimerclient.resx">
+      <DependentUpon>supprimerclient.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="supprimerpersonnel.resx">
       <DependentUpon>supprimerpersonnel.h</DependentUpon>
