@@ -12,7 +12,7 @@
 #include "supprimercommande.h"
 #include "affichercommande.h"
 #include "supprimerarticle.h"
-#include "affichercommande.h"
+#include "modifierarticle.h"
 #include "ajouterarticle.h"
 #include "afficherarticle.h"
 namespace POO {
@@ -137,6 +137,8 @@ namespace POO {
     private: System::Windows::Forms::Button^ button20;
     private: System::Windows::Forms::Button^ button19;
     private: System::Windows::Forms::Button^ button18;
+
+
 
 
 
@@ -871,7 +873,7 @@ namespace POO {
                 supprimerClientForm->FormClosed += gcnew FormClosedEventHandler(this, &Form1::supprimerclientFormClosed);
             }
         }
-               System::Void modifierclientFormClosed(System::Object^ sender, FormClosedEventArgs^ e) {
+               System::Void supprimerclientFormClosed(System::Object^ sender, FormClosedEventArgs^ e) {
                    modifierClientFormIsOpen = false;
                }
               private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -976,7 +978,7 @@ namespace POO {
                             modifierArticleForm->FormClosed += gcnew FormClosedEventHandler(this, &Form1::modifierarticleFormClosed);
                         }
                     }
-                           System::Void modifierrticleFormClosed(System::Object^ sender, FormClosedEventArgs^ e) {
+                           System::Void modifierarticleFormClosed(System::Object^ sender, FormClosedEventArgs^ e) {
                                modifierArticleFormIsOpen = false;
                            }
 
@@ -1009,21 +1011,5 @@ private: System::Void button10_Click_1(System::Object^ sender, System::EventArgs
 }
 private: System::Void tabPage4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-
-
-
-private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-
-private: System::Void button10_Click_2(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-
-
-
-
 };
 }
