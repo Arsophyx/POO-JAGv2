@@ -65,17 +65,65 @@
     <ClInclude Include="ville.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="integrer.h">
+    <ClInclude Include="afficherarticle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="adresse_facturation.h">
+    <ClInclude Include="afficherclient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="adresse_livraison.h">
+    <ClInclude Include="affichercommande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="afficherpersonnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ajouterarticle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ajouterclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ajoutercommande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ajouterpersonnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modifierarticle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modifierclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modifiercommande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modifierpersonnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="supprimerarticle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="supprimerclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="supprimercommande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="supprimerpersonnel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="adresse.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse_facturation.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="adresse_livraison.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
+    <ClInclude Include="integrer.h">
+      <Filter>Header Files\Head</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -103,18 +151,15 @@
     <ClCompile Include="CAD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
     <ClCompile Include="CLservices.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
     <ClCompile Include="Personnel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ville.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
     <ClCompile Include="integrer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -127,7 +172,54 @@
     <ClCompile Include="adresse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
+    <ClCompile Include="afficherarticle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="afficherclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="affichercommande.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="afficherpersonnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ajouterarticle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ajouterclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ajoutercommande.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ajouterpersonnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modifierarticle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modifierclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modifiercommande.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modifierpersonnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="supprimerarticle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="supprimerclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="supprimercommande.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="supprimerpersonnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico">
