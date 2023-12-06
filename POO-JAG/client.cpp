@@ -17,7 +17,7 @@ String^ NS_Comp_Mappage::client::afficher(void) {
 	return"SELECT * FROM TB_P6;";
 }
 
-void NS_Comp_Mappage::client::setid_client(int id_client) {
+void NS_Comp_Mappage::client::setid_client(int^ id_client) {
 	this->id_client = id_client;
 }
 
@@ -37,7 +37,7 @@ void NS_Comp_Mappage::client::setanniversairepa_client(String^ anniversairepa_cl
 	this->anniversairepa_client = anniversairepa_client;
 }
 
-int NS_Comp_Mappage::client::getid_client(void) {
+int^ NS_Comp_Mappage::client::getid_client(void) {
 	return this->id_client;
 }
 
