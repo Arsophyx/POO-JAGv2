@@ -246,6 +246,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="afficherarticle.resx">
+      <DependentUpon>afficherarticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="afficherclient.resx">
+      <DependentUpon>afficherclient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="affichercommande.resx">
+      <DependentUpon>affichercommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="afficherpersonnel.resx">
+      <DependentUpon>afficherpersonnel.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ajouterarticle.resx">
       <DependentUpon>ajouterarticle.h</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +280,9 @@
     <EmbeddedResource Include="modifierclient.resx">
       <DependentUpon>modifierclient.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modifiercommande.resx">
+      <DependentUpon>modifiercommande.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modifierpersonnel.resx">
       <DependentUpon>modifierpersonnel.h</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="supprimerclient.resx">
       <DependentUpon>supprimerclient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supprimercommande.resx">
+      <DependentUpon>supprimercommande.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="supprimerpersonnel.resx">
       <DependentUpon>supprimerpersonnel.h</DependentUpon>
