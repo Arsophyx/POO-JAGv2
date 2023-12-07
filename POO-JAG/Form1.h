@@ -204,20 +204,20 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->button17 = (gcnew System::Windows::Forms::Button());
                this->dataGridView6 = (gcnew System::Windows::Forms::DataGridView());
                this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
-               this->dataGridView7 = (gcnew System::Windows::Forms::DataGridView());
-               this->button21 = (gcnew System::Windows::Forms::Button());
-               this->button22 = (gcnew System::Windows::Forms::Button());
-               this->label1 = (gcnew System::Windows::Forms::Label());
-               this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-               this->button23 = (gcnew System::Windows::Forms::Button());
-               this->button24 = (gcnew System::Windows::Forms::Button());
+               this->button29 = (gcnew System::Windows::Forms::Button());
+               this->button28 = (gcnew System::Windows::Forms::Button());
+               this->button27 = (gcnew System::Windows::Forms::Button());
+               this->button26 = (gcnew System::Windows::Forms::Button());
+               this->button25 = (gcnew System::Windows::Forms::Button());
                this->label2 = (gcnew System::Windows::Forms::Label());
                this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-               this->button25 = (gcnew System::Windows::Forms::Button());
-               this->button26 = (gcnew System::Windows::Forms::Button());
-               this->button27 = (gcnew System::Windows::Forms::Button());
-               this->button28 = (gcnew System::Windows::Forms::Button());
-               this->button29 = (gcnew System::Windows::Forms::Button());
+               this->button24 = (gcnew System::Windows::Forms::Button());
+               this->button23 = (gcnew System::Windows::Forms::Button());
+               this->label1 = (gcnew System::Windows::Forms::Label());
+               this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+               this->button22 = (gcnew System::Windows::Forms::Button());
+               this->button21 = (gcnew System::Windows::Forms::Button());
+               this->dataGridView7 = (gcnew System::Windows::Forms::DataGridView());
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
                this->tabControl1->SuspendLayout();
                this->tabPage1->SuspendLayout();
@@ -708,88 +708,70 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage6->Text = L"Statistiques";
                this->tabPage6->Visible = false;
                // 
-               // dataGridView7
+               // button29
                // 
-               this->dataGridView7->BackgroundColor = System::Drawing::Color::SkyBlue;
-               this->dataGridView7->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-               this->dataGridView7->GridColor = System::Drawing::SystemColors::ControlLightLight;
-               this->dataGridView7->Location = System::Drawing::Point(12, 20);
-               this->dataGridView7->Name = L"dataGridView7";
-               this->dataGridView7->RowHeadersWidth = 51;
-               this->dataGridView7->RowTemplate->Height = 24;
-               this->dataGridView7->Size = System::Drawing::Size(635, 513);
-               this->dataGridView7->TabIndex = 1;
+               this->button29->AutoSize = true;
+               this->button29->BackColor = System::Drawing::Color::SkyBlue;
+               this->button29->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button29->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button29->Location = System::Drawing::Point(738, 493);
+               this->button29->Name = L"button29";
+               this->button29->Size = System::Drawing::Size(292, 40);
+               this->button29->TabIndex = 26;
+               this->button29->Text = L"Test de Remise";
+               this->button29->UseVisualStyleBackColor = false;
                // 
-               // button21
+               // button28
                // 
-               this->button21->AutoSize = true;
-               this->button21->BackColor = System::Drawing::Color::SkyBlue;
-               this->button21->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button21->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button21->Location = System::Drawing::Point(742, 20);
-               this->button21->Name = L"button21";
-               this->button21->Size = System::Drawing::Size(288, 40);
-               this->button21->TabIndex = 7;
-               this->button21->Text = L"Panier Moyen";
-               this->button21->UseVisualStyleBackColor = false;
+               this->button28->AutoSize = true;
+               this->button28->BackColor = System::Drawing::Color::SkyBlue;
+               this->button28->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button28->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button28->Location = System::Drawing::Point(738, 431);
+               this->button28->Name = L"button28";
+               this->button28->Size = System::Drawing::Size(292, 40);
+               this->button28->TabIndex = 25;
+               this->button28->Text = L"Valeur Achat du Stock";
+               this->button28->UseVisualStyleBackColor = false;
                // 
-               // button22
+               // button27
                // 
-               this->button22->AutoSize = true;
-               this->button22->BackColor = System::Drawing::Color::SkyBlue;
-               this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button22->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button22->Location = System::Drawing::Point(742, 78);
-               this->button22->Name = L"button22";
-               this->button22->Size = System::Drawing::Size(288, 40);
-               this->button22->TabIndex = 8;
-               this->button22->Text = L"Chiffre d\'Affaire du mois";
-               this->button22->UseVisualStyleBackColor = false;
-               this->button22->Click += gcnew System::EventHandler(this, &Form1::button22_Click);
+               this->button27->AutoSize = true;
+               this->button27->BackColor = System::Drawing::Color::SkyBlue;
+               this->button27->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button27->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button27->Location = System::Drawing::Point(738, 371);
+               this->button27->Name = L"button27";
+               this->button27->Size = System::Drawing::Size(292, 40);
+               this->button27->TabIndex = 24;
+               this->button27->Text = L"Valeur Commerciale du Stock";
+               this->button27->UseVisualStyleBackColor = false;
                // 
-               // label1
+               // button26
                // 
-               this->label1->AutoSize = true;
-               this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                   static_cast<System::Byte>(0)));
-               this->label1->Location = System::Drawing::Point(1039, 63);
-               this->label1->Name = L"label1";
-               this->label1->Size = System::Drawing::Size(89, 20);
-               this->label1->TabIndex = 17;
-               this->label1->Text = L"Mois/Année";
+               this->button26->AutoSize = true;
+               this->button26->BackColor = System::Drawing::Color::SkyBlue;
+               this->button26->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button26->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button26->Location = System::Drawing::Point(738, 308);
+               this->button26->Name = L"button26";
+               this->button26->Size = System::Drawing::Size(292, 40);
+               this->button26->TabIndex = 23;
+               this->button26->Text = L"Top Articles des Moins Vendus";
+               this->button26->UseVisualStyleBackColor = false;
                // 
-               // textBox1
+               // button25
                // 
-               this->textBox1->Location = System::Drawing::Point(1043, 86);
-               this->textBox1->Name = L"textBox1";
-               this->textBox1->Size = System::Drawing::Size(192, 32);
-               this->textBox1->TabIndex = 16;
-               // 
-               // button23
-               // 
-               this->button23->AutoSize = true;
-               this->button23->BackColor = System::Drawing::Color::SkyBlue;
-               this->button23->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button23->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button23->Location = System::Drawing::Point(742, 132);
-               this->button23->Name = L"button23";
-               this->button23->Size = System::Drawing::Size(288, 40);
-               this->button23->TabIndex = 18;
-               this->button23->Text = L"Article reapprovisionnement";
-               this->button23->UseVisualStyleBackColor = false;
-               // 
-               // button24
-               // 
-               this->button24->AutoSize = true;
-               this->button24->BackColor = System::Drawing::Color::SkyBlue;
-               this->button24->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button24->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button24->Location = System::Drawing::Point(742, 190);
-               this->button24->Name = L"button24";
-               this->button24->Size = System::Drawing::Size(288, 40);
-               this->button24->TabIndex = 19;
-               this->button24->Text = L"Montant Total Achat";
-               this->button24->UseVisualStyleBackColor = false;
+               this->button25->AutoSize = true;
+               this->button25->BackColor = System::Drawing::Color::SkyBlue;
+               this->button25->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button25->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button25->Location = System::Drawing::Point(742, 251);
+               this->button25->Name = L"button25";
+               this->button25->Size = System::Drawing::Size(288, 40);
+               this->button25->TabIndex = 22;
+               this->button25->Text = L"Top Articles des Plus Vendus";
+               this->button25->UseVisualStyleBackColor = false;
                // 
                // label2
                // 
@@ -809,70 +791,89 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->textBox2->Size = System::Drawing::Size(192, 32);
                this->textBox2->TabIndex = 20;
                // 
-               // button25
+               // button24
                // 
-               this->button25->AutoSize = true;
-               this->button25->BackColor = System::Drawing::Color::SkyBlue;
-               this->button25->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button25->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button25->Location = System::Drawing::Point(742, 251);
-               this->button25->Name = L"button25";
-               this->button25->Size = System::Drawing::Size(288, 40);
-               this->button25->TabIndex = 22;
-               this->button25->Text = L"Top Articles des Plus Vendus";
-               this->button25->UseVisualStyleBackColor = false;
+               this->button24->AutoSize = true;
+               this->button24->BackColor = System::Drawing::Color::SkyBlue;
+               this->button24->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button24->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button24->Location = System::Drawing::Point(742, 190);
+               this->button24->Name = L"button24";
+               this->button24->Size = System::Drawing::Size(288, 40);
+               this->button24->TabIndex = 19;
+               this->button24->Text = L"Montant Total Achat";
+               this->button24->UseVisualStyleBackColor = false;
                // 
-               // button26
+               // button23
                // 
-               this->button26->AutoSize = true;
-               this->button26->BackColor = System::Drawing::Color::SkyBlue;
-               this->button26->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button26->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button26->Location = System::Drawing::Point(738, 308);
-               this->button26->Name = L"button26";
-               this->button26->Size = System::Drawing::Size(292, 40);
-               this->button26->TabIndex = 23;
-               this->button26->Text = L"Top Articles des Moins Vendus";
-               this->button26->UseVisualStyleBackColor = false;
+               this->button23->AutoSize = true;
+               this->button23->BackColor = System::Drawing::Color::SkyBlue;
+               this->button23->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button23->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button23->Location = System::Drawing::Point(742, 132);
+               this->button23->Name = L"button23";
+               this->button23->Size = System::Drawing::Size(288, 40);
+               this->button23->TabIndex = 18;
+               this->button23->Text = L"Article reapprovisionnement";
+               this->button23->UseVisualStyleBackColor = false;
                // 
-               // button27
+               // label1
                // 
-               this->button27->AutoSize = true;
-               this->button27->BackColor = System::Drawing::Color::SkyBlue;
-               this->button27->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button27->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button27->Location = System::Drawing::Point(738, 371);
-               this->button27->Name = L"button27";
-               this->button27->Size = System::Drawing::Size(292, 40);
-               this->button27->TabIndex = 24;
-               this->button27->Text = L"Valeur Commerciale du Stock";
-               this->button27->UseVisualStyleBackColor = false;
+               this->label1->AutoSize = true;
+               this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                   static_cast<System::Byte>(0)));
+               this->label1->Location = System::Drawing::Point(1039, 63);
+               this->label1->Name = L"label1";
+               this->label1->Size = System::Drawing::Size(89, 20);
+               this->label1->TabIndex = 17;
+               this->label1->Text = L"Mois/Année";
                // 
-               // button28
+               // textBox1
                // 
-               this->button28->AutoSize = true;
-               this->button28->BackColor = System::Drawing::Color::SkyBlue;
-               this->button28->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button28->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button28->Location = System::Drawing::Point(738, 431);
-               this->button28->Name = L"button28";
-               this->button28->Size = System::Drawing::Size(292, 40);
-               this->button28->TabIndex = 25;
-               this->button28->Text = L"Valeur Achat du Stock";
-               this->button28->UseVisualStyleBackColor = false;
+               this->textBox1->Location = System::Drawing::Point(1043, 86);
+               this->textBox1->Name = L"textBox1";
+               this->textBox1->Size = System::Drawing::Size(192, 32);
+               this->textBox1->TabIndex = 16;
                // 
-               // button29
+               // button22
                // 
-               this->button29->AutoSize = true;
-               this->button29->BackColor = System::Drawing::Color::SkyBlue;
-               this->button29->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-               this->button29->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-               this->button29->Location = System::Drawing::Point(738, 493);
-               this->button29->Name = L"button29";
-               this->button29->Size = System::Drawing::Size(292, 40);
-               this->button29->TabIndex = 26;
-               this->button29->Text = L"Test de Remise";
-               this->button29->UseVisualStyleBackColor = false;
+               this->button22->AutoSize = true;
+               this->button22->BackColor = System::Drawing::Color::SkyBlue;
+               this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button22->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button22->Location = System::Drawing::Point(742, 78);
+               this->button22->Name = L"button22";
+               this->button22->Size = System::Drawing::Size(288, 40);
+               this->button22->TabIndex = 8;
+               this->button22->Text = L"Chiffre d\'Affaire du mois";
+               this->button22->UseVisualStyleBackColor = false;
+               this->button22->Click += gcnew System::EventHandler(this, &Form1::button22_Click);
+               // 
+               // button21
+               // 
+               this->button21->AutoSize = true;
+               this->button21->BackColor = System::Drawing::Color::SkyBlue;
+               this->button21->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button21->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button21->Location = System::Drawing::Point(742, 20);
+               this->button21->Name = L"button21";
+               this->button21->Size = System::Drawing::Size(288, 40);
+               this->button21->TabIndex = 7;
+               this->button21->Text = L"Panier Moyen";
+               this->button21->UseVisualStyleBackColor = false;
+               // 
+               // dataGridView7
+               // 
+               this->dataGridView7->BackgroundColor = System::Drawing::Color::SkyBlue;
+               this->dataGridView7->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+               this->dataGridView7->GridColor = System::Drawing::SystemColors::ControlLightLight;
+               this->dataGridView7->Location = System::Drawing::Point(12, 20);
+               this->dataGridView7->Name = L"dataGridView7";
+               this->dataGridView7->RowHeadersWidth = 51;
+               this->dataGridView7->RowTemplate->Height = 24;
+               this->dataGridView7->Size = System::Drawing::Size(635, 513);
+               this->dataGridView7->TabIndex = 1;
+               this->dataGridView7->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView7_CellContentClick);
                // 
                // Form1
                // 
@@ -1208,6 +1209,8 @@ private: System::Void button10_Click_1(System::Object^ sender, System::EventArgs
 private: System::Void tabPage4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dataGridView7_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 };
 }
