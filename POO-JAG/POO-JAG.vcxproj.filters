@@ -98,6 +98,21 @@
     <ClInclude Include="modifiercommande.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="article.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CAD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Personnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ville.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="statistiques.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="modifierpersonnel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -149,6 +164,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CAD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statistiques.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CLservices.cpp">
