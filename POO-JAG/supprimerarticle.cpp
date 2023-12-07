@@ -63,7 +63,7 @@ namespace POO_JAG {
         this->MaximumSize = System::Drawing::Size(660, 193);
         this->MinimumSize = System::Drawing::Size(660, 193);
         this->Name = L"supprimerarticle";
-        this->Text = L"supprimerarticle";
+        this->Text = L"Supprimer un Article";
         this->Load += gcnew System::EventHandler(this, &supprimerarticle::supprimerarticle_Load);
         this->ResumeLayout(false);
         this->PerformLayout();

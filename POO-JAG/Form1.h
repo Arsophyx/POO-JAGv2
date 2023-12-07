@@ -137,6 +137,19 @@ namespace POO {
     private: System::Windows::Forms::Button^ button20;
     private: System::Windows::Forms::Button^ button19;
     private: System::Windows::Forms::Button^ button18;
+private: System::Windows::Forms::Button^ button21;
+private: System::Windows::Forms::Button^ button22;
+private: System::Windows::Forms::Button^ button24;
+private: System::Windows::Forms::Button^ button23;
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::TextBox^ textBox1;
+private: System::Windows::Forms::Button^ button29;
+private: System::Windows::Forms::Button^ button28;
+private: System::Windows::Forms::Button^ button27;
+private: System::Windows::Forms::Button^ button26;
+private: System::Windows::Forms::Button^ button25;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::TextBox^ textBox2;
 
 
 
@@ -192,6 +205,19 @@ namespace POO {
                this->dataGridView6 = (gcnew System::Windows::Forms::DataGridView());
                this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
                this->dataGridView7 = (gcnew System::Windows::Forms::DataGridView());
+               this->button21 = (gcnew System::Windows::Forms::Button());
+               this->button22 = (gcnew System::Windows::Forms::Button());
+               this->label1 = (gcnew System::Windows::Forms::Label());
+               this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+               this->button23 = (gcnew System::Windows::Forms::Button());
+               this->button24 = (gcnew System::Windows::Forms::Button());
+               this->label2 = (gcnew System::Windows::Forms::Label());
+               this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+               this->button25 = (gcnew System::Windows::Forms::Button());
+               this->button26 = (gcnew System::Windows::Forms::Button());
+               this->button27 = (gcnew System::Windows::Forms::Button());
+               this->button28 = (gcnew System::Windows::Forms::Button());
+               this->button29 = (gcnew System::Windows::Forms::Button());
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
                this->tabControl1->SuspendLayout();
                this->tabPage1->SuspendLayout();
@@ -239,13 +265,13 @@ namespace POO {
                this->tabControl1->Multiline = true;
                this->tabControl1->Name = L"tabControl1";
                this->tabControl1->SelectedIndex = 0;
-               this->tabControl1->Size = System::Drawing::Size(1667, 598);
+               this->tabControl1->Size = System::Drawing::Size(1332, 598);
                this->tabControl1->TabIndex = 0;
                // 
                // tabPage1
                // 
                this->tabPage1->AccessibleRole = System::Windows::Forms::AccessibleRole::OutlineButton;
-               this->tabPage1->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+               this->tabPage1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
                this->tabPage1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
                this->tabPage1->Controls->Add(this->button20);
                this->tabPage1->Controls->Add(this->button19);
@@ -257,7 +283,7 @@ namespace POO {
                this->tabPage1->Margin = System::Windows::Forms::Padding(4);
                this->tabPage1->Name = L"tabPage1";
                this->tabPage1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-               this->tabPage1->Size = System::Drawing::Size(1659, 560);
+               this->tabPage1->Size = System::Drawing::Size(1324, 560);
                this->tabPage1->TabIndex = 0;
                this->tabPage1->Text = L"Base de Données";
                this->tabPage1->Visible = false;
@@ -327,7 +353,7 @@ namespace POO {
                // 
                // tabPage2
                // 
-               this->tabPage2->BackColor = System::Drawing::Color::DimGray;
+               this->tabPage2->BackColor = System::Drawing::Color::White;
                this->tabPage2->Controls->Add(this->button5);
                this->tabPage2->Controls->Add(this->button4);
                this->tabPage2->Controls->Add(this->button3);
@@ -336,7 +362,7 @@ namespace POO {
                this->tabPage2->Location = System::Drawing::Point(4, 34);
                this->tabPage2->Margin = System::Windows::Forms::Padding(4);
                this->tabPage2->Name = L"tabPage2";
-               this->tabPage2->Size = System::Drawing::Size(1659, 560);
+               this->tabPage2->Size = System::Drawing::Size(1324, 560);
                this->tabPage2->TabIndex = 1;
                this->tabPage2->Text = L"Personnel";
                this->tabPage2->Visible = false;
@@ -410,7 +436,7 @@ namespace POO {
                // 
                // tabPage3
                // 
-               this->tabPage3->BackColor = System::Drawing::Color::DimGray;
+               this->tabPage3->BackColor = System::Drawing::Color::White;
                this->tabPage3->Controls->Add(this->button6);
                this->tabPage3->Controls->Add(this->button7);
                this->tabPage3->Controls->Add(this->button8);
@@ -419,7 +445,7 @@ namespace POO {
                this->tabPage3->Location = System::Drawing::Point(4, 34);
                this->tabPage3->Margin = System::Windows::Forms::Padding(4);
                this->tabPage3->Name = L"tabPage3";
-               this->tabPage3->Size = System::Drawing::Size(1659, 560);
+               this->tabPage3->Size = System::Drawing::Size(1324, 560);
                this->tabPage3->TabIndex = 2;
                this->tabPage3->Text = L"Clients";
                this->tabPage3->Visible = false;
@@ -492,7 +518,7 @@ namespace POO {
                // 
                // tabPage4
                // 
-               this->tabPage4->BackColor = System::Drawing::Color::DimGray;
+               this->tabPage4->BackColor = System::Drawing::Color::White;
                this->tabPage4->Controls->Add(this->button10);
                this->tabPage4->Controls->Add(this->button12);
                this->tabPage4->Controls->Add(this->button13);
@@ -501,7 +527,7 @@ namespace POO {
                this->tabPage4->Location = System::Drawing::Point(4, 34);
                this->tabPage4->Margin = System::Windows::Forms::Padding(4);
                this->tabPage4->Name = L"tabPage4";
-               this->tabPage4->Size = System::Drawing::Size(1659, 560);
+               this->tabPage4->Size = System::Drawing::Size(1324, 560);
                this->tabPage4->TabIndex = 3;
                this->tabPage4->Text = L"Commandes";
                this->tabPage4->Visible = false;
@@ -576,7 +602,7 @@ namespace POO {
                // 
                // tabPage5
                // 
-               this->tabPage5->BackColor = System::Drawing::Color::DimGray;
+               this->tabPage5->BackColor = System::Drawing::Color::White;
                this->tabPage5->Controls->Add(this->button11);
                this->tabPage5->Controls->Add(this->button15);
                this->tabPage5->Controls->Add(this->button16);
@@ -585,7 +611,7 @@ namespace POO {
                this->tabPage5->Location = System::Drawing::Point(4, 34);
                this->tabPage5->Margin = System::Windows::Forms::Padding(4);
                this->tabPage5->Name = L"tabPage5";
-               this->tabPage5->Size = System::Drawing::Size(1659, 560);
+               this->tabPage5->Size = System::Drawing::Size(1324, 560);
                this->tabPage5->TabIndex = 4;
                this->tabPage5->Text = L"Stock";
                this->tabPage5->Visible = false;
@@ -659,12 +685,25 @@ namespace POO {
                // 
                // tabPage6
                // 
-               this->tabPage6->BackColor = System::Drawing::Color::DimGray;
+               this->tabPage6->BackColor = System::Drawing::Color::White;
+               this->tabPage6->Controls->Add(this->button29);
+               this->tabPage6->Controls->Add(this->button28);
+               this->tabPage6->Controls->Add(this->button27);
+               this->tabPage6->Controls->Add(this->button26);
+               this->tabPage6->Controls->Add(this->button25);
+               this->tabPage6->Controls->Add(this->label2);
+               this->tabPage6->Controls->Add(this->textBox2);
+               this->tabPage6->Controls->Add(this->button24);
+               this->tabPage6->Controls->Add(this->button23);
+               this->tabPage6->Controls->Add(this->label1);
+               this->tabPage6->Controls->Add(this->textBox1);
+               this->tabPage6->Controls->Add(this->button22);
+               this->tabPage6->Controls->Add(this->button21);
                this->tabPage6->Controls->Add(this->dataGridView7);
                this->tabPage6->Location = System::Drawing::Point(4, 34);
                this->tabPage6->Margin = System::Windows::Forms::Padding(4);
                this->tabPage6->Name = L"tabPage6";
-               this->tabPage6->Size = System::Drawing::Size(1659, 560);
+               this->tabPage6->Size = System::Drawing::Size(1324, 560);
                this->tabPage6->TabIndex = 5;
                this->tabPage6->Text = L"Statistiques";
                this->tabPage6->Visible = false;
@@ -681,16 +720,172 @@ namespace POO {
                this->dataGridView7->Size = System::Drawing::Size(635, 513);
                this->dataGridView7->TabIndex = 1;
                // 
+               // button21
+               // 
+               this->button21->AutoSize = true;
+               this->button21->BackColor = System::Drawing::Color::SkyBlue;
+               this->button21->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button21->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button21->Location = System::Drawing::Point(742, 20);
+               this->button21->Name = L"button21";
+               this->button21->Size = System::Drawing::Size(288, 40);
+               this->button21->TabIndex = 7;
+               this->button21->Text = L"Panier Moyen";
+               this->button21->UseVisualStyleBackColor = false;
+               // 
+               // button22
+               // 
+               this->button22->AutoSize = true;
+               this->button22->BackColor = System::Drawing::Color::SkyBlue;
+               this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button22->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button22->Location = System::Drawing::Point(742, 78);
+               this->button22->Name = L"button22";
+               this->button22->Size = System::Drawing::Size(288, 40);
+               this->button22->TabIndex = 8;
+               this->button22->Text = L"Chiffre d\'Affaire du mois";
+               this->button22->UseVisualStyleBackColor = false;
+               this->button22->Click += gcnew System::EventHandler(this, &Form1::button22_Click);
+               // 
+               // label1
+               // 
+               this->label1->AutoSize = true;
+               this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                   static_cast<System::Byte>(0)));
+               this->label1->Location = System::Drawing::Point(1039, 63);
+               this->label1->Name = L"label1";
+               this->label1->Size = System::Drawing::Size(89, 20);
+               this->label1->TabIndex = 17;
+               this->label1->Text = L"Mois/Année";
+               // 
+               // textBox1
+               // 
+               this->textBox1->Location = System::Drawing::Point(1043, 86);
+               this->textBox1->Name = L"textBox1";
+               this->textBox1->Size = System::Drawing::Size(192, 32);
+               this->textBox1->TabIndex = 16;
+               // 
+               // button23
+               // 
+               this->button23->AutoSize = true;
+               this->button23->BackColor = System::Drawing::Color::SkyBlue;
+               this->button23->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button23->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button23->Location = System::Drawing::Point(742, 132);
+               this->button23->Name = L"button23";
+               this->button23->Size = System::Drawing::Size(288, 40);
+               this->button23->TabIndex = 18;
+               this->button23->Text = L"Article reapprovisionnement";
+               this->button23->UseVisualStyleBackColor = false;
+               // 
+               // button24
+               // 
+               this->button24->AutoSize = true;
+               this->button24->BackColor = System::Drawing::Color::SkyBlue;
+               this->button24->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button24->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button24->Location = System::Drawing::Point(742, 190);
+               this->button24->Name = L"button24";
+               this->button24->Size = System::Drawing::Size(288, 40);
+               this->button24->TabIndex = 19;
+               this->button24->Text = L"Montant Total Achat";
+               this->button24->UseVisualStyleBackColor = false;
+               // 
+               // label2
+               // 
+               this->label2->AutoSize = true;
+               this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                   static_cast<System::Byte>(0)));
+               this->label2->Location = System::Drawing::Point(1039, 202);
+               this->label2->Name = L"label2";
+               this->label2->Size = System::Drawing::Size(87, 20);
+               this->label2->TabIndex = 21;
+               this->label2->Text = L"ID du Client";
+               // 
+               // textBox2
+               // 
+               this->textBox2->Location = System::Drawing::Point(1043, 225);
+               this->textBox2->Name = L"textBox2";
+               this->textBox2->Size = System::Drawing::Size(192, 32);
+               this->textBox2->TabIndex = 20;
+               // 
+               // button25
+               // 
+               this->button25->AutoSize = true;
+               this->button25->BackColor = System::Drawing::Color::SkyBlue;
+               this->button25->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button25->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button25->Location = System::Drawing::Point(742, 251);
+               this->button25->Name = L"button25";
+               this->button25->Size = System::Drawing::Size(288, 40);
+               this->button25->TabIndex = 22;
+               this->button25->Text = L"Top Articles des Plus Vendus";
+               this->button25->UseVisualStyleBackColor = false;
+               // 
+               // button26
+               // 
+               this->button26->AutoSize = true;
+               this->button26->BackColor = System::Drawing::Color::SkyBlue;
+               this->button26->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button26->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button26->Location = System::Drawing::Point(738, 308);
+               this->button26->Name = L"button26";
+               this->button26->Size = System::Drawing::Size(292, 40);
+               this->button26->TabIndex = 23;
+               this->button26->Text = L"Top Articles des Moins Vendus";
+               this->button26->UseVisualStyleBackColor = false;
+               // 
+               // button27
+               // 
+               this->button27->AutoSize = true;
+               this->button27->BackColor = System::Drawing::Color::SkyBlue;
+               this->button27->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button27->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button27->Location = System::Drawing::Point(738, 371);
+               this->button27->Name = L"button27";
+               this->button27->Size = System::Drawing::Size(292, 40);
+               this->button27->TabIndex = 24;
+               this->button27->Text = L"Valeur Commerciale du Stock";
+               this->button27->UseVisualStyleBackColor = false;
+               // 
+               // button28
+               // 
+               this->button28->AutoSize = true;
+               this->button28->BackColor = System::Drawing::Color::SkyBlue;
+               this->button28->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button28->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button28->Location = System::Drawing::Point(738, 431);
+               this->button28->Name = L"button28";
+               this->button28->Size = System::Drawing::Size(292, 40);
+               this->button28->TabIndex = 25;
+               this->button28->Text = L"Valeur Achat du Stock";
+               this->button28->UseVisualStyleBackColor = false;
+               // 
+               // button29
+               // 
+               this->button29->AutoSize = true;
+               this->button29->BackColor = System::Drawing::Color::SkyBlue;
+               this->button29->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button29->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button29->Location = System::Drawing::Point(738, 493);
+               this->button29->Name = L"button29";
+               this->button29->Size = System::Drawing::Size(292, 40);
+               this->button29->TabIndex = 26;
+               this->button29->Text = L"Test de Remise";
+               this->button29->UseVisualStyleBackColor = false;
+               // 
                // Form1
                // 
                this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
                this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-               this->ClientSize = System::Drawing::Size(1667, 598);
+               this->ClientSize = System::Drawing::Size(1332, 598);
                this->Controls->Add(this->tabControl1);
                this->Controls->Add(this->dataGridView1);
                this->Margin = System::Windows::Forms::Padding(4);
+               this->MaximumSize = System::Drawing::Size(1350, 645);
+               this->MinimumSize = System::Drawing::Size(1350, 645);
                this->Name = L"Form1";
-               this->Text = L"Form1";
+               this->Text = L"CESI Scount";
                this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
                this->tabControl1->ResumeLayout(false);
@@ -708,6 +903,7 @@ namespace POO {
                this->tabPage5->PerformLayout();
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView6))->EndInit();
                this->tabPage6->ResumeLayout(false);
+               this->tabPage6->PerformLayout();
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView7))->EndInit();
                this->ResumeLayout(false);
 
@@ -1010,6 +1206,8 @@ private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void button10_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void tabPage4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
