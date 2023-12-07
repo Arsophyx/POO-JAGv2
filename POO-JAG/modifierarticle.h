@@ -6,13 +6,13 @@ namespace POO_JAG {
     using namespace System::ComponentModel;
     using namespace System::Windows::Forms;
 
-    public ref class ajouterclient : public System::Windows::Forms::Form
+    public ref class modifierarticle : public System::Windows::Forms::Form
     {
     public:
-        ajouterclient(void);
+        modifierarticle(void);
 
     protected:
-        ~ajouterclient();
+        ~modifierarticle();
 
     private:
         System::ComponentModel::Container^ components;
@@ -22,12 +22,12 @@ namespace POO_JAG {
     private: System::Windows::Forms::TextBox^ textBox2;
     private: System::Windows::Forms::Label^ label3;
     private: System::Windows::Forms::TextBox^ textBox3;
-
-
-
-
-
-
+    private: System::Windows::Forms::Label^ label4;
+    private: System::Windows::Forms::TextBox^ textBox4;
+    private: System::Windows::Forms::Label^ label5;
+    private: System::Windows::Forms::TextBox^ textBox5;
+    private: System::Windows::Forms::Label^ label6;
+    private: System::Windows::Forms::TextBox^ textBox6;
            System::Windows::Forms::Button^ button1;
 
            void InitializeComponent(void);
@@ -35,7 +35,7 @@ namespace POO_JAG {
 
     private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
-    private: System::Void ajouterclient_Load(System::Object^ sender, System::EventArgs^ e) {
+    private: System::Void modifierarticle_Load(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
     }

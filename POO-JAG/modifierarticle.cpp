@@ -1,15 +1,15 @@
 #include "pch.h"
-#include "modifierpersonnel.h"
+#include "modifierarticle.h"
 
 namespace POO_JAG {
 
-    modifierpersonnel::modifierpersonnel(void)
+    modifierarticle::modifierarticle(void)
     {
         InitializeComponent();
-        button1->Click += gcnew System::EventHandler(this, &modifierpersonnel::button1_Click);
+        button1->Click += gcnew System::EventHandler(this, &modifierarticle::button1_Click);
     }
 
-    modifierpersonnel::~modifierpersonnel()
+    modifierarticle::~modifierarticle()
     {
         if (components)
         {
@@ -17,7 +17,7 @@ namespace POO_JAG {
         }
     }
 
-    void modifierpersonnel::InitializeComponent(void)
+    void modifierarticle::InitializeComponent(void)
     {
         this->button1 = (gcnew System::Windows::Forms::Button());
         this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -32,8 +32,6 @@ namespace POO_JAG {
         this->textBox5 = (gcnew System::Windows::Forms::TextBox());
         this->label6 = (gcnew System::Windows::Forms::Label());
         this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-        this->label7 = (gcnew System::Windows::Forms::Label());
-        this->textBox7 = (gcnew System::Windows::Forms::TextBox());
         this->SuspendLayout();
         // 
         // button1
@@ -45,12 +43,12 @@ namespace POO_JAG {
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(234, 105);
         this->button1->TabIndex = 0;
-        this->button1->Text = L"Modifer le Personnel";
+        this->button1->Text = L"Modifier l\'Article";
         this->button1->UseVisualStyleBackColor = false;
         // 
         // textBox1
         // 
-        this->textBox1->Location = System::Drawing::Point(27, 78);
+        this->textBox1->Location = System::Drawing::Point(26, 29);
         this->textBox1->Name = L"textBox1";
         this->textBox1->Size = System::Drawing::Size(266, 22);
         this->textBox1->TabIndex = 1;
@@ -58,26 +56,26 @@ namespace POO_JAG {
         // label1
         // 
         this->label1->AutoSize = true;
-        this->label1->Location = System::Drawing::Point(24, 59);
+        this->label1->Location = System::Drawing::Point(23, 10);
         this->label1->Name = L"label1";
-        this->label1->Size = System::Drawing::Size(100, 16);
+        this->label1->Size = System::Drawing::Size(85, 16);
         this->label1->TabIndex = 2;
-        this->label1->Text = L"Nom Personnel";
-        this->label1->Click += gcnew System::EventHandler(this, &modifierpersonnel::label1_Click);
+        this->label1->Text = L"ID de l\'Article\r\n";
+        this->label1->Click += gcnew System::EventHandler(this, &modifierarticle::label1_Click);
         // 
         // label2
         // 
         this->label2->AutoSize = true;
-        this->label2->Location = System::Drawing::Point(24, 112);
+        this->label2->Location = System::Drawing::Point(23, 63);
         this->label2->Name = L"label2";
-        this->label2->Size = System::Drawing::Size(118, 16);
+        this->label2->Size = System::Drawing::Size(101, 16);
         this->label2->TabIndex = 4;
-        this->label2->Text = L"Prenom Personnel";
-        this->label2->Click += gcnew System::EventHandler(this, &modifierpersonnel::label2_Click);
+        this->label2->Text = L"Nom de l\'Article";
+        this->label2->Click += gcnew System::EventHandler(this, &modifierarticle::label2_Click);
         // 
         // textBox2
         // 
-        this->textBox2->Location = System::Drawing::Point(27, 131);
+        this->textBox2->Location = System::Drawing::Point(26, 82);
         this->textBox2->Name = L"textBox2";
         this->textBox2->Size = System::Drawing::Size(266, 22);
         this->textBox2->TabIndex = 3;
@@ -85,15 +83,15 @@ namespace POO_JAG {
         // label3
         // 
         this->label3->AutoSize = true;
-        this->label3->Location = System::Drawing::Point(24, 168);
+        this->label3->Location = System::Drawing::Point(23, 119);
         this->label3->Name = L"label3";
-        this->label3->Size = System::Drawing::Size(176, 16);
+        this->label3->Size = System::Drawing::Size(160, 16);
         this->label3->TabIndex = 6;
-        this->label3->Text = L"Prise de poste du Personnel";
+        this->label3->Text = L"Prix de l\'Article Hors Taxe";
         // 
         // textBox3
         // 
-        this->textBox3->Location = System::Drawing::Point(27, 187);
+        this->textBox3->Location = System::Drawing::Point(26, 138);
         this->textBox3->Name = L"textBox3";
         this->textBox3->Size = System::Drawing::Size(266, 22);
         this->textBox3->TabIndex = 5;
@@ -101,15 +99,15 @@ namespace POO_JAG {
         // label4
         // 
         this->label4->AutoSize = true;
-        this->label4->Location = System::Drawing::Point(24, 230);
+        this->label4->Location = System::Drawing::Point(23, 181);
         this->label4->Name = L"label4";
-        this->label4->Size = System::Drawing::Size(140, 16);
+        this->label4->Size = System::Drawing::Size(99, 16);
         this->label4->TabIndex = 8;
-        this->label4->Text = L"Adresse du Personnel";
+        this->label4->Text = L"TVA de l\'Article";
         // 
         // textBox4
         // 
-        this->textBox4->Location = System::Drawing::Point(27, 249);
+        this->textBox4->Location = System::Drawing::Point(26, 200);
         this->textBox4->Name = L"textBox4";
         this->textBox4->Size = System::Drawing::Size(266, 22);
         this->textBox4->TabIndex = 7;
@@ -117,15 +115,15 @@ namespace POO_JAG {
         // label5
         // 
         this->label5->AutoSize = true;
-        this->label5->Location = System::Drawing::Point(24, 290);
+        this->label5->Location = System::Drawing::Point(23, 241);
         this->label5->Name = L"label5";
-        this->label5->Size = System::Drawing::Size(163, 16);
+        this->label5->Size = System::Drawing::Size(250, 16);
         this->label5->TabIndex = 10;
-        this->label5->Text = L"Code Postal du Personnel";
+        this->label5->Text = L"Seuil de Réapprovisionement de l\'Article";
         // 
         // textBox5
         // 
-        this->textBox5->Location = System::Drawing::Point(27, 309);
+        this->textBox5->Location = System::Drawing::Point(26, 260);
         this->textBox5->Name = L"textBox5";
         this->textBox5->Size = System::Drawing::Size(266, 22);
         this->textBox5->TabIndex = 9;
@@ -133,46 +131,26 @@ namespace POO_JAG {
         // label6
         // 
         this->label6->AutoSize = true;
-        this->label6->Location = System::Drawing::Point(24, 342);
+        this->label6->Location = System::Drawing::Point(23, 293);
         this->label6->Name = L"label6";
-        this->label6->Size = System::Drawing::Size(99, 16);
+        this->label6->Size = System::Drawing::Size(106, 16);
         this->label6->TabIndex = 12;
-        this->label6->Text = L"ID du Supérieur";
-        this->label6->Click += gcnew System::EventHandler(this, &modifierpersonnel::label6_Click);
+        this->label6->Text = L"Stock de l\'Article";
+        this->label6->Click += gcnew System::EventHandler(this, &modifierarticle::label6_Click);
         // 
         // textBox6
         // 
-        this->textBox6->Location = System::Drawing::Point(27, 361);
+        this->textBox6->Location = System::Drawing::Point(26, 312);
         this->textBox6->Name = L"textBox6";
         this->textBox6->Size = System::Drawing::Size(266, 22);
         this->textBox6->TabIndex = 11;
-        this->textBox6->TextChanged += gcnew System::EventHandler(this, &modifierpersonnel::textBox6_TextChanged);
+        this->textBox6->TextChanged += gcnew System::EventHandler(this, &modifierarticle::textBox6_TextChanged);
         // 
-        // label7
-        // 
-        this->label7->AutoSize = true;
-        this->label7->Location = System::Drawing::Point(24, 9);
-        this->label7->Name = L"label7";
-        this->label7->Size = System::Drawing::Size(102, 16);
-        this->label7->TabIndex = 14;
-        this->label7->Text = L"ID du Personnel";
-        this->label7->Click += gcnew System::EventHandler(this, &modifierpersonnel::label7_Click);
-        // 
-        // textBox7
-        // 
-        this->textBox7->Location = System::Drawing::Point(27, 28);
-        this->textBox7->Name = L"textBox7";
-        this->textBox7->Size = System::Drawing::Size(266, 22);
-        this->textBox7->TabIndex = 13;
-        this->textBox7->TextChanged += gcnew System::EventHandler(this, &modifierpersonnel::textBox7_TextChanged);
-        // 
-        // modifierpersonnel
+        // modifierarticle
         // 
         this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-        this->ClientSize = System::Drawing::Size(642, 403);
-        this->Controls->Add(this->label7);
-        this->Controls->Add(this->textBox7);
+        this->ClientSize = System::Drawing::Size(642, 353);
         this->Controls->Add(this->label6);
         this->Controls->Add(this->textBox6);
         this->Controls->Add(this->label5);
@@ -186,17 +164,18 @@ namespace POO_JAG {
         this->Controls->Add(this->label1);
         this->Controls->Add(this->textBox1);
         this->Controls->Add(this->button1);
-        this->MaximumSize = System::Drawing::Size(660, 450);
-        this->MinimumSize = System::Drawing::Size(660, 450);
-        this->Name = L"modifierpersonnel";
-        this->Text = L"Modifier un Personnel";
-        this->Load += gcnew System::EventHandler(this, &modifierpersonnel::modifierpersonnel_Load);
+        this->MaximumSize = System::Drawing::Size(660, 400);
+        this->MinimumSize = System::Drawing::Size(660, 400);
+        this->Name = L"modifierarticle";
+        this->Text = L"Modifier un Article";
+        this->Load += gcnew System::EventHandler(this, &modifierarticle::modifierarticle_Load);
         this->ResumeLayout(false);
         this->PerformLayout();
 
     }
 
-    void modifierpersonnel::button1_Click(System::Object^ sender, System::EventArgs^ e) {
+    void modifierarticle::button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
     }
 }
+

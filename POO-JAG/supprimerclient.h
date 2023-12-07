@@ -18,16 +18,16 @@ namespace POO_JAG {
         System::ComponentModel::Container^ components;
     private: System::Windows::Forms::TextBox^ textBox1;
     private: System::Windows::Forms::Label^ label1;
-    private: System::Windows::Forms::Label^ label2;
-    private: System::Windows::Forms::TextBox^ textBox2;
-    private: System::Windows::Forms::Label^ label3;
-    private: System::Windows::Forms::TextBox^ textBox3;
-    private: System::Windows::Forms::Label^ label4;
-    private: System::Windows::Forms::TextBox^ textBox4;
-    private: System::Windows::Forms::Label^ label5;
-    private: System::Windows::Forms::TextBox^ textBox5;
-    private: System::Windows::Forms::Label^ label6;
-    private: System::Windows::Forms::TextBox^ textBox6;
+
+
+
+
+
+
+
+
+
+
            System::Windows::Forms::Button^ button1;
 
            void InitializeComponent(void);
@@ -42,6 +42,8 @@ namespace POO_JAG {
     private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
     }
     };
 }

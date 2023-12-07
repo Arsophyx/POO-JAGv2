@@ -43,7 +43,7 @@ namespace POO_JAG {
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(234, 105);
         this->button1->TabIndex = 0;
-        this->button1->Text = L"Ajouter un personnel";
+        this->button1->Text = L"Ajouter la Commande";
         this->button1->UseVisualStyleBackColor = false;
         // 
         // textBox1
@@ -58,9 +58,9 @@ namespace POO_JAG {
         this->label1->AutoSize = true;
         this->label1->Location = System::Drawing::Point(23, 10);
         this->label1->Name = L"label1";
-        this->label1->Size = System::Drawing::Size(100, 16);
+        this->label1->Size = System::Drawing::Size(226, 16);
         this->label1->TabIndex = 2;
-        this->label1->Text = L"Nom Personnel";
+        this->label1->Text = L"Solde Regelement de la Commande";
         this->label1->Click += gcnew System::EventHandler(this, &ajoutercommande::label1_Click);
         // 
         // label2
@@ -68,9 +68,9 @@ namespace POO_JAG {
         this->label2->AutoSize = true;
         this->label2->Location = System::Drawing::Point(23, 63);
         this->label2->Name = L"label2";
-        this->label2->Size = System::Drawing::Size(118, 16);
+        this->label2->Size = System::Drawing::Size(218, 16);
         this->label2->TabIndex = 4;
-        this->label2->Text = L"Prenom Personnel";
+        this->label2->Text = L"Payement Moyen de la Commande";
         this->label2->Click += gcnew System::EventHandler(this, &ajoutercommande::label2_Click);
         // 
         // textBox2
@@ -85,9 +85,9 @@ namespace POO_JAG {
         this->label3->AutoSize = true;
         this->label3->Location = System::Drawing::Point(23, 119);
         this->label3->Name = L"label3";
-        this->label3->Size = System::Drawing::Size(176, 16);
+        this->label3->Size = System::Drawing::Size(199, 16);
         this->label3->TabIndex = 6;
-        this->label3->Text = L"Prise de poste du Personnel";
+        this->label3->Text = L"Date émission de la Commande";
         // 
         // textBox3
         // 
@@ -101,9 +101,9 @@ namespace POO_JAG {
         this->label4->AutoSize = true;
         this->label4->Location = System::Drawing::Point(23, 181);
         this->label4->Name = L"label4";
-        this->label4->Size = System::Drawing::Size(140, 16);
+        this->label4->Size = System::Drawing::Size(206, 16);
         this->label4->TabIndex = 8;
-        this->label4->Text = L"Adresse du Personnel";
+        this->label4->Text = L"Date Payement de la Commande";
         // 
         // textBox4
         // 
@@ -117,9 +117,9 @@ namespace POO_JAG {
         this->label5->AutoSize = true;
         this->label5->Location = System::Drawing::Point(23, 241);
         this->label5->Name = L"label5";
-        this->label5->Size = System::Drawing::Size(163, 16);
+        this->label5->Size = System::Drawing::Size(166, 16);
         this->label5->TabIndex = 10;
-        this->label5->Text = L"Code Postal du Personnel";
+        this->label5->Text = L"Date Livraison Commande";
         // 
         // textBox5
         // 
@@ -133,9 +133,9 @@ namespace POO_JAG {
         this->label6->AutoSize = true;
         this->label6->Location = System::Drawing::Point(23, 293);
         this->label6->Name = L"label6";
-        this->label6->Size = System::Drawing::Size(99, 16);
+        this->label6->Size = System::Drawing::Size(74, 16);
         this->label6->TabIndex = 12;
-        this->label6->Text = L"ID du Supérieur";
+        this->label6->Text = L"ID du Client";
         this->label6->Click += gcnew System::EventHandler(this, &ajoutercommande::label6_Click);
         // 
         // textBox6
@@ -167,7 +167,7 @@ namespace POO_JAG {
         this->MaximumSize = System::Drawing::Size(660, 400);
         this->MinimumSize = System::Drawing::Size(660, 400);
         this->Name = L"ajoutercommande";
-        this->Text = L"ajoutercommande";
+        this->Text = L"Ajouter une Commande";
         this->Load += gcnew System::EventHandler(this, &ajoutercommande::ajoutercommande_Load);
         this->ResumeLayout(false);
         this->PerformLayout();

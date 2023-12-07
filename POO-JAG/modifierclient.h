@@ -24,10 +24,10 @@ namespace POO_JAG {
     private: System::Windows::Forms::TextBox^ textBox3;
     private: System::Windows::Forms::Label^ label4;
     private: System::Windows::Forms::TextBox^ textBox4;
-    private: System::Windows::Forms::Label^ label5;
-    private: System::Windows::Forms::TextBox^ textBox5;
-    private: System::Windows::Forms::Label^ label6;
-    private: System::Windows::Forms::TextBox^ textBox6;
+
+
+
+
            System::Windows::Forms::Button^ button1;
 
            void InitializeComponent(void);

@@ -43,7 +43,7 @@ namespace POO_JAG {
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(234, 105);
         this->button1->TabIndex = 0;
-        this->button1->Text = L"Ajouter un personnel";
+        this->button1->Text = L"Ajouter le Personnel";
         this->button1->UseVisualStyleBackColor = false;
         // 
         // textBox1
@@ -167,7 +167,7 @@ namespace POO_JAG {
         this->MaximumSize = System::Drawing::Size(660, 400);
         this->MinimumSize = System::Drawing::Size(660, 400);
         this->Name = L"Ajouterpersonnel";
-        this->Text = L"Ajouterpersonnel";
+        this->Text = L"Ajouter un Personnel";
         this->Load += gcnew System::EventHandler(this, &Ajouterpersonnel::Ajouterpersonnel_Load);
         this->ResumeLayout(false);
         this->PerformLayout();

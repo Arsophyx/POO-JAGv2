@@ -32,7 +32,7 @@ namespace POO_JAG {
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(234, 105);
         this->button1->TabIndex = 0;
-        this->button1->Text = L"Supprimer un personnel";
+        this->button1->Text = L"Supprimer le Personnel";
         this->button1->UseVisualStyleBackColor = false;
         this->button1->Click += gcnew System::EventHandler(this, &supprimerpersonnel::button1_Click_1);
         // 
@@ -64,7 +64,7 @@ namespace POO_JAG {
         this->MaximumSize = System::Drawing::Size(660, 193);
         this->MinimumSize = System::Drawing::Size(660, 193);
         this->Name = L"supprimerpersonnel";
-        this->Text = L"supprimerpersonnel";
+        this->Text = L"Supprimer un Personnel";
         this->Load += gcnew System::EventHandler(this, &supprimerpersonnel::supprimerpersonnel_Load);
         this->ResumeLayout(false);
         this->PerformLayout();

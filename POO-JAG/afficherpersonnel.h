@@ -28,6 +28,8 @@ namespace POO_JAG {
     private: System::Windows::Forms::TextBox^ textBox5;
     private: System::Windows::Forms::Label^ label6;
     private: System::Windows::Forms::TextBox^ textBox6;
+    private: System::Windows::Forms::Label^ label7;
+    private: System::Windows::Forms::TextBox^ textBox7;
            System::Windows::Forms::Button^ button1;
 
            void InitializeComponent(void);
