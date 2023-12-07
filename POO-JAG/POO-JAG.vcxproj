@@ -181,6 +181,10 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Personnel.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="servicearticle.h" />
+    <ClInclude Include="serviceclient.h" />
+    <ClInclude Include="servicecommande.h" />
+    <ClInclude Include="serviceperso.h" />
     <ClInclude Include="supprimerarticle.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -228,6 +232,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="servicearticle.cpp" />
+    <ClCompile Include="serviceclient.cpp" />
+    <ClCompile Include="servicecommande.cpp" />
+    <ClCompile Include="serviceperso.cpp" />
     <ClCompile Include="supprimerarticle.cpp" />
     <ClCompile Include="supprimerclient.cpp" />
     <ClCompile Include="supprimercommande.cpp" />
