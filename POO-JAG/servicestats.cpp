@@ -3,7 +3,7 @@
 
 NS_Comp_Svc_Stats::servicestats::servicestats(void) {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
-	this->mapStats = gcnew NS_Comp_Map_Stats::statistiques();
+	this->mapStats = gcnew NS_Comp_Map_Stats::statistiques;
 }
 
 System::Data::DataSet^ NS_Comp_Svc_Stats::servicestats::afficherPanierMoyen(System::String^ dataTableName) {
@@ -28,7 +28,7 @@ System::Data::DataSet^ NS_Comp_Svc_Stats::servicestats::afficherArticleReapprovi
 System::Data::DataSet^ NS_Comp_Svc_Stats::servicestats::afficherMontantTotalAchats(System::String^ id_client, System::String^ dataTableName) {
 	System::String^ sql;
 	this->mapStats->setClient(id_client);
-	sql = this->mapStats->panierMoyen();
+	sql = this->mapStats->montantTotalAchats();
 	return this->oCad->getRows(sql, dataTableName);
 }
 
