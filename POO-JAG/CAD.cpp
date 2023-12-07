@@ -5,7 +5,7 @@
 
 NS_Comp_Data::CLcad::CLcad(void)
 {
-    this->sCnx = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True;Connect Timeout=30;Encrypt=False";
+    this->sCnx = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True;Connect Timeout=5;Encrypt=False";
 
     this->sSql = "Rien";
 
