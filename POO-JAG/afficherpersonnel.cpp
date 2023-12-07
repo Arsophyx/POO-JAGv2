@@ -32,23 +32,25 @@ namespace POO_JAG {
         this->textBox5 = (gcnew System::Windows::Forms::TextBox());
         this->label6 = (gcnew System::Windows::Forms::Label());
         this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+        this->label7 = (gcnew System::Windows::Forms::Label());
+        this->textBox7 = (gcnew System::Windows::Forms::TextBox());
         this->SuspendLayout();
         // 
         // button1
         // 
-        this->button1->BackColor = System::Drawing::Color::SeaGreen;
+        this->button1->BackColor = System::Drawing::Color::SkyBlue;
         this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
         this->button1->Location = System::Drawing::Point(370, 119);
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(234, 105);
         this->button1->TabIndex = 0;
-        this->button1->Text = L"Ajouter un personnel";
+        this->button1->Text = L"Afficher le(s) Personnel(s)";
         this->button1->UseVisualStyleBackColor = false;
         // 
         // textBox1
         // 
-        this->textBox1->Location = System::Drawing::Point(26, 29);
+        this->textBox1->Location = System::Drawing::Point(26, 86);
         this->textBox1->Name = L"textBox1";
         this->textBox1->Size = System::Drawing::Size(266, 22);
         this->textBox1->TabIndex = 1;
@@ -56,7 +58,7 @@ namespace POO_JAG {
         // label1
         // 
         this->label1->AutoSize = true;
-        this->label1->Location = System::Drawing::Point(23, 10);
+        this->label1->Location = System::Drawing::Point(23, 67);
         this->label1->Name = L"label1";
         this->label1->Size = System::Drawing::Size(100, 16);
         this->label1->TabIndex = 2;
@@ -66,7 +68,7 @@ namespace POO_JAG {
         // label2
         // 
         this->label2->AutoSize = true;
-        this->label2->Location = System::Drawing::Point(23, 63);
+        this->label2->Location = System::Drawing::Point(23, 120);
         this->label2->Name = L"label2";
         this->label2->Size = System::Drawing::Size(118, 16);
         this->label2->TabIndex = 4;
@@ -75,7 +77,7 @@ namespace POO_JAG {
         // 
         // textBox2
         // 
-        this->textBox2->Location = System::Drawing::Point(26, 82);
+        this->textBox2->Location = System::Drawing::Point(26, 139);
         this->textBox2->Name = L"textBox2";
         this->textBox2->Size = System::Drawing::Size(266, 22);
         this->textBox2->TabIndex = 3;
@@ -83,7 +85,7 @@ namespace POO_JAG {
         // label3
         // 
         this->label3->AutoSize = true;
-        this->label3->Location = System::Drawing::Point(23, 119);
+        this->label3->Location = System::Drawing::Point(23, 176);
         this->label3->Name = L"label3";
         this->label3->Size = System::Drawing::Size(176, 16);
         this->label3->TabIndex = 6;
@@ -91,7 +93,7 @@ namespace POO_JAG {
         // 
         // textBox3
         // 
-        this->textBox3->Location = System::Drawing::Point(26, 138);
+        this->textBox3->Location = System::Drawing::Point(26, 195);
         this->textBox3->Name = L"textBox3";
         this->textBox3->Size = System::Drawing::Size(266, 22);
         this->textBox3->TabIndex = 5;
@@ -99,7 +101,7 @@ namespace POO_JAG {
         // label4
         // 
         this->label4->AutoSize = true;
-        this->label4->Location = System::Drawing::Point(23, 181);
+        this->label4->Location = System::Drawing::Point(23, 238);
         this->label4->Name = L"label4";
         this->label4->Size = System::Drawing::Size(140, 16);
         this->label4->TabIndex = 8;
@@ -107,7 +109,7 @@ namespace POO_JAG {
         // 
         // textBox4
         // 
-        this->textBox4->Location = System::Drawing::Point(26, 200);
+        this->textBox4->Location = System::Drawing::Point(26, 257);
         this->textBox4->Name = L"textBox4";
         this->textBox4->Size = System::Drawing::Size(266, 22);
         this->textBox4->TabIndex = 7;
@@ -115,7 +117,7 @@ namespace POO_JAG {
         // label5
         // 
         this->label5->AutoSize = true;
-        this->label5->Location = System::Drawing::Point(23, 241);
+        this->label5->Location = System::Drawing::Point(23, 298);
         this->label5->Name = L"label5";
         this->label5->Size = System::Drawing::Size(163, 16);
         this->label5->TabIndex = 10;
@@ -123,7 +125,7 @@ namespace POO_JAG {
         // 
         // textBox5
         // 
-        this->textBox5->Location = System::Drawing::Point(26, 260);
+        this->textBox5->Location = System::Drawing::Point(26, 317);
         this->textBox5->Name = L"textBox5";
         this->textBox5->Size = System::Drawing::Size(266, 22);
         this->textBox5->TabIndex = 9;
@@ -131,7 +133,7 @@ namespace POO_JAG {
         // label6
         // 
         this->label6->AutoSize = true;
-        this->label6->Location = System::Drawing::Point(23, 293);
+        this->label6->Location = System::Drawing::Point(23, 350);
         this->label6->Name = L"label6";
         this->label6->Size = System::Drawing::Size(99, 16);
         this->label6->TabIndex = 12;
@@ -140,17 +142,35 @@ namespace POO_JAG {
         // 
         // textBox6
         // 
-        this->textBox6->Location = System::Drawing::Point(26, 312);
+        this->textBox6->Location = System::Drawing::Point(26, 369);
         this->textBox6->Name = L"textBox6";
         this->textBox6->Size = System::Drawing::Size(266, 22);
         this->textBox6->TabIndex = 11;
         this->textBox6->TextChanged += gcnew System::EventHandler(this, &afficherpersonnel::textBox6_TextChanged);
         // 
+        // label7
+        // 
+        this->label7->AutoSize = true;
+        this->label7->Location = System::Drawing::Point(23, 9);
+        this->label7->Name = L"label7";
+        this->label7->Size = System::Drawing::Size(102, 16);
+        this->label7->TabIndex = 14;
+        this->label7->Text = L"ID du Personnel";
+        // 
+        // textBox7
+        // 
+        this->textBox7->Location = System::Drawing::Point(26, 28);
+        this->textBox7->Name = L"textBox7";
+        this->textBox7->Size = System::Drawing::Size(266, 22);
+        this->textBox7->TabIndex = 13;
+        // 
         // afficherpersonnel
         // 
         this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-        this->ClientSize = System::Drawing::Size(642, 353);
+        this->ClientSize = System::Drawing::Size(642, 403);
+        this->Controls->Add(this->label7);
+        this->Controls->Add(this->textBox7);
         this->Controls->Add(this->label6);
         this->Controls->Add(this->textBox6);
         this->Controls->Add(this->label5);
@@ -164,10 +184,10 @@ namespace POO_JAG {
         this->Controls->Add(this->label1);
         this->Controls->Add(this->textBox1);
         this->Controls->Add(this->button1);
-        this->MaximumSize = System::Drawing::Size(660, 400);
-        this->MinimumSize = System::Drawing::Size(660, 400);
+        this->MaximumSize = System::Drawing::Size(660, 450);
+        this->MinimumSize = System::Drawing::Size(660, 450);
         this->Name = L"afficherpersonnel";
-        this->Text = L"afficherpersonnel";
+        this->Text = L"Afficher un Personnel";
         this->Load += gcnew System::EventHandler(this, &afficherpersonnel::afficherpersonnel_Load);
         this->ResumeLayout(false);
         this->PerformLayout();

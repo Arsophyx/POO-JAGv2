@@ -145,7 +145,7 @@ namespace POO_JAG {
         this->MaximumSize = System::Drawing::Size(660, 350);
         this->MinimumSize = System::Drawing::Size(660, 350);
         this->Name = L"ajouterarticle";
-        this->Text = L"ajouterarticle";
+        this->Text = L"Ajouter un Article";
         this->Load += gcnew System::EventHandler(this, &ajouterarticle::ajouterarticle_Load);
         this->ResumeLayout(false);
         this->PerformLayout();

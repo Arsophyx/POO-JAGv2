@@ -28,8 +28,6 @@ namespace POO_JAG {
         this->textBox3 = (gcnew System::Windows::Forms::TextBox());
         this->label4 = (gcnew System::Windows::Forms::Label());
         this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-        this->label5 = (gcnew System::Windows::Forms::Label());
-        this->textBox5 = (gcnew System::Windows::Forms::TextBox());
         this->SuspendLayout();
         // 
         // button1
@@ -37,7 +35,7 @@ namespace POO_JAG {
         this->button1->BackColor = System::Drawing::Color::Gold;
         this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-        this->button1->Location = System::Drawing::Point(367, 95);
+        this->button1->Location = System::Drawing::Point(363, 73);
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(234, 105);
         this->button1->TabIndex = 0;
@@ -110,29 +108,12 @@ namespace POO_JAG {
         this->textBox4->Size = System::Drawing::Size(266, 22);
         this->textBox4->TabIndex = 7;
         // 
-        // label5
-        // 
-        this->label5->AutoSize = true;
-        this->label5->Location = System::Drawing::Point(23, 241);
-        this->label5->Name = L"label5";
-        this->label5->Size = System::Drawing::Size(154, 16);
-        this->label5->TabIndex = 10;
-        this->label5->Text = L"AnniversairePA du Client";
-        // 
-        // textBox5
-        // 
-        this->textBox5->Location = System::Drawing::Point(26, 260);
-        this->textBox5->Name = L"textBox5";
-        this->textBox5->Size = System::Drawing::Size(266, 22);
-        this->textBox5->TabIndex = 9;
-        // 
         // modifierclient
         // 
         this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-        this->ClientSize = System::Drawing::Size(642, 303);
-        this->Controls->Add(this->label5);
-        this->Controls->Add(this->textBox5);
+        this->BackColor = System::Drawing::Color::White;
+        this->ClientSize = System::Drawing::Size(642, 253);
         this->Controls->Add(this->label4);
         this->Controls->Add(this->textBox4);
         this->Controls->Add(this->label3);
@@ -142,10 +123,10 @@ namespace POO_JAG {
         this->Controls->Add(this->label1);
         this->Controls->Add(this->textBox1);
         this->Controls->Add(this->button1);
-        this->MaximumSize = System::Drawing::Size(660, 350);
-        this->MinimumSize = System::Drawing::Size(660, 350);
+        this->MaximumSize = System::Drawing::Size(660, 300);
+        this->MinimumSize = System::Drawing::Size(660, 300);
         this->Name = L"modifierclient";
-        this->Text = L"modifierclient";
+        this->Text = L"Modifier un Client";
         this->Load += gcnew System::EventHandler(this, &modifierclient::modifierclient_Load);
         this->ResumeLayout(false);
         this->PerformLayout();
