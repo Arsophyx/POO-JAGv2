@@ -43,6 +43,7 @@ namespace POO_JAG {
         this->button1->TabIndex = 0;
         this->button1->Text = L"Ajouter l\'Article";
         this->button1->UseVisualStyleBackColor = false;
+        this->button1->Click += gcnew System::EventHandler(this, &ajouterarticle::button1_Click_1);
         // 
         // textBox1
         // 
@@ -50,6 +51,7 @@ namespace POO_JAG {
         this->textBox1->Name = L"textBox1";
         this->textBox1->Size = System::Drawing::Size(266, 22);
         this->textBox1->TabIndex = 1;
+        this->textBox1->TextChanged += gcnew System::EventHandler(this, &ajouterarticle::textBox1_TextChanged);
         // 
         // label1
         // 
@@ -125,6 +127,7 @@ namespace POO_JAG {
         this->textBox5->Name = L"textBox5";
         this->textBox5->Size = System::Drawing::Size(266, 22);
         this->textBox5->TabIndex = 9;
+        this->textBox5->TextChanged += gcnew System::EventHandler(this, &ajouterarticle::textBox5_TextChanged);
         // 
         // ajouterarticle
         // 

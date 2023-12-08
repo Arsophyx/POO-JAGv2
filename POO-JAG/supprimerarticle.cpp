@@ -39,6 +39,7 @@ namespace POO_JAG {
         this->textBox1->Name = L"textBox1";
         this->textBox1->Size = System::Drawing::Size(266, 22);
         this->textBox1->TabIndex = 4;
+        this->textBox1->TextChanged += gcnew System::EventHandler(this, &supprimerarticle::textBox1_TextChanged);
         // 
         // button1
         // 
@@ -51,6 +52,7 @@ namespace POO_JAG {
         this->button1->TabIndex = 3;
         this->button1->Text = L"Supprimer l\'Article";
         this->button1->UseVisualStyleBackColor = false;
+        this->button1->Click += gcnew System::EventHandler(this, &supprimerarticle::button1_Click_1);
         // 
         // supprimerarticle
         // 
