@@ -4,6 +4,9 @@
 
 
 
+System::String^ NS_Comp_Mappage::ville::SelectId(void) {
+	return "SELECT [id_ville] FROM [dbo].[ville] WHERE [nom_ville] LIKE '" + this->nom_ville + "'";
+}
 
 void NS_Comp_Mappage::ville::setid_ville(int^ id_ville)
 {

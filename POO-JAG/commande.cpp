@@ -48,9 +48,7 @@ void NS_Comp_Mappage::commande::setdatepayement_commande(String^ datepayement_co
 void NS_Comp_Mappage::commande::setdatelivraison_commande(String^ datelivraison_commande) {
 	this->datelivraison_commande = datelivraison_commande;
 }
-void NS_Comp_Mappage::commande::setptrid_client(client^ ptrid_client) {
-	this->ptrid_client = ptrid_client;
-}
+
 int^ NS_Comp_Mappage::commande::getid_commande(void) {
 	return this->id_commande;
 }
@@ -77,8 +75,4 @@ String^ NS_Comp_Mappage::commande::getdatemission_commande(void) {
 
 String^ NS_Comp_Mappage::commande::getdatelivraison_commande(void) {
 	return this->datelivraison_commande;
-}
-
-NS_Comp_Mappage::client^ NS_Comp_Mappage::commande::getptrid_client(void) {
-	return this->ptrid_client;
 }

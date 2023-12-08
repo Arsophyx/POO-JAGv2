@@ -16,6 +16,8 @@ namespace NS_Comp_Mappage {
 		String^ modifier(void);
 		String^ supprimer(void);
 		String^ afficher(void);
+		String^ selectId(void);
+		String^ afficherTable(void);
 		void setid_client(int^);
 		void setnom_client(String^ nom_client);
 		void setprenom_client(String^ prenom_client);

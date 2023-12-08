@@ -16,6 +16,7 @@
 #include "ajouterarticle.h"
 #include "afficherarticle.h"
 #include "servicestats.h"
+#include "serviceclient.h"
 
 namespace POO {
 
@@ -162,6 +163,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
     private: System::Data::DataSet^ oDs;
     private: NS_Comp_Svc_Stats::servicestats^ oSvcStats;
+    private: NS_Comp_Svc_client::serviceclient^ oSvcClient;
         
 
 
@@ -283,7 +285,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage1->Location = System::Drawing::Point(4, 29);
                this->tabPage1->Name = L"tabPage1";
                this->tabPage1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-               this->tabPage1->Size = System::Drawing::Size(1324, 560);
+               this->tabPage1->Size = System::Drawing::Size(992, 459);
                this->tabPage1->TabIndex = 0;
                this->tabPage1->Text = L"Base de Données";
                this->tabPage1->Visible = false;
@@ -327,6 +329,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->button18->TabIndex = 2;
                this->button18->Text = L"Afficher les clients";
                this->button18->UseVisualStyleBackColor = false;
+               this->button18->Click += gcnew System::EventHandler(this, &Form1::button18_Click);
                // 
                // button1
                // 
@@ -366,7 +369,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage2->Controls->Add(this->dataGridView3);
                this->tabPage2->Location = System::Drawing::Point(4, 29);
                this->tabPage2->Name = L"tabPage2";
-               this->tabPage2->Size = System::Drawing::Size(1324, 560);
+               this->tabPage2->Size = System::Drawing::Size(992, 459);
                this->tabPage2->TabIndex = 1;
                this->tabPage2->Text = L"Personnel";
                this->tabPage2->Visible = false;
@@ -453,7 +456,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage3->Controls->Add(this->dataGridView4);
                this->tabPage3->Location = System::Drawing::Point(4, 29);
                this->tabPage3->Name = L"tabPage3";
-               this->tabPage3->Size = System::Drawing::Size(1324, 560);
+               this->tabPage3->Size = System::Drawing::Size(992, 459);
                this->tabPage3->TabIndex = 2;
                this->tabPage3->Text = L"Clients";
                this->tabPage3->Visible = false;
@@ -539,7 +542,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage4->Controls->Add(this->dataGridView5);
                this->tabPage4->Location = System::Drawing::Point(4, 29);
                this->tabPage4->Name = L"tabPage4";
-               this->tabPage4->Size = System::Drawing::Size(1324, 560);
+               this->tabPage4->Size = System::Drawing::Size(992, 459);
                this->tabPage4->TabIndex = 3;
                this->tabPage4->Text = L"Commandes";
                this->tabPage4->Visible = false;
@@ -627,7 +630,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage5->Controls->Add(this->dataGridView6);
                this->tabPage5->Location = System::Drawing::Point(4, 29);
                this->tabPage5->Name = L"tabPage5";
-               this->tabPage5->Size = System::Drawing::Size(1324, 560);
+               this->tabPage5->Size = System::Drawing::Size(992, 459);
                this->tabPage5->TabIndex = 4;
                this->tabPage5->Text = L"Stock";
                this->tabPage5->Visible = false;
@@ -1036,6 +1039,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
         System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
             oSvcStats = gcnew NS_Comp_Svc_Stats::servicestats();
+            oSvcClient = gcnew NS_Comp_Svc_client::serviceclient();
         }
 
         System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1295,6 +1299,12 @@ private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ 
     this->oDs = this->oSvcStats->afficherMontantTotalAchats(textBox2->Text, "Montant total des achats");
     this->dataGridView7->DataSource = this->oDs;
     this->dataGridView7->DataMember = "Montant total des achats";
+}
+private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView2->Refresh();
+    this->oDs = this->oSvcClient->affichertable("Clients");
+    this->dataGridView2->DataSource = this->oDs;
+    this->dataGridView2->DataMember = "Clients";
 }
 };
 }

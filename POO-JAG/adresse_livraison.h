@@ -6,13 +6,16 @@ namespace NS_Comp_Mappage {
 
     ref class adresse_livraison  {
     private:
-        adresse^ ptrid_adresse;
-        client^ ptrid_client;
+        int^ ptrid_adresse;
+        int^ ptrid_client;
 
     public:
-        void setptrid_client(client^);
-        client^ getptrid_client(void);
-        void setptrid_adresse(adresse^);
-        adresse^ getptrid_adresse(void);
+        System::String^ ajout(void);
+        System::String^ selectIdAdresse(void);
+        System::String^ supprimer(void);
+        void setptrid_client(int^);
+        int^ getptrid_client(void);
+        void setptrid_adresse(int^);
+        int^ getptrid_adresse(void);
     };
 }

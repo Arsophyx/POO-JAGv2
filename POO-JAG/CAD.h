@@ -13,5 +13,6 @@ namespace NS_Comp_Data{
         CLcad(void);
         System::Data::DataSet^ getRows(System::String^, System::String^);
         void actionRows(System::String^);
+        int actionRowsID(System::String^ rq_sql);
     };
 }
