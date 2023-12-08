@@ -5,12 +5,12 @@ namespace NS_Comp_Mappage {
 	ref class article{
 	private:
 		System::String^ sSql;
-		int^ id_article;
+		System::String^ id_article;
 		System::String^ nom_article;
-		float^ ht_article;
-		float^ tva_article;
-		int^ seuilreaprovissionement_article;
-		int^ stock_article;
+		System::String^ ht_article;
+		System::String^ tva_article;
+		System::String^ seuilreaprovisionnement_article;
+		System::String^ stock_article;
 
 	public:
 		
@@ -19,18 +19,18 @@ namespace NS_Comp_Mappage {
 		System::String^ supprimer_article(void);
 		System::String^ afficher_article(void);
 
-		void setid_article(int^);
+		void setid_article(System::String^);
 		void setnom_article(System::String^);
-		void setht_article(float^);
-		void settva_article(float^);
-		void setseuilreaprovissionement_article(int^);
-		void setstock_article(int^);
+		void setht_article(System::String^);
+		void settva_article(System::String^);
+		void setseuilreaprovisionnement_article(System::String^);
+		void setstock_article(System::String^);
 
-		int^ getid_article(void);
+		System::String^ getid_article(void);
 		System::String^ getnom_article(void);
-		float^ getht_article(void);
-		float^ gettva_article(void);
-		int^ getseuilreaprovissionement_article(void);
-		int^ getstock_article(void);
+		System::String^ getht_article(void);
+		System::String^ gettva_article(void);
+		System::String^ getseuilreaprovisionnement_article(void);
+		System::String^ getstock_article(void);
 	};
 }

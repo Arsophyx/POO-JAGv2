@@ -132,7 +132,7 @@ namespace POO_JAG {
         // 
         // button1
         // 
-        this->button1->BackColor = System::Drawing::Color::Gold;
+        this->button1->BackColor = System::Drawing::Color::SkyBlue;
         this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
         this->button1->Location = System::Drawing::Point(378, 123);

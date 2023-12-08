@@ -151,9 +151,13 @@ private: System::Windows::Forms::Button^ button27;
 private: System::Windows::Forms::Button^ button26;
 private: System::Windows::Forms::Button^ button25;
 private: System::Windows::Forms::Label^ label2;
+
 private: System::Windows::Forms::TextBox^ textBox2;
 
-
+public:
+    System::Windows::Forms::DataGridView^ GetDataGridView() {
+        return dataGridView1;
+    }
 
 
 
@@ -242,7 +246,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::ActiveCaption;
                this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
                this->dataGridView1->Location = System::Drawing::Point(16, 54);
-               this->dataGridView1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
                this->dataGridView1->MaximumSize = System::Drawing::Size(899, 1329);
                this->dataGridView1->MinimumSize = System::Drawing::Size(899, 0);
                this->dataGridView1->Name = L"dataGridView1";
@@ -264,7 +268,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                    static_cast<System::Byte>(0)));
                this->tabControl1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
                this->tabControl1->Location = System::Drawing::Point(0, 0);
-               this->tabControl1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->tabControl1->Margin = System::Windows::Forms::Padding(4);
                this->tabControl1->Multiline = true;
                this->tabControl1->Name = L"tabControl1";
                this->tabControl1->SelectedIndex = 0;
@@ -283,7 +287,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage1->Controls->Add(this->dataGridView2);
                this->tabPage1->ForeColor = System::Drawing::SystemColors::ControlText;
                this->tabPage1->Location = System::Drawing::Point(4, 34);
-               this->tabPage1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->tabPage1->Margin = System::Windows::Forms::Padding(4);
                this->tabPage1->Name = L"tabPage1";
                this->tabPage1->RightToLeft = System::Windows::Forms::RightToLeft::No;
                this->tabPage1->Size = System::Drawing::Size(1323, 558);
@@ -368,7 +372,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage2->Controls->Add(this->button2);
                this->tabPage2->Controls->Add(this->dataGridView3);
                this->tabPage2->Location = System::Drawing::Point(4, 34);
-               this->tabPage2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->tabPage2->Margin = System::Windows::Forms::Padding(4);
                this->tabPage2->Name = L"tabPage2";
                this->tabPage2->Size = System::Drawing::Size(1323, 558);
                this->tabPage2->TabIndex = 1;
@@ -456,7 +460,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage3->Controls->Add(this->button9);
                this->tabPage3->Controls->Add(this->dataGridView4);
                this->tabPage3->Location = System::Drawing::Point(4, 34);
-               this->tabPage3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->tabPage3->Margin = System::Windows::Forms::Padding(4);
                this->tabPage3->Name = L"tabPage3";
                this->tabPage3->Size = System::Drawing::Size(1323, 558);
                this->tabPage3->TabIndex = 2;
@@ -543,7 +547,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage4->Controls->Add(this->button14);
                this->tabPage4->Controls->Add(this->dataGridView5);
                this->tabPage4->Location = System::Drawing::Point(4, 34);
-               this->tabPage4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->tabPage4->Margin = System::Windows::Forms::Padding(4);
                this->tabPage4->Name = L"tabPage4";
                this->tabPage4->Size = System::Drawing::Size(1323, 558);
                this->tabPage4->TabIndex = 3;
@@ -632,7 +636,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage5->Controls->Add(this->button17);
                this->tabPage5->Controls->Add(this->dataGridView6);
                this->tabPage5->Location = System::Drawing::Point(4, 34);
-               this->tabPage5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->tabPage5->Margin = System::Windows::Forms::Padding(4);
                this->tabPage5->Name = L"tabPage5";
                this->tabPage5->Size = System::Drawing::Size(1323, 558);
                this->tabPage5->TabIndex = 4;
@@ -729,7 +733,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->tabPage6->Controls->Add(this->button21);
                this->tabPage6->Controls->Add(this->dataGridView7);
                this->tabPage6->Location = System::Drawing::Point(4, 34);
-               this->tabPage6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->tabPage6->Margin = System::Windows::Forms::Padding(4);
                this->tabPage6->Name = L"tabPage6";
                this->tabPage6->Size = System::Drawing::Size(1323, 558);
                this->tabPage6->TabIndex = 5;
@@ -928,7 +932,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
                this->ClientSize = System::Drawing::Size(1331, 596);
                this->Controls->Add(this->tabControl1);
                this->Controls->Add(this->dataGridView1);
-               this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+               this->Margin = System::Windows::Forms::Padding(4);
                this->MaximumSize = System::Drawing::Size(1349, 643);
                this->MinimumSize = System::Drawing::Size(1349, 643);
                this->Name = L"Form1";
