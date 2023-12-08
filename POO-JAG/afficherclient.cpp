@@ -52,7 +52,7 @@ namespace POO_JAG {
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(176, 85);
         this->button1->TabIndex = 9;
-        this->button1->Text = L"Modifier le(s) Client(s)";
+        this->button1->Text = L"Afficher le(s) Client(s)";
         this->button1->UseVisualStyleBackColor = false;
         this->button1->Click += gcnew System::EventHandler(this, &afficherclient::button1_Click_1);
         // 

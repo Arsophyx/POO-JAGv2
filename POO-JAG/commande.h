@@ -17,7 +17,6 @@ namespace NS_Comp_Mappage {
 		String^ datepayement_commande;
 		String^ datelivraison_commande;
 
-
 	public:
 		String^ ajouter(void);
 		String^ modifier(void);
@@ -30,7 +29,7 @@ namespace NS_Comp_Mappage {
 		void setmoyenpayement_commande(String^);
 		void setdateemission_commande(String^);
 		void setdatepayement_commande(String^);
-		void setdatelivraison_commande(String^);
+		void setdatelivraison_commande(String^);;
 		int^ getid_commande(void);
 		int^ getsoldereglement_commande(void);
 		client^ getptrid_client(void);

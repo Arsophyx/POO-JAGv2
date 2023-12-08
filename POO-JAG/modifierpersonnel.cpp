@@ -47,6 +47,7 @@ namespace POO_JAG {
         this->button1->TabIndex = 0;
         this->button1->Text = L"Modifer le Personnel";
         this->button1->UseVisualStyleBackColor = false;
+        this->button1->Click += gcnew System::EventHandler(this, &modifierpersonnel::button1_Click_1);
         // 
         // textBox1
         // 
@@ -54,6 +55,7 @@ namespace POO_JAG {
         this->textBox1->Name = L"textBox1";
         this->textBox1->Size = System::Drawing::Size(266, 22);
         this->textBox1->TabIndex = 1;
+        this->textBox1->TextChanged += gcnew System::EventHandler(this, &modifierpersonnel::textBox1_TextChanged);
         // 
         // label1
         // 
@@ -97,6 +99,7 @@ namespace POO_JAG {
         this->textBox3->Name = L"textBox3";
         this->textBox3->Size = System::Drawing::Size(266, 22);
         this->textBox3->TabIndex = 5;
+        this->textBox3->TextChanged += gcnew System::EventHandler(this, &modifierpersonnel::textBox3_TextChanged);
         // 
         // label4
         // 
@@ -113,6 +116,7 @@ namespace POO_JAG {
         this->textBox4->Name = L"textBox4";
         this->textBox4->Size = System::Drawing::Size(266, 22);
         this->textBox4->TabIndex = 7;
+        this->textBox4->TextChanged += gcnew System::EventHandler(this, &modifierpersonnel::textBox4_TextChanged);
         // 
         // label5
         // 
@@ -129,6 +133,7 @@ namespace POO_JAG {
         this->textBox5->Name = L"textBox5";
         this->textBox5->Size = System::Drawing::Size(266, 22);
         this->textBox5->TabIndex = 9;
+        this->textBox5->TextChanged += gcnew System::EventHandler(this, &modifierpersonnel::textBox5_TextChanged);
         // 
         // label6
         // 

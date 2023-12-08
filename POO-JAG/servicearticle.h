@@ -9,9 +9,9 @@ namespace NS_Comp_Svc_article {
 		NS_Comp_Mappage::article^ article;
 	public:
 		servicearticle(void);
-		void creerarticle(System::String^ nom_article, float^ ht_article, float^ tva_article, int^ seuilReaprovissionnement, int^ stock_article);
-		void modifierarticle(System::String^ nom_article, float^ ht_article, float^ tva_article, int^ seuilReaprovissionnement, int^ stock_article);
-		void supprimerarticle(System::String^ nom_article, float^ ht_article, float^ tva_article, int^ seuilReaprovissionnement, int^ stock_article);
+		void creerarticle(System::String^ nom_article, System::String^ ht_article, System::String^ tva_article, System::String^ seuilreaprovisionnement_article, System::String^ stock_article);
+		void modifierarticle(System::String^ id_article, System::String^ nom_article, System::String^ ht_article, System::String^ tva_article, System::String^ seuilreaprovisionnement_article, System::String^ stock_article);
+		void supprimerarticle(System::String^ id_article);
 		System::Data::DataSet^ afficherarticle(System::String^);
 	};
 
