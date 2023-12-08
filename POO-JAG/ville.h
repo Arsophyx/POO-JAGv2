@@ -11,6 +11,7 @@ namespace NS_Comp_Mappage {
 		System::String^ codepostal_ville;
 
 	public:
+		System::String^ SelectId(void);
 
 		void setid_ville(int^);
 		void setnom_ville(System::String^);

@@ -1,4 +1,5 @@
 #pragma once
+#include "serviceclient.h"
 
 namespace POO_JAG {
 
@@ -25,7 +26,15 @@ namespace POO_JAG {
     private: System::Windows::Forms::Label^ label4;
     private: System::Windows::Forms::TextBox^ textBox4;
 
-
+    private: NS_Comp_Svc_client::serviceclient^ oSvcClient;
+    private: System::Windows::Forms::TextBox^ textBox5;
+    private: System::Windows::Forms::TextBox^ textBox6;
+    private: System::Windows::Forms::TextBox^ textBox7;
+    private: System::Windows::Forms::TextBox^ textBox8;
+    private: System::Windows::Forms::Label^ label5;
+    private: System::Windows::Forms::Label^ label6;
+    private: System::Windows::Forms::Label^ label7;
+    private: System::Windows::Forms::Label^ label8;
 
 
            System::Windows::Forms::Button^ button1;
@@ -36,12 +45,18 @@ namespace POO_JAG {
     private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void modifierclient_Load(System::Object^ sender, System::EventArgs^ e) {
+        oSvcClient = gcnew NS_Comp_Svc_client::serviceclient();
     }
     private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        oSvcClient->modifierclient(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text, textBox7->Text, textBox8->Text);
     }
     };
 }

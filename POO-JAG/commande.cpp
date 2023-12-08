@@ -48,6 +48,7 @@ void NS_Comp_Mappage::commande::setdatepayement_commande(String^ datepayement_co
 void NS_Comp_Mappage::commande::setdatelivraison_commande(String^ datelivraison_commande) {
 	this->datelivraison_commande = datelivraison_commande;
 }
+
 int^ NS_Comp_Mappage::commande::getid_commande(void) {
 	return this->id_commande;
 }
