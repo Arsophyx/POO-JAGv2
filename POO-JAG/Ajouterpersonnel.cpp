@@ -45,6 +45,7 @@ namespace POO_JAG {
         this->button1->TabIndex = 0;
         this->button1->Text = L"Ajouter le Personnel";
         this->button1->UseVisualStyleBackColor = false;
+        this->button1->Click += gcnew System::EventHandler(this, &Ajouterpersonnel::button1_Click_1);
         // 
         // textBox1
         // 

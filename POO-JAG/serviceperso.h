@@ -9,10 +9,10 @@ namespace NS_Comp_Svc_Perso {
 		NS_Comp_Mappage::personnel^ perso;
 	public :
 		serviceperso(void);
-		void creerPersonnel(System::String^ nom_personnel, System::String^ prenom_personnel, System::String^ priseposte_personnel, System::String^ adresse_personnel, System::String^ codepostal);
-		void modifierPersonnel(System::String^ nom_personnel, System::String^ prenom_personnel, System::String^ priseposte_personnel, System::String^ adresse_personnel, System::String^ codepostal);
-		void supprimerPersonnel(System::String^ nom_personnel, System::String^ prenom_personnel, System::String^ priseposte_personnel, System::String^ adresse_personnel, System::String^ codepostal);
-		System::Data::DataSet^ afficherpersonnel(System::String^ );
+		void creerPersonnel(System::String^ nom_personnel, System::String^ prenom_personnel, System::String^ priseposte_personnel, System::String^ adresse_personnel, System::String^ codepostal_personnel, System::String^ id_superieur);
+		void modifierPersonnel(System::String^ id_personnel, System::String^ nom_personnel, System::String^ prenom_personnel, System::String^ priseposte_personnel, System::String^ adresse_personnel, System::String^ codepostal_personnel, System::String^ id_superieur);
+		void supprimerPersonnel(System::String^ id_personnel);
+		void afficherpersonnel(System::String^ id_personnel, System::String^ nom_personnel, System::String^ prenom_personnel, System::String^ priseposte_personnel, System::String^ adresse_personnel, System::String^ codepostal_personnel, System::String^ id_superieur);
 	};
 
 }
