@@ -1,5 +1,5 @@
 #pragma once
-
+#include "servicearticle.h"
 namespace POO_JAG {
 
     using namespace System;
@@ -26,7 +26,7 @@ namespace POO_JAG {
     private: System::Windows::Forms::TextBox^ textBox4;
     private: System::Windows::Forms::Label^ label5;
     private: System::Windows::Forms::TextBox^ textBox5;
-
+    private: NS_Comp_Svc_article::servicearticle^ oSvcarticle;
 
            System::Windows::Forms::Button^ button1;
 
@@ -36,12 +36,21 @@ namespace POO_JAG {
     private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void ajouterarticle_Load(System::Object^ sender, System::EventArgs^ e) {
+        this->oSvcarticle = gcnew NS_Comp_Svc_article::servicearticle();
     }
     private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+        
+    }
+    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        this->oSvcarticle->creerarticle(this->textBox1->Text, this->textBox2->Text, this->textBox3->Text, this->textBox4->Text, this->textBox5->Text);
     }
     };
 }

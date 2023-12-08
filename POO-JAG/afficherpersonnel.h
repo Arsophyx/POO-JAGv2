@@ -1,5 +1,6 @@
 #pragma once
-#include "serviceperso.h"
+
+
 
 namespace POO_JAG {
 
@@ -32,7 +33,7 @@ namespace POO_JAG {
     private: System::Windows::Forms::Label^ label7;
     private: System::Windows::Forms::TextBox^ textBox7;
            System::Windows::Forms::Button^ button1;
-    private: NS_Comp_Svc_Perso::serviceperso^ oSvcperso;
+   
 
            void InitializeComponent(void);
            System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
@@ -40,7 +41,7 @@ namespace POO_JAG {
     private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void afficherpersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
-        this->oSvcperso = gcnew NS_Comp_Svc_Perso::serviceperso();
+       
     }
     private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
     }
@@ -49,6 +50,7 @@ namespace POO_JAG {
     private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+       
     }
     };
 }

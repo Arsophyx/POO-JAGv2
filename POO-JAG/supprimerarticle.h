@@ -1,5 +1,5 @@
 #pragma once
-
+#include "servicearticle.h"
 namespace POO_JAG {
 
     using namespace System;
@@ -20,7 +20,7 @@ namespace POO_JAG {
 
     private:
         System::ComponentModel::Container^ components;
-
+    private: NS_Comp_Svc_article::servicearticle^ oSvcarticle;
 
 
 
@@ -43,12 +43,18 @@ namespace POO_JAG {
     private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void supprimerarticle_Load(System::Object^ sender, System::EventArgs^ e) {
+        this->oSvcarticle = gcnew NS_Comp_Svc_article::servicearticle();
     }
     private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        this->oSvcarticle->supprimerarticle(this->textBox1->Text);
     }
     };
 }
