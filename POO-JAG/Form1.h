@@ -16,6 +16,7 @@
 #include "ajouterarticle.h"
 #include "afficherarticle.h"
 #include "servicestats.h"
+#include "serviceclient.h"
 
 namespace POO {
 
@@ -166,6 +167,7 @@ public:
 
     private: System::Data::DataSet^ oDs;
     private: NS_Comp_Svc_Stats::servicestats^ oSvcStats;
+    private: NS_Comp_Svc_client::serviceclient^ oSvcClient;
         
 
 
@@ -334,6 +336,7 @@ public:
                this->button18->TabIndex = 2;
                this->button18->Text = L"Afficher les clients";
                this->button18->UseVisualStyleBackColor = false;
+               this->button18->Click += gcnew System::EventHandler(this, &Form1::button18_Click);
                // 
                // button1
                // 
@@ -1047,6 +1050,7 @@ public:
 
         System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
             oSvcStats = gcnew NS_Comp_Svc_Stats::servicestats();
+            oSvcClient = gcnew NS_Comp_Svc_client::serviceclient();
         }
 
         System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1306,6 +1310,12 @@ private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ 
     this->oDs = this->oSvcStats->afficherMontantTotalAchats(textBox2->Text, "Montant total des achats");
     this->dataGridView7->DataSource = this->oDs;
     this->dataGridView7->DataMember = "Montant total des achats";
+}
+private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView2->Refresh();
+    this->oDs = this->oSvcClient->affichertable("Clients");
+    this->dataGridView2->DataSource = this->oDs;
+    this->dataGridView2->DataMember = "Clients";
 }
 };
 }

@@ -5,7 +5,7 @@
 
 NS_Comp_Data::CLcad::CLcad(void)
 {
-    this->sCnx = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True;Connect Timeout=5;Encrypt=False";
+    this->sCnx = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
     this->sSql = "Rien";
 
@@ -34,4 +34,14 @@ void NS_Comp_Data::CLcad::actionRows(System::String^ sSql)
     this->oCnx->Open();
     this->oCmd->ExecuteNonQuery();
     this->oCnx->Close();
+}
+
+int NS_Comp_Data::CLcad::actionRowsID(System::String^ sSql){
+    int id;
+    this->sSql = sSql;
+    this->oCmd->CommandText = this->sSql;
+    this->oCnx->Open();
+    id = System::Convert::ToInt32(this->oCmd->ExecuteScalar());
+    this->oCnx->Close();
+    return id;
 }

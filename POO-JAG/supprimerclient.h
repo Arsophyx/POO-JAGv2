@@ -1,4 +1,5 @@
 #pragma once
+#include "serviceclient.h"
 
 namespace POO_JAG {
 
@@ -19,7 +20,7 @@ namespace POO_JAG {
     private: System::Windows::Forms::TextBox^ textBox1;
     private: System::Windows::Forms::Label^ label1;
 
-
+    private: NS_Comp_Svc_client::serviceclient^ oSvcClient;
 
 
 
@@ -36,6 +37,7 @@ namespace POO_JAG {
     private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void supprimerclient_Load(System::Object^ sender, System::EventArgs^ e) {
+        oSvcClient = gcnew NS_Comp_Svc_client::serviceclient();
     }
     private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
     }
@@ -44,6 +46,9 @@ namespace POO_JAG {
     private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        oSvcClient->supprimerclient(textBox1->Text);
+    }
+    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     };
 }

@@ -6,13 +6,17 @@ namespace NS_Comp_Mappage {
 	private:
 		int^ id_adresse;
 		String^ nom_adresse;
-		ville^ ptrid_ville;
+		int^ ptrid_ville;
 	public:
+		System::String^ selectID(void);
+		System::String^ ajoutAdresse(void);
+		System::String^ supprimer(void);
+		System::String^ modifier(void);
 		void setid_adresse(int^);
 		void setnom_adresse(String^);
-		void setptrid_ville(ville^);
+		void setptrid_ville(int^);
 		int^ getid_adresse(void);
 		String^ getnom_adresse(void);
-		ville^ getptrid_ville(void);
+		int^ getptrid_ville(void);
 	};
 }
