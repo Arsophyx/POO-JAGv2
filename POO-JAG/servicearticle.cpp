@@ -38,8 +38,8 @@ void NS_Comp_Svc_article::servicearticle::supprimerarticle(System::String^ id_ar
 	this->oCad->actionRows(sql);
 
 }
-System::Data::DataSet^ NS_Comp_Svc_article::servicearticle::afficherarticle(System::String^ datatablename) {
+System::Data::DataSet^ NS_Comp_Svc_article::servicearticle::afficherallarticle(System::String^ datatablename) {
 	System::String^ sql;
-	sql = this->article->afficher_article();
+	sql = this->article->afficherallarticle();
 	return this->oCad->getRows(sql, datatablename);
 }

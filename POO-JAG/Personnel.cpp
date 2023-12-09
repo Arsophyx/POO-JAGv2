@@ -21,7 +21,11 @@ System::String^ NS_Comp_Mappage::personnel::supprimer_personnel(void)
 
 System::String^ NS_Comp_Mappage::personnel::afficher_personnel(void)
 {
-	return "SELECT [id_personnel], [nom_personnel], [prenom_personnel], [priseposte_personnel], [adresse_personnel], [codepostal_personnel], [id_superieur] FROM [dbo].[personnel];";
+	return "SELECT * FROM [dbo].[personnel] WHERE(id_personnel IS NOT NULL AND id_personnel LIKE '%" + this->id_personnel + "%') OR ""(nom_personnel IS NOT NULL AND nom_personnel LIKE '%" + this->nom_personnel + "%') OR ""(prenom_personnel IS NOT NULL AND prenom_personnel LIKE '%" + this->prenom_personnel + "%') OR ""(priseposte_personnel IS NOT NULL AND priseposte_personnel LIKE '%" + this->priseposte_personnel + "%') OR ""(adresse_personnel IS NOT NULL AND adresse_personnel LIKE '%" + this->adresse_personnel + "%') OR ""(codepostal_personnel IS NOT NULL AND codepostal_personnel LIKE '%" + this->codepostal_personnel + "%') OR ""(id_superieur IS NOT NULL AND id_superieur LIKE '%" + this->id_personnel + "%'); ";
+}
+System::String^ NS_Comp_Mappage::personnel::afficherallpersonnel(void)
+{
+	return "SELECT * FROM [dbo].[personnel];";
 }
 
 void NS_Comp_Mappage::personnel::setid_personnel(System::String^ id_personnel)

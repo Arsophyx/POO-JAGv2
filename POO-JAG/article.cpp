@@ -24,6 +24,10 @@ System::String^ NS_Comp_Mappage::article::afficher_article(void)
 	return "SELECT [id_article], [nom_article], [ht_article], [tva_article], [seuilreaprovisionnement_article], [stock_article] FROM [dbo].[TB_P6];";
 }
 
+System::String^ NS_Comp_Mappage::article::afficherallarticle(void)
+{
+	return "SELECT * FROM [dbo].[article];";
+}
 void NS_Comp_Mappage::article::setid_article(System::String^ id_article)
 {
 	this->id_article = id_article;
