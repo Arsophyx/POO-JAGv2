@@ -1,5 +1,6 @@
 #pragma once
 #include "servicearticle.h"
+
 namespace POO_JAG {
 
     using namespace System;
