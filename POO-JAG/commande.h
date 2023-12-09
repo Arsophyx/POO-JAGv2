@@ -9,8 +9,8 @@ namespace NS_Comp_Mappage {
 	ref class commande{
 	private:
 		int^ id_commande;
-		int^ soldereglement_commande;
-		client^ ptrid_client;
+		String^ soldereglement_commande;
+		int^ ptrid_client;
 		String^ reference_commande;
 		String^ moyenpayement_commande;
 		String^ dateemmission_commande;
@@ -22,17 +22,19 @@ namespace NS_Comp_Mappage {
 		String^ modifier(void);
 		String^ supprimer(void);
 		String^ afficher(void);
+		String^ compteurCommande(void);
+		String^ selectId(void);
 		void setid_commande(int^);
-		void setsoldereglement_commande(int^);
-		void setptrid_client(client^);
+		void setsoldereglement_commande(String^);
+		void setptrid_client(int^);
 		void setreference_commande(String^);
 		void setmoyenpayement_commande(String^);
 		void setdateemission_commande(String^);
 		void setdatepayement_commande(String^);
 		void setdatelivraison_commande(String^);;
 		int^ getid_commande(void);
-		int^ getsoldereglement_commande(void);
-		client^ getptrid_client(void);
+		String^ getsoldereglement_commande(void);
+		int^ getptrid_client(void);
 		String^ getreference_commande(void);
 		String^ getmoyenpayement_commande(void);
 		String^ getdatemission_commande(void);
