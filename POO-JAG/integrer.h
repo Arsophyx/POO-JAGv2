@@ -5,15 +5,17 @@ namespace NS_Comp_Mappage {
 
     ref class integrer {
     private:
-        commande^ id_commande;
-        article^ id_article;
+        int^ id_commande;
+        int^ id_article;
         int^ nombre_article;
 
     public:
-        void setptrid_commande(commande^);
-        commande^ getptrid_commande(void);
-        void setptrid_article(article^);
-        article^ getptrid_article(void);
+        System::String^ ajouter(void);
+        System::String^ supprimer(void);
+        void setptrid_commande(int^);
+        int^ getptrid_commande(void);
+        void setptrid_article(int^);
+        int^ getptrid_article(void);
         void setnombre_article(int^ nombre_article);
         int^ getnombre_article(void);
     };
