@@ -19,6 +19,7 @@ namespace NS_Comp_Mappage {
 		System::String^ modifier_personnel(void);
 		System::String^ supprimer_personnel(void);
 		System::String^ afficher_personnel(void);
+		System::String^ afficherallpersonnel(void);
 		void setid_personnel(System::String^);
 		void setnom_personnel(System::String^);
 		void setprenom_personnel(System::String^);
