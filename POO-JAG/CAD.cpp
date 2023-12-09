@@ -45,3 +45,13 @@ int NS_Comp_Data::CLcad::actionRowsID(System::String^ sSql){
     this->oCnx->Close();
     return id;
 }
+
+System::String^ NS_Comp_Data::CLcad::actionRowsString(System::String^ sSql) {
+    System::String^ chaine;
+    this->sSql = sSql;
+    this->oCmd->CommandText = this->sSql;
+    this->oCnx->Open();
+    chaine = System::Convert::ToString(this->oCmd->ExecuteScalar());
+    this->oCnx->Close();
+    return chaine;
+}

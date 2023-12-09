@@ -14,5 +14,6 @@ namespace NS_Comp_Data{
         System::Data::DataSet^ getRows(System::String^, System::String^);
         void actionRows(System::String^);
         int actionRowsID(System::String^ rq_sql);
+        System::String^ actionRowsString(System::String^ sSql);
     };
 }

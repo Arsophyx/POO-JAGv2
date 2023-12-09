@@ -18,6 +18,11 @@ namespace NS_Comp_Mappage {
 		String^ afficher(void);
 		String^ selectId(void);
 		String^ afficherTable(void);
+		String^ selectPrenom(void);
+		String^ selectNom(void);
+		String^ selectAnniversairePA(void);
+		String^ selectVilleLivraison(void);
+		String^ setAnniversairePA(void);
 		void setid_client(int^);
 		void setnom_client(String^ nom_client);
 		void setprenom_client(String^ prenom_client);
