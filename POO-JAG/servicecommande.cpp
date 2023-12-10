@@ -66,7 +66,7 @@ void NS_Comp_Svc_commande::servicecommande::modifiercommande(String^ id_commande
 	sql = this->commande->modifier();
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc_commande::servicecommande::supprimercommande(System::String^ id_commande){
+void NS_Comp_Svc_commande::servicecommande::supprimercommande(System::String^ id_commande) {
 	System::String^ sql;
 	this->integrer->setptrid_commande(System::Convert::ToInt32(id_commande));
 	sql = this->integrer->supprimer();
@@ -92,7 +92,6 @@ void NS_Comp_Svc_commande::servicecommande::ajouterArticle(String^ soldereglemen
 	this->oCad->actionRows(sql);
 }
 
-}
 System::Data::DataSet^ NS_Comp_Svc_commande::servicecommande::affichercommande(System::String^ id, System::String^ reference, System::String^ soldereglement, System::String^ moyenpayement, System::String^ dateemmission, System::String^ datepayement, System::String^ datelivraison, System::String^ id_client, System::String^ datatablename) {
 	System::String^ sql = "SELECT * FROM [dbo].[commande] WHERE ";
 	if (!String::IsNullOrEmpty(id)) {
