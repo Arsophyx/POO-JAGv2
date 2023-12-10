@@ -231,7 +231,12 @@ namespace POO_JAG {
             MessageBox::Show("Il n'y a pas assez d'articles en stock pour le nombre d'articles rentré.");
         }
         else {
-            oSvcCommande->ajouterArticle(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text), System::Convert::ToInt32(textBox7->Text), System::Convert::ToInt32(textBox8->Text));
+            if (this->oSvcCommande->verifierIntegrer(textBox7->Text, textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text) == 1) {
+                oSvcCommande->ajouterArticle(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text), System::Convert::ToInt32(textBox7->Text), System::Convert::ToInt32(textBox8->Text));
+            }
+            else {
+                MessageBox::Show("Cet article existe déjà dans la commande");
+            }
         }
     }
     private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
