@@ -363,6 +363,7 @@ public:
                this->button19->TabIndex = 3;
                this->button19->Text = L"Afficher les commandes";
                this->button19->UseVisualStyleBackColor = false;
+               this->button19->Click += gcnew System::EventHandler(this, &Form1::button19_Click);
                // 
                // button18
                // 
@@ -1336,6 +1337,7 @@ public:
             oSvcClient = gcnew NS_Comp_Svc_client::serviceclient();
             oSvcperso = gcnew NS_Comp_Svc_Perso::serviceperso();
             oSvcarticle = gcnew NS_Comp_Svc_article::servicearticle();
+            oSvccommande = gcnew NS_Comp_Svc_commande::servicecommande();
         }
 
        private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1670,7 +1672,11 @@ private: System::Void button32_Click(System::Object^ sender, System::EventArgs^ 
     this->dataGridView3->DataMember = "Client";
 }
 private: System::Void button31_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView3->Refresh();
 
+    this->oDs = this->oSvccommande->afficherallcommande("Commandes");
+    this->dataGridView3->DataSource = this->oDs;
+    this->dataGridView3->DataMember = "Commandes";
 
 }
 private: System::Void button30_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1700,7 +1706,11 @@ private: System::Void button36_Click(System::Object^ sender, System::EventArgs^ 
     this->dataGridView4->DataMember = "Client";
 }
 private: System::Void button35_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView4->Refresh();
 
+    this->oDs = this->oSvccommande->afficherallcommande("Commandes");
+    this->dataGridView4->DataSource = this->oDs;
+    this->dataGridView4->DataMember = "Commandes";
 
 
 
@@ -1731,11 +1741,11 @@ private: System::Void button40_Click(System::Object^ sender, System::EventArgs^ 
     this->dataGridView5->DataMember = "Client";
 }
 private: System::Void button39_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView5->Refresh();
 
-
-
-
-
+    this->oDs = this->oSvccommande->afficherallcommande("Commandes");
+    this->dataGridView5->DataSource = this->oDs;
+    this->dataGridView5->DataMember = "Commandes";
 }
 private: System::Void button38_Click(System::Object^ sender, System::EventArgs^ e) {
     this->dataGridView5->Refresh();
@@ -1762,10 +1772,11 @@ private: System::Void button44_Click(System::Object^ sender, System::EventArgs^ 
     this->dataGridView6->DataMember = "Client";
 }
 private: System::Void button43_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView6->Refresh();
 
-
-
-
+    this->oDs = this->oSvccommande->afficherallcommande("Commandes");
+    this->dataGridView6->DataSource = this->oDs;
+    this->dataGridView6->DataMember = "Commandes";
 }
 private: System::Void button42_Click(System::Object^ sender, System::EventArgs^ e) {
     this->dataGridView6->Refresh();
@@ -1775,5 +1786,12 @@ private: System::Void button42_Click(System::Object^ sender, System::EventArgs^ 
     this->dataGridView6->DataMember = "Article";
 }
 
+private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView2->Refresh();
+
+    this->oDs = this->oSvccommande->afficherallcommande("Commandes");
+    this->dataGridView2->DataSource = this->oDs;
+    this->dataGridView2->DataMember = "Commandes";
+}
 };
 }

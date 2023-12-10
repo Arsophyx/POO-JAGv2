@@ -7,6 +7,7 @@ NS_Comp_Svc_commande::servicecommande::servicecommande(void)
 	this->commande = gcnew NS_Comp_Mappage::commande();
 	this->client = gcnew NS_Comp_Mappage::client();
 	this->integrer = gcnew NS_Comp_Mappage::integrer();
+	this->article = gcnew NS_Comp_Mappage::article();
 }
 
 void NS_Comp_Svc_commande::servicecommande::creercommande(String^ soldereglement_commande, System::String^ moyenpayement_commande, System::String^ dateemmission_commande, System::String^ datepayement_commande, System::String^ datelivraison_commande, int^ ptrid_client) {
@@ -77,6 +78,7 @@ void NS_Comp_Svc_commande::servicecommande::supprimercommande(System::String^ id
 }
 
 void NS_Comp_Svc_commande::servicecommande::ajouterArticle(String^ soldereglement_commande, System::String^ moyenpayement_commande, System::String^ dateemmission_commande, System::String^ datepayement_commande, System::String^ datelivraison_commande, int^ id_client, int^ id_article, int^ nombre_article) {
+	// on récupère l'id de la commande
 	System::String^ sql;
 	this->commande->setsoldereglement_commande(soldereglement_commande);
 	this->commande->setmoyenpayement_commande(moyenpayement_commande);
@@ -86,9 +88,20 @@ void NS_Comp_Svc_commande::servicecommande::ajouterArticle(String^ soldereglemen
 	this->commande->setptrid_client(id_client);
 	sql = this->commande->selectId();
 	this->integrer->setptrid_commande(this->oCad->actionRowsID(sql));
+
+	// on remplit integrer
 	this->integrer->setptrid_article(id_article);
 	this->integrer->setnombre_article(nombre_article);
 	sql = this->integrer->ajouter();
+	this->oCad->actionRows(sql);
+
+	// on met à jour stock article
+	this->article->setid_article(System::Convert::ToString(id_article));
+	sql = this->article->selectStock();
+	int stock = this->oCad->actionRowsID(sql);
+	stock = stock - System::Convert::ToInt32(nombre_article);
+	this->article->setstock_article(System::Convert::ToString(stock));
+	sql = this->article->updateStock();
 	this->oCad->actionRows(sql);
 }
 
@@ -130,4 +143,23 @@ System::Data::DataSet^ NS_Comp_Svc_commande::servicecommande::affichercommande(S
 	sql = sql->Substring(0, sql->Length - 5);
 
 	return this->oCad->getRows(sql, datatablename);
+}
+
+System::Data::DataSet^ NS_Comp_Svc_commande::servicecommande::afficherallcommande(System::String^ datatablename) {
+	System::String^ sql;
+	sql = this->commande->afficherTable();
+	return this->oCad->getRows(sql, datatablename);
+}
+
+bool NS_Comp_Svc_commande::servicecommande::verifierStock(String^ id_article, System::String^ nombre_article) {
+	System::String^ sql;
+	this->article->setid_article(id_article);
+	sql = this->article->selectStock();
+	int stock = this->oCad->actionRowsID(sql);
+	if (stock < System::Convert::ToInt32(nombre_article)) {
+		return 0;  //le stock est insuffisant pour ce nombre d'articles
+	}
+	else {
+		return 1;
+	}
 }
