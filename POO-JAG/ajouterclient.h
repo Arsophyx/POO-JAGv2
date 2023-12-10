@@ -86,11 +86,11 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
-        if (!VerifierExistenceVille(textBox6->Text)) {
+        if (!VerifierExistenceVille(textBox6->Text->ToLower())) {
             MessageBox::Show("La ville de livraison indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
-        if (!VerifierExistenceVille(textBox7->Text)) {
+        if (!VerifierExistenceVille(textBox7->Text->ToLower())) {
             MessageBox::Show("La ville de facturation indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
@@ -128,7 +128,7 @@ namespace POO_JAG {
             return;
         }
 
-        this->oSvcClient->creerclient(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text, textBox7->Text);
+        this->oSvcClient->creerclient(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text->ToLower(), textBox7->Text->ToLower());
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
