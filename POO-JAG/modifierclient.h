@@ -114,12 +114,24 @@ namespace POO_JAG {
             MessageBox::Show("L'anniversaire du client ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (textBox4->Text->Length < 10) {
+            MessageBox::Show("L'anniversaire du client ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         if (textBox5->Text->Length > 64) {
             MessageBox::Show("L'adresse de livraison du client ne peut pas faire plus que 64", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox6->Text->Length > 64) {
             MessageBox::Show("L'adresse de facturation du client ne peut pas faire plus que 64 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox1->Text->Length < 2) {
+            MessageBox::Show("Le nom client ne peut pas faire moins que 2 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox2->Text->Length < 2) {
+            MessageBox::Show("La prénom client ne peut pas faire moins que 2 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         oSvcClient->modifierclient(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text, textBox7->Text, textBox8->Text);
@@ -149,5 +161,7 @@ namespace POO_JAG {
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
-    };
+    private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+};
 }

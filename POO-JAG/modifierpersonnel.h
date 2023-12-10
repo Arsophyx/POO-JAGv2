@@ -105,6 +105,10 @@ namespace POO_JAG {
             MessageBox::Show("Le date de la prise de poste du personnel ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (textBox3->Text->Length < 10) {
+            MessageBox::Show("Le date de la prise de poste du personnel doit être écrit sur 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         if (textBox4->Text->Length > 64) {
             MessageBox::Show("L'adresse du personnel ne peut pas faire plus que 64 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
