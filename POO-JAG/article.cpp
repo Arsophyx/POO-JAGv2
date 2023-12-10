@@ -21,7 +21,7 @@ System::String^ NS_Comp_Mappage::article::supprimer_article(void)
 
 System::String^ NS_Comp_Mappage::article::afficher_article(void)
 {
-	return "SELECT [id_article], [nom_article], [ht_article], [tva_article], [seuilreaprovisionnement_article], [stock_article] FROM [dbo].[TB_P6];";
+	return "SELECT * FROM [dbo].[article];";
 }
 
 System::String^ NS_Comp_Mappage::article::afficherallarticle(void)

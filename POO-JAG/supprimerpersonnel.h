@@ -48,7 +48,13 @@ namespace POO_JAG {
     private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox3->Text)) {
+            MessageBox::Show("Veuillez remplir : ID du Personnel.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcperso->supprimerPersonnel(this->textBox3->Text);
+    }
+    private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     };
 }
