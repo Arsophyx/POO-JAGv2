@@ -59,6 +59,11 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir : ID de l'Article.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        int textBox1Value;
+        if (!int::TryParse(textBox1->Text, textBox1Value)) {
+            MessageBox::Show("Veuillez remplir ID de l'a commande'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcarticle->supprimerarticle(this->textBox1->Text);
     }
     };

@@ -199,6 +199,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="statistiques.h" />
+    <ClInclude Include="Test.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ville.h" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +246,7 @@
     <ClCompile Include="supprimercommande.cpp" />
     <ClCompile Include="supprimerpersonnel.cpp" />
     <ClCompile Include="statistiques.cpp" />
+    <ClCompile Include="Test.cpp" />
     <ClCompile Include="ville.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="supprimerpersonnel.resx">
       <DependentUpon>supprimerpersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

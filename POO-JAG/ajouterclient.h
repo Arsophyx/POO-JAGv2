@@ -6,6 +6,7 @@ namespace POO_JAG {
 
     using namespace System;
     using namespace System::ComponentModel;
+    using namespace System::Data::SqlClient;
     using namespace System::Windows::Forms;
 
     public ref class ajouterclient : public System::Windows::Forms::Form
@@ -85,9 +86,62 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (!VerifierExistenceVille(textBox6->Text)) {
+            MessageBox::Show("La ville de livraison indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (!VerifierExistenceVille(textBox7->Text)) {
+            MessageBox::Show("La ville de facturation indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+
+        if (textBox1->Text->Length > 32) {
+            MessageBox::Show("Le nom client de la Commande ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox2->Text->Length > 32) {
+            MessageBox::Show("La prénom client ne peut pas faire plus que 32 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox3->Text->Length > 10) {
+            MessageBox::Show("L'anniversaire du client ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox4->Text->Length > 64) {
+            MessageBox::Show("L'adresse de livraison du client ne peut pas faire plus que 64", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox5->Text->Length > 64) {
+            MessageBox::Show("L'adresse de facturation du client ne peut pas faire plus que 64 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+
         this->oSvcClient->creerclient(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text, textBox7->Text);
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
-    };
+    private: System::Void textBox6_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+    }
+           bool VerifierExistenceVille(String^ nomVille) {
+               try {
+                   String^ connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True";
+                   SqlConnection^ connection = gcnew SqlConnection(connectionString);
+
+                   String^ query = "SELECT COUNT(*) FROM [dbo].[ville] WHERE nom_ville = @NomVille";
+                   SqlCommand^ command = gcnew SqlCommand(query, connection);
+                   command->Parameters->Add(gcnew SqlParameter("@NomVille", nomVille));
+
+                   connection->Open();
+                   int rowCount = Convert::ToInt32(command->ExecuteScalar());
+                   connection->Close();
+
+                   return rowCount > 0;
+               }
+               catch (Exception^ ex) {
+                   return false;
+               }
+           }
+    private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+};
 }

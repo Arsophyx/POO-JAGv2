@@ -50,6 +50,11 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir : ID du Client.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        int textBox1Value;
+        if (!int::TryParse(textBox1->Text, textBox1Value)) {
+            MessageBox::Show("Veuillez remplir ID du client en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         oSvcClient->supprimerclient(textBox1->Text);
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {

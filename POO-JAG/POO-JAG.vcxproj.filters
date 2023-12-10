@@ -164,6 +164,9 @@
     <ClInclude Include="statistiques.h">
       <Filter>Header Files\Head</Filter>
     </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -275,6 +278,9 @@
       <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="Form1.cpp">
+      <Filter>Source Files\LIEE au winform</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
       <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
   </ItemGroup>
