@@ -96,19 +96,19 @@ void NS_Comp_Svc_client::serviceclient::supprimerclient(System::String^ id_clien
 	this->client->setid_client(System::Convert::ToInt32(id_client));
 	this->adresse_facturation->setptrid_client(System::Convert::ToInt32(id_client));
 	sql = this->adresse_facturation->selectIdAdresse();
+	sql = this->adresse_facturation->supprimer();
+	this->oCad->actionRows(sql);
 	this->adresse->setid_adresse(this->oCad->actionRowsID(sql));
 	sql = this->adresse->supprimer();
-	this->oCad->actionRows(sql);
-	sql = this->adresse_facturation->supprimer();
 	this->oCad->actionRows(sql);
 
 	//adresse livraison
 	this->adresse_livraison->setptrid_client(System::Convert::ToInt32(id_client));
 	sql = this->adresse_livraison->selectIdAdresse();
+	sql = this->adresse_livraison->supprimer();
+	this->oCad->actionRows(sql);
 	this->adresse->setid_adresse(this->oCad->actionRowsID(sql));
 	sql = this->adresse->supprimer();
-	this->oCad->actionRows(sql);
-	sql = this->adresse_livraison->supprimer();
 	this->oCad->actionRows(sql);
 
 	//client
