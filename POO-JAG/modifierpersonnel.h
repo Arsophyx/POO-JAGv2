@@ -94,23 +94,23 @@ namespace POO_JAG {
         }
 
         if (textBox1->Text->Length > 32) {
-            MessageBox::Show("Le nom du personnel ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le nom du personnel ne peut pas faire plus que 32 caracteres.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox2->Text->Length > 32) {
-            MessageBox::Show("Le prénom du personnel ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le prenom du personnel ne peut pas faire plus que 32 caracteres.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length > 10) {
-            MessageBox::Show("Le date de la prise de poste du personnel ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le date de la prise de poste du personnel ne peut pas faire plus que 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length < 10) {
-            MessageBox::Show("Le date de la prise de poste du personnel doit être écrit sur 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le date de la prise de poste du personnel doit etre ecrit sur 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length > 64) {
-            MessageBox::Show("L'adresse du personnel ne peut pas faire plus que 64 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("L'adresse du personnel ne peut pas faire plus que 64 caracteres.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox5->Text->Length > 5) {
