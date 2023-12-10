@@ -1445,7 +1445,7 @@ public:
             }
         }
                System::Void supprimerclientFormClosed(System::Object^ sender, FormClosedEventArgs^ e) {
-                   modifierClientFormIsOpen = false;
+                   supprimerClientFormIsOpen = false;
                }
               private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
                   if (!modifierClientFormIsOpen) {

@@ -119,6 +119,10 @@ namespace POO_JAG {
             MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (!VerifierExistenceidclient(textBox6->Text)) {
+            MessageBox::Show("L'id du Client indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         oSvcCommande->creercommande(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text));
     }
     private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -215,6 +219,14 @@ namespace POO_JAG {
             MessageBox::Show("L'id article indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (!VerifierExistenceidclient(textBox6->Text)) {
+            MessageBox::Show("L'id du Client indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (!VerifierExistencearticledouble(textBox7->Text)) {
+            MessageBox::Show("L'id article indiquée à déjà été ajouté à la commande.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         oSvcCommande->ajouterArticle(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text), System::Convert::ToInt32(textBox7->Text), System::Convert::ToInt32(textBox8->Text));
     }
     private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -240,6 +252,46 @@ private: System::Void textBox1_TextChanged(System::Object^ sender, System::Event
            }
            catch (Exception^ ex) {
                return false;
+           }
+       }
+       bool VerifierExistenceidclient(String^ idclient) {
+           try {
+               String^ connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True";
+               SqlConnection^ connection = gcnew SqlConnection(connectionString);
+
+               String^ query = "SELECT COUNT(*) FROM [dbo].[client] WHERE id_client = @idclient";
+               SqlCommand^ command = gcnew SqlCommand(query, connection);
+               command->Parameters->Add(gcnew SqlParameter("@idclient", idclient));
+
+               connection->Open();
+               int rowCount = Convert::ToInt32(command->ExecuteScalar());
+               connection->Close();
+
+               return rowCount > 0;
+           }
+           catch (Exception^ ex) {
+               return false;
+           }
+       }
+       bool VerifierExistencearticledouble(String^ integrer) {
+               try {
+                   String^ connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True";
+                   SqlConnection^ connection = gcnew SqlConnection(connectionString);
+
+                   String^ query = "SELECT TOP 2 2 FROM [dbo].[integrer] WHERE id_article = @integrer";
+                   SqlCommand^ command = gcnew SqlCommand(query, connection);
+                   command->Parameters->Add(gcnew SqlParameter("@integrer", integrer));
+
+                   connection->Open();
+                   SqlDataReader^ reader = command->ExecuteReader();
+                   bool integrerExists = reader->Read();
+                   connection->Close();
+
+                   return integrerExists;
+               }
+               catch (Exception^ ex) {
+
+                   return false;
            }
        }
 };
