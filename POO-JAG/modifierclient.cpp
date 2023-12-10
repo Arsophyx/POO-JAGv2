@@ -44,7 +44,7 @@ namespace POO_JAG {
         this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
         this->button1->Location = System::Drawing::Point(282, 147);
-        this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+        this->button1->Margin = System::Windows::Forms::Padding(2);
         this->button1->Name = L"button1";
         this->button1->Size = System::Drawing::Size(176, 85);
         this->button1->TabIndex = 0;
@@ -55,10 +55,11 @@ namespace POO_JAG {
         // textBox1
         // 
         this->textBox1->Location = System::Drawing::Point(20, 24);
-        this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+        this->textBox1->Margin = System::Windows::Forms::Padding(2);
         this->textBox1->Name = L"textBox1";
         this->textBox1->Size = System::Drawing::Size(200, 20);
         this->textBox1->TabIndex = 1;
+        this->textBox1->TextChanged += gcnew System::EventHandler(this, &modifierclient::textBox1_TextChanged);
         // 
         // label1
         // 
@@ -85,7 +86,7 @@ namespace POO_JAG {
         // textBox2
         // 
         this->textBox2->Location = System::Drawing::Point(20, 67);
-        this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+        this->textBox2->Margin = System::Windows::Forms::Padding(2);
         this->textBox2->Name = L"textBox2";
         this->textBox2->Size = System::Drawing::Size(200, 20);
         this->textBox2->TabIndex = 3;
@@ -103,7 +104,7 @@ namespace POO_JAG {
         // textBox3
         // 
         this->textBox3->Location = System::Drawing::Point(20, 112);
-        this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+        this->textBox3->Margin = System::Windows::Forms::Padding(2);
         this->textBox3->Name = L"textBox3";
         this->textBox3->Size = System::Drawing::Size(200, 20);
         this->textBox3->TabIndex = 5;
@@ -121,7 +122,7 @@ namespace POO_JAG {
         // textBox4
         // 
         this->textBox4->Location = System::Drawing::Point(20, 162);
-        this->textBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+        this->textBox4->Margin = System::Windows::Forms::Padding(2);
         this->textBox4->Name = L"textBox4";
         this->textBox4->Size = System::Drawing::Size(200, 20);
         this->textBox4->TabIndex = 7;
@@ -149,6 +150,7 @@ namespace POO_JAG {
         this->textBox7->Name = L"textBox7";
         this->textBox7->Size = System::Drawing::Size(200, 20);
         this->textBox7->TabIndex = 11;
+        this->textBox7->TextChanged += gcnew System::EventHandler(this, &modifierclient::textBox7_TextChanged);
         // 
         // textBox8
         // 
@@ -157,6 +159,7 @@ namespace POO_JAG {
         this->textBox8->Name = L"textBox8";
         this->textBox8->Size = System::Drawing::Size(200, 20);
         this->textBox8->TabIndex = 12;
+        this->textBox8->TextChanged += gcnew System::EventHandler(this, &modifierclient::textBox8_TextChanged);
         // 
         // label5
         // 
@@ -222,7 +225,7 @@ namespace POO_JAG {
         this->Controls->Add(this->label1);
         this->Controls->Add(this->textBox1);
         this->Controls->Add(this->button1);
-        this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+        this->Margin = System::Windows::Forms::Padding(2);
         this->MaximumSize = System::Drawing::Size(499, 430);
         this->MinimumSize = System::Drawing::Size(499, 430);
         this->Name = L"modifierclient";

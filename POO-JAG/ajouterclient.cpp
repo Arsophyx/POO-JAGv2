@@ -150,6 +150,7 @@ namespace POO_JAG {
         this->textBox6->Name = L"textBox6";
         this->textBox6->Size = System::Drawing::Size(200, 20);
         this->textBox6->TabIndex = 11;
+        this->textBox6->TextChanged += gcnew System::EventHandler(this, &ajouterclient::textBox6_TextChanged_1);
         // 
         // label6
         // 
@@ -157,9 +158,9 @@ namespace POO_JAG {
         this->label6->Location = System::Drawing::Point(17, 245);
         this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
         this->label6->Name = L"label6";
-        this->label6->Size = System::Drawing::Size(196, 13);
+        this->label6->Size = System::Drawing::Size(126, 13);
         this->label6->TabIndex = 12;
-        this->label6->Text = L"Ville de l\'adresse de facturation du client";
+        this->label6->Text = L"Ville de livraison du Client";
         this->label6->Click += gcnew System::EventHandler(this, &ajouterclient::label6_Click_1);
         // 
         // textBox7
@@ -169,6 +170,7 @@ namespace POO_JAG {
         this->textBox7->Name = L"textBox7";
         this->textBox7->Size = System::Drawing::Size(200, 20);
         this->textBox7->TabIndex = 13;
+        this->textBox7->TextChanged += gcnew System::EventHandler(this, &ajouterclient::textBox7_TextChanged);
         // 
         // label7
         // 
@@ -176,9 +178,9 @@ namespace POO_JAG {
         this->label7->Location = System::Drawing::Point(17, 285);
         this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
         this->label7->Name = L"label7";
-        this->label7->Size = System::Drawing::Size(184, 13);
+        this->label7->Size = System::Drawing::Size(138, 13);
         this->label7->TabIndex = 14;
-        this->label7->Text = L"Ville de l\'adresse de livraison du client";
+        this->label7->Text = L"Ville de facturation du Client";
         // 
         // ajouterclient
         // 

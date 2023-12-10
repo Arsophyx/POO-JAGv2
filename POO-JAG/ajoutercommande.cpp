@@ -60,6 +60,7 @@ namespace POO_JAG {
         this->textBox1->Name = L"textBox1";
         this->textBox1->Size = System::Drawing::Size(200, 20);
         this->textBox1->TabIndex = 1;
+        this->textBox1->TextChanged += gcnew System::EventHandler(this, &ajoutercommande::textBox1_TextChanged);
         // 
         // label1
         // 
@@ -67,9 +68,9 @@ namespace POO_JAG {
         this->label1->Location = System::Drawing::Point(17, 8);
         this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
         this->label1->Name = L"label1";
-        this->label1->Size = System::Drawing::Size(176, 13);
+        this->label1->Size = System::Drawing::Size(170, 13);
         this->label1->TabIndex = 2;
-        this->label1->Text = L"Solde Regelement de la Commande";
+        this->label1->Text = L"Solde Reglement de la Commande";
         this->label1->Click += gcnew System::EventHandler(this, &ajoutercommande::label1_Click);
         // 
         // label2
@@ -186,6 +187,7 @@ namespace POO_JAG {
         this->textBox7->Name = L"textBox7";
         this->textBox7->Size = System::Drawing::Size(200, 20);
         this->textBox7->TabIndex = 14;
+        this->textBox7->TextChanged += gcnew System::EventHandler(this, &ajoutercommande::textBox7_TextChanged);
         // 
         // textBox8
         // 
@@ -202,9 +204,10 @@ namespace POO_JAG {
         this->label7->Location = System::Drawing::Point(548, 31);
         this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
         this->label7->Name = L"label7";
-        this->label7->Size = System::Drawing::Size(66, 13);
+        this->label7->Size = System::Drawing::Size(69, 13);
         this->label7->TabIndex = 16;
-        this->label7->Text = L"Id de l\'article";
+        this->label7->Text = L"ID de l\'Article";
+        this->label7->Click += gcnew System::EventHandler(this, &ajoutercommande::label7_Click);
         // 
         // label8
         // 
@@ -212,9 +215,9 @@ namespace POO_JAG {
         this->label8->Location = System::Drawing::Point(548, 82);
         this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
         this->label8->Name = L"label8";
-        this->label8->Size = System::Drawing::Size(94, 13);
+        this->label8->Size = System::Drawing::Size(84, 13);
         this->label8->TabIndex = 17;
-        this->label8->Text = L"Nombre de l\'article";
+        this->label8->Text = L"Nombre d\'Article";
         this->label8->Click += gcnew System::EventHandler(this, &ajoutercommande::label8_Click);
         // 
         // ajoutercommande
