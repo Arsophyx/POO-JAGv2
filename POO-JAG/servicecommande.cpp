@@ -163,3 +163,23 @@ bool NS_Comp_Svc_commande::servicecommande::verifierStock(String^ id_article, Sy
 		return 1;
 	}
 }
+
+bool NS_Comp_Svc_commande::servicecommande::verifierIntegrer(String^ id_article, String^ soldereglement_commande, System::String^ moyenpayement_commande, System::String^ dateemmission_commande, System::String^ datepayement_commande, System::String^ datelivraison_commande, String^ id_client) {
+	System::String^ sql;
+	this->commande->setsoldereglement_commande(soldereglement_commande);
+	this->commande->setmoyenpayement_commande(moyenpayement_commande);
+	this->commande->setdateemission_commande(dateemmission_commande);
+	this->commande->setdatepayement_commande(datepayement_commande);
+	this->commande->setdatelivraison_commande(datelivraison_commande);
+	this->commande->setptrid_client(System::Convert::ToInt32(id_client));
+	sql = this->commande->selectId();
+	this->integrer->setptrid_commande(this->oCad->actionRowsID(sql));
+	this->integrer->setptrid_article(System::Convert::ToInt32(id_article));
+	sql = this->integrer->compteur();
+	if (this->oCad->actionRowsID(sql) == 0) {
+		return 1; // c'est bon, il n'y a pas de ligne qui existe déjà
+	}
+	else {
+		return 0;
+	}
+}
