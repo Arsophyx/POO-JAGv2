@@ -28,6 +28,15 @@ System::String^ NS_Comp_Mappage::article::afficherallarticle(void)
 {
 	return "SELECT * FROM [dbo].[article];";
 }
+
+System::String^ NS_Comp_Mappage::article::selectStock(void) {
+	return "SELECT [stock_article] FROM [dbo].[article] WHERE [id_article] = " + this->id_article;
+}
+
+System::String^ NS_Comp_Mappage::article::updateStock(void) {
+	return "UPDATE [dbo].[article] SET stock_article = " + this->stock_article;
+}
+
 void NS_Comp_Mappage::article::setid_article(System::String^ id_article)
 {
 	this->id_article = id_article;

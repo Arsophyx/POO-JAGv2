@@ -19,6 +19,8 @@ namespace NS_Comp_Mappage {
 		System::String^ supprimer_article(void);
 		System::String^ afficher_article(void);
 		System::String^ afficherallarticle(void);
+		System::String^ selectStock(void);
+		System::String^ updateStock(void);
 
 		void setid_article(System::String^);
 		void setnom_article(System::String^);
