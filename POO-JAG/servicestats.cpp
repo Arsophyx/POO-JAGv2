@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "servicestats.h"
 
+typedef float^ (*event)(float, float);
+event evt;
+
 NS_Comp_Svc_Stats::servicestats::servicestats(void) {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->mapStats = gcnew NS_Comp_Map_Stats::statistiques;
@@ -54,4 +57,21 @@ System::Data::DataSet^ NS_Comp_Svc_Stats::servicestats::afficherValeurAchatStock
 	System::String^ sql;
 	sql = this->mapStats->valeurAchatStock();
 	return this->oCad->getRows(sql, dataTableName);
+}
+
+System::String^ NS_Comp_Svc_Stats::servicestats::afficherValeurCommande(System::String^ id_commande) {
+	System::String^ sql;
+	this->mapStats->setCommande(id_commande);
+	sql = this->mapStats->valeurCommande();
+	return this->oCad->actionRowsString(sql);
+}
+
+System::String^ NS_Comp_Svc_Stats::servicestats::afficherReduction(System::String^ val_commande, System::String^ taux) {
+	evt = &NS_Comp_Map_Stats::statistiques::reduction;
+	return System::Convert::ToString(evt(System::Convert::ToSingle(val_commande), System::Convert::ToSingle(taux)));
+}
+
+System::String^ NS_Comp_Svc_Stats::servicestats::afficherAugmentation(System::String^ val_commande, System::String^ taux) {
+	evt = &NS_Comp_Map_Stats::statistiques::augmentation;
+	return System::Convert::ToString(evt(System::Convert::ToSingle(val_commande), System::Convert::ToSingle(taux)));
 }

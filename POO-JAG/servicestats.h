@@ -17,5 +17,8 @@ namespace NS_Comp_Svc_Stats {
 		System::Data::DataSet^ afficherTopArticlesMoinsVendus(System::String^);
 		System::Data::DataSet^ afficherValeurCommercialeStock(System::String^);
 		System::Data::DataSet^ afficherValeurAchatStock(System::String^);
+		System::String^ afficherValeurCommande(System::String^);
+		System::String^ afficherReduction(System::String^, System::String^);
+		System::String^ afficherAugmentation(System::String^, System::String^);
 	};
 }
