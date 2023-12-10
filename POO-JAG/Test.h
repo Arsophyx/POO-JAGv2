@@ -64,18 +64,76 @@ namespace POO_JAG {
         this->oSvcStats = gcnew NS_Comp_Svc_Stats::servicestats();
     }
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir Identifiant de la Commande.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox1Value;
+        if (!int::TryParse(textBox1->Text, textBox1Value)) {
+            MessageBox::Show("Veuillez remplir Identifiant de la Commande en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         label2->Text = "Valeur de la commande : ";
         label2->Text += this->oSvcStats->afficherValeurCommande(textBox1->Text);
+
     }
+    
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir Identifiant de la Commande.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox1Value;
+        if (!int::TryParse(textBox1->Text, textBox1Value)) {
+            MessageBox::Show("Veuillez remplir Identifiant de la Commande en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox2->Text)) {
+            MessageBox::Show("Veuillez remplir Valeur de la réduction.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox2Value;
+        if (!int::TryParse(textBox2->Text, textBox2Value)) {
+            MessageBox::Show("Veuillez remplir Valeur de la réduction en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+
         System::String^ val = this->oSvcStats->afficherReduction(label2->Text->Substring(24), textBox2->Text);
         label2->Text = "Valeur de la commande : ";
         label2->Text += val;
     }
     private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir Identifiant de la Commande.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox1Value;
+        if (!int::TryParse(textBox1->Text, textBox1Value)) {
+            MessageBox::Show("Veuillez remplir Identifiant de la Commande en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox3->Text)) {
+            MessageBox::Show("Veuillez remplir Valeur de l'augmentation.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox3Value;
+        if (!int::TryParse(textBox3->Text, textBox3Value)) {
+            MessageBox::Show("Veuillez remplir Valeur de l'augmentation en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         System::String^ val = this->oSvcStats->afficherAugmentation(label2->Text->Substring(24), textBox2->Text);
         label2->Text = "Valeur de la commande : ";
         label2->Text += val;
+    }
+    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+       
+    }
+    private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+
+    }
+    private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+        
     }
     };
 }
