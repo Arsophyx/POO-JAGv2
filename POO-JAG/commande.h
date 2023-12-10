@@ -24,6 +24,8 @@ namespace NS_Comp_Mappage {
 		String^ afficher(void);
 		String^ compteurCommande(void);
 		String^ selectId(void);
+		System::String^ afficherallcommande(void);
+
 		void setid_commande(int^);
 		void setsoldereglement_commande(String^);
 		void setptrid_client(int^);

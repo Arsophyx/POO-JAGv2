@@ -131,3 +131,8 @@ System::Data::DataSet^ NS_Comp_Svc_commande::servicecommande::affichercommande(S
 
 	return this->oCad->getRows(sql, datatablename);
 }
+System::Data::DataSet^ NS_Comp_Svc_commande::servicecommande::afficherallcommande(System::String^ datatablename) {
+	System::String^ sql;
+	sql = this->commande->afficherallcommande();
+	return this->oCad->getRows(sql, datatablename);
+}
