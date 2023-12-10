@@ -12,6 +12,7 @@ namespace NS_Comp_Mappage {
     public:
         System::String^ ajouter(void);
         System::String^ supprimer(void);
+        System::String^ compteur(void);
         void setptrid_commande(int^);
         int^ getptrid_commande(void);
         void setptrid_article(int^);
