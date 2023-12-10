@@ -36,7 +36,7 @@ namespace POO_JAG {
     private: System::Windows::Forms::TextBox^ textBox8;
     private: System::Windows::Forms::Label^ label7;
     private: System::Windows::Forms::Label^ label8;
-
+    private: bool ajouterCommandeClicked = false;
     private: NS_Comp_Svc_commande::servicecommande^ oSvcCommande;
 
            void InitializeComponent(void);
@@ -124,12 +124,17 @@ namespace POO_JAG {
             return;
         }
         oSvcCommande->creercommande(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text));
+        ajouterCommandeClicked = true;
     }
     private: System::Void textBox8_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (!ajouterCommandeClicked) {
+            MessageBox::Show("Veuillez d'abord cliquer sur le bouton Ajouter la Commande.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         if (String::IsNullOrEmpty(textBox1->Text)) {
             MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
