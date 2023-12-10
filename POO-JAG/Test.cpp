@@ -31,7 +31,7 @@ namespace POO_JAG {
         this->MaximumSize = System::Drawing::Size(600, 900);
         this->MinimumSize = System::Drawing::Size(600, 900);
         this->Name = L"test";
-        this->Text = L"Afficher un Article";
+        this->Text = L"Test";
         this->Load += gcnew System::EventHandler(this, &test::afficherarticle_Load);
         this->ResumeLayout(false);
 
