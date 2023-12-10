@@ -2,11 +2,11 @@
 #include "commande.h"
 
 String^ NS_Comp_Mappage::commande::ajouter(void) {
-	return "INSERT INTO [dbo].[commande] (reference_commande, soldereglement_commande, moyenpayement_commande, dateemmission_commande, datepayement_commande, datelivraison_commande, id_client) VALUES('" + this->reference_commande + "','" + this->soldereglement_commande + "', '" + this->moyenpayement_commande + "', '" + this->dateemmission_commande + "', '" + this->datepayement_commande + "', '" + this->datelivraison_commande + "', " + this->ptrid_client +");";
+	return "INSERT INTO [dbo].[commande] (reference_commande, soldereglement_commande, moyenpayement_commande, dateemmission_commande, datepayement_commande, datelivraison_commande, id_client) VALUES('" + this->reference_commande + "','" + this->soldereglement_commande->Replace(",", ".") + "', '" + this->moyenpayement_commande + "', '" + this->dateemmission_commande + "', '" + this->datepayement_commande + "', '" + this->datelivraison_commande + "', " + this->ptrid_client +");";
 }
 
 String^ NS_Comp_Mappage::commande::modifier(void) {
-	return "UPDATE [dbo].[commande] SET soldereglement_commande = '" + this->soldereglement_commande + "', moyenpayement_commande = '" + this->moyenpayement_commande + "', dateemmission_commande = '" + this->dateemmission_commande + "', datepayement_commande = '" + this->datepayement_commande + "', datelivraison_commande = '" + this->datelivraison_commande + "' WHERE [id_commande] = " + this->id_commande +";";
+	return "UPDATE [dbo].[commande] SET soldereglement_commande = '" + this->soldereglement_commande->Replace(",", ".") + "', moyenpayement_commande = '" + this->moyenpayement_commande + "', dateemmission_commande = '" + this->dateemmission_commande + "', datepayement_commande = '" + this->datepayement_commande + "', datelivraison_commande = '" + this->datelivraison_commande + "' WHERE [id_commande] = " + this->id_commande +";";
 }
 
 String^ NS_Comp_Mappage::commande::supprimer(void) {

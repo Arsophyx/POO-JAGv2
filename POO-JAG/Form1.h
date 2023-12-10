@@ -22,6 +22,7 @@
 #include "servicearticle.h"
 #include "Test.h"
 
+
 namespace POO {
 
     using namespace System;
@@ -1359,11 +1360,19 @@ public:
         }
                private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
                    this->dataGridView2->Refresh();
-  
+
                    this->oDs = this->oSvcarticle->afficherallarticle("Article");
                    this->dataGridView2->DataSource = this->oDs;
                    this->dataGridView2->DataMember = "Article";
-      
+
+               }
+               private: System::Void button19_Click(System::Object ^ sender, System::EventArgs ^ e) {
+                   this->dataGridView2->Refresh();
+
+                   this->oDs = this->oSvccommande->afficherallcommande("Commande");
+                   this->dataGridView2->DataSource = this->oDs;
+                   this->dataGridView2->DataMember = "Commande";
+
                }
 
     private: System::Void tabPage1_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -1436,7 +1445,7 @@ public:
             }
         }
                System::Void supprimerclientFormClosed(System::Object^ sender, FormClosedEventArgs^ e) {
-                   modifierClientFormIsOpen = false;
+                   supprimerClientFormIsOpen = false;
                }
               private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
                   if (!modifierClientFormIsOpen) {
@@ -1588,7 +1597,7 @@ private: System::Void tabPage4_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
     if (String::IsNullOrEmpty(textBox1->Text)) {
-        MessageBox::Show("Veuillez remplir : Mois/Annes.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+        MessageBox::Show("Veuillez remplir : Mois/Annee.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
         return;
     }
     this->dataGridView7->Refresh();
@@ -1708,9 +1717,11 @@ private: System::Void button36_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void button35_Click(System::Object^ sender, System::EventArgs^ e) {
     this->dataGridView4->Refresh();
 
+
     this->oDs = this->oSvccommande->afficherallcommande("Commandes");
     this->dataGridView4->DataSource = this->oDs;
     this->dataGridView4->DataMember = "Commandes";
+
 
 
 
@@ -1777,6 +1788,7 @@ private: System::Void button43_Click(System::Object^ sender, System::EventArgs^ 
     this->oDs = this->oSvccommande->afficherallcommande("Commandes");
     this->dataGridView6->DataSource = this->oDs;
     this->dataGridView6->DataMember = "Commandes";
+
 }
 private: System::Void button42_Click(System::Object^ sender, System::EventArgs^ e) {
     this->dataGridView6->Refresh();

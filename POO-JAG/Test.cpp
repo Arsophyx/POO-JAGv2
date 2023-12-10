@@ -78,7 +78,7 @@ namespace POO_JAG {
         this->button2->Name = L"button2";
         this->button2->Size = System::Drawing::Size(132, 66);
         this->button2->TabIndex = 4;
-        this->button2->Text = L"Ajouter la réduction à la commande";
+        this->button2->Text = L"Ajouter la rï¿½duction ï¿½ la commande";
         this->button2->UseVisualStyleBackColor = false;
         this->button2->Click += gcnew System::EventHandler(this, &test::button2_Click);
         // 
@@ -90,7 +90,7 @@ namespace POO_JAG {
         this->button3->Name = L"button3";
         this->button3->Size = System::Drawing::Size(132, 66);
         this->button3->TabIndex = 5;
-        this->button3->Text = L"Ajouter l\'augmentation à la commande";
+        this->button3->Text = L"Ajouter l\'augmentation ï¿½ la commande";
         this->button3->UseVisualStyleBackColor = false;
         this->button3->Click += gcnew System::EventHandler(this, &test::button3_Click);
         // 
@@ -115,7 +115,7 @@ namespace POO_JAG {
         this->label3->Name = L"label3";
         this->label3->Size = System::Drawing::Size(110, 13);
         this->label3->TabIndex = 8;
-        this->label3->Text = L"Valeur de la réduction";
+        this->label3->Text = L"Valeur de la rï¿½duction";
         // 
         // label4
         // 
@@ -128,6 +128,7 @@ namespace POO_JAG {
         // 
         // test
         // 
+
         this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
         this->ClientSize = System::Drawing::Size(584, 361);

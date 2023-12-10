@@ -72,15 +72,15 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
-        Single textBox2Value;
+        double textBox2Value;
 
-        if (!Single::TryParse(textBox2->Text, textBox2Value)) {
+        if (!double::TryParse(textBox2->Text, textBox2Value)) {
             MessageBox::Show("Veuillez remplir le Prix de l'article en tant que décimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
-        Single textBox3Value;
+        double textBox3Value;
 
-        if (!Single::TryParse(textBox3->Text, textBox3Value)) {
+        if (!double::TryParse(textBox3->Text, textBox3Value)) {
             MessageBox::Show("Veuillez remplir la TVA en tant que décimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
@@ -98,9 +98,19 @@ namespace POO_JAG {
             MessageBox::Show("Le nom de l'article ne peut pas faire plus que 128 caractères", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (textBox2->Text->Length > 11) {
+            MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox3->Text->Length > 4) {
+            MessageBox::Show("La TVA de l'Article ne peut pas faire plus que 4 caractères et doit être écrit sous ce format : 1,CC", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcarticle->creerarticle(this->textBox1->Text, this->textBox2->Text, this->textBox3->Text, this->textBox4->Text, this->textBox5->Text);
     }
     private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
-    };
+    private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+};
 }

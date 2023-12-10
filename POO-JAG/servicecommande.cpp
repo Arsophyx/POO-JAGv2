@@ -11,7 +11,7 @@ NS_Comp_Svc_commande::servicecommande::servicecommande(void)
 }
 
 void NS_Comp_Svc_commande::servicecommande::creercommande(String^ soldereglement_commande, System::String^ moyenpayement_commande, System::String^ dateemmission_commande, System::String^ datepayement_commande, System::String^ datelivraison_commande, int^ ptrid_client) {
-	// Création de la référence de la commande
+	// CrÃ©ation de la rÃ©fÃ©rence de la commande
 	System::String^ sql;
 	String^ reference_commande = "";
 	this->client->setid_client(ptrid_client);
@@ -22,7 +22,7 @@ void NS_Comp_Svc_commande::servicecommande::creercommande(String^ soldereglement
 	reference_commande += datepayement_commande->Substring(6, 4);
 	sql = this->client->selectVilleLivraison();
 	reference_commande += this->oCad->actionRowsString(sql)->Substring(0, 3)->ToUpper();
-	// numéro d'incrémention dans la référence commande (de manière automatique)
+	// numÃ©ro d'incrÃ©mention dans la rÃ©fÃ©rence commande (de maniÃ¨re automatique)
 	this->commande->setptrid_client(ptrid_client);
 	sql = this->commande->compteurCommande();
 	String^ numeroc = this->oCad->actionRowsString(sql);
@@ -78,7 +78,7 @@ void NS_Comp_Svc_commande::servicecommande::supprimercommande(System::String^ id
 }
 
 void NS_Comp_Svc_commande::servicecommande::ajouterArticle(String^ soldereglement_commande, System::String^ moyenpayement_commande, System::String^ dateemmission_commande, System::String^ datepayement_commande, System::String^ datelivraison_commande, int^ id_client, int^ id_article, int^ nombre_article) {
-	// on récupère l'id de la commande
+	// on rÃ©cupÃ¨re l'id de la commande
 	System::String^ sql;
 	this->commande->setsoldereglement_commande(soldereglement_commande);
 	this->commande->setmoyenpayement_commande(moyenpayement_commande);
@@ -95,7 +95,7 @@ void NS_Comp_Svc_commande::servicecommande::ajouterArticle(String^ soldereglemen
 	sql = this->integrer->ajouter();
 	this->oCad->actionRows(sql);
 
-	// on met à jour stock article
+	// on met Ã  jour stock article
 	this->article->setid_article(System::Convert::ToString(id_article));
 	sql = this->article->selectStock();
 	int stock = this->oCad->actionRowsID(sql);

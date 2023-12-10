@@ -6,6 +6,7 @@ namespace POO_JAG {
     using namespace System;
     using namespace System::ComponentModel;
     using namespace System::Windows::Forms;
+    using namespace System::Data::SqlClient;
 
     public ref class supprimerclient : public System::Windows::Forms::Form
     {
@@ -55,9 +56,34 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir ID du client en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (!VerifierExistencecommande(textBox1->Text)) {
+            MessageBox::Show("Impossible de supprimer le client car des commandes sont associées.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         oSvcClient->supprimerclient(textBox1->Text);
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
+           bool VerifierExistencecommande(String^ idclient) {
+               try {
+                   String^ connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True";
+                   SqlConnection^ connection = gcnew SqlConnection(connectionString);
+
+                   String^ query = "SELECT TOP 1 1 FROM [dbo].[commande] WHERE id_client = @idclient";
+                   SqlCommand^ command = gcnew SqlCommand(query, connection);
+                   command->Parameters->Add(gcnew SqlParameter("@idclient", idclient));
+
+                   connection->Open();
+                   SqlDataReader^ reader = command->ExecuteReader();
+                   bool idClientExists = reader->Read();
+                   connection->Close();
+
+                   return !idClientExists;
+               }
+               catch (Exception^ ex) {
+
+                   return false;
+               }
+           }
     };
 }
