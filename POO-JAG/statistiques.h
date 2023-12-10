@@ -18,8 +18,6 @@ namespace NS_Comp_Map_Stats{
 		System::String^ topArticlesMoinsVendus(void);
 		System::String^ valeurCommercialeStock(void);
 		System::String^ valeurAchatStock(void);
-		static float^ reduction(float, float);
-		static float^ augmentation(float, float);
 		System::String^ valeurCommande(void);
 
 		void setMois(System::String^);
@@ -29,5 +27,10 @@ namespace NS_Comp_Map_Stats{
 		System::String^ getMois(void);
 		System::String^ getClient(void);
 		System::String^ getCommande(void);
+	};
+	class remise {
+	public:
+		static System::Double^ reduction(System::String^, System::String^);
+		static System::Double^ augmentation(System::String^, System::String^);
 	};
 }

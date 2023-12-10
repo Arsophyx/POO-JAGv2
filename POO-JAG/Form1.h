@@ -20,6 +20,7 @@
 #include "serviceperso.h"
 #include "servicecommande.h"
 #include "servicearticle.h"
+#include "Test.h"
 
 namespace POO {
 
