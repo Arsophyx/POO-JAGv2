@@ -34,7 +34,7 @@ System::String^ NS_Comp_Mappage::article::selectStock(void) {
 }
 
 System::String^ NS_Comp_Mappage::article::updateStock(void) {
-	return "UPDATE [dbo].[article] SET stock_article = " + this->stock_article;
+	return "UPDATE [dbo].[article] SET stock_article = " + this->stock_article + " WHERE [id_article] = " + this->id_article;
 }
 
 void NS_Comp_Mappage::article::setid_article(System::String^ id_article)
