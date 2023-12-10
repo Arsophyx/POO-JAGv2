@@ -33,6 +33,18 @@ System::String^ NS_Comp_Map_Stats::statistiques::valeurAchatStock(void) {
 	return "SELECT SUM(([tva_article]/100+1)*[ht_article]*[stock_article]) AS [Valeur d'Achat Stock] FROM [dbo].[article]";
 }
 
+float^ NS_Comp_Map_Stats::statistiques::reduction(float prix, float taux) {
+	return (prix * (1 - taux));
+}
+
+float^ NS_Comp_Map_Stats::statistiques::augmentation(float prix, float taux) {
+	return (prix * (1 + taux));
+}
+
+System::String^ NS_Comp_Map_Stats::statistiques::valeurCommande(void) {
+	return "SELECT SUM([a].[ht_article]*[i].[nombre_article]) FROM (SELECT [id_commande] FROM [dbo].[commande] WHERE [id_commande] = " + this->commande + ") AS [c] INNER JOIN [integrer] AS [i] ON [c].[id_commande] = [i].[id_commande] INNER JOIN [article] AS [a] ON [i].[id_article] = [a].[id_article]";
+}
+
 void NS_Comp_Map_Stats::statistiques::setMois(System::String^ t_mois) {
 	this->mois = t_mois;
 }
@@ -41,10 +53,18 @@ void NS_Comp_Map_Stats::statistiques::setClient(System::String^ idclient) {
 	this->client = idclient;
 }
 
+void NS_Comp_Map_Stats::statistiques::setCommande(System::String^ idcommande) {
+	this->client = idcommande;
+}
+
 System::String^ NS_Comp_Map_Stats::statistiques::getMois(void) {
 	return this->mois;
 }
 
 System::String^ NS_Comp_Map_Stats::statistiques::getClient(void) {
 	return this->client;
+}
+
+System::String^ NS_Comp_Map_Stats::statistiques::getCommande(void) {
+	return this->commande;
 }

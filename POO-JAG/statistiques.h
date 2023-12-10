@@ -8,6 +8,7 @@ namespace NS_Comp_Map_Stats{
 		System::String^ sSql;
 		System::String^ mois;
 		System::String^ client;
+		System::String^ commande;
 	public:
 		System::String^ panierMoyen(void);
 		System::String^ chiffreAffairesMois(void);
@@ -17,11 +18,16 @@ namespace NS_Comp_Map_Stats{
 		System::String^ topArticlesMoinsVendus(void);
 		System::String^ valeurCommercialeStock(void);
 		System::String^ valeurAchatStock(void);
+		static float^ reduction(float, float);
+		static float^ augmentation(float, float);
+		System::String^ valeurCommande(void);
 
 		void setMois(System::String^);
 		void setClient(System::String^);
+		void setCommande(System::String^);
 
 		System::String^ getMois(void);
 		System::String^ getClient(void);
+		System::String^ getCommande(void);
 	};
 }
