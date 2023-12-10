@@ -2,11 +2,11 @@
 #include "commande.h"
 
 String^ NS_Comp_Mappage::commande::ajouter(void) {
-	return "INSERT INTO [dbo].[commande] (reference_commande, soldereglement_commande, moyenpayement_commande, dateemmission_commande, datepayement_commande, datelivraison_commande, id_client) VALUES('" + this->reference_commande + "','" + this->soldereglement_commande + "', '" + this->moyenpayement_commande + "', '" + this->dateemmission_commande + "', '" + this->datepayement_commande + "', '" + this->datelivraison_commande + "', " + this->ptrid_client +");";
+	return "INSERT INTO [dbo].[commande] (reference_commande, soldereglement_commande, moyenpayement_commande, dateemmission_commande, datepayement_commande, datelivraison_commande, id_client) VALUES('" + this->reference_commande + "','" + this->soldereglement_commande->Replace(",", ".") + "', '" + this->moyenpayement_commande + "', '" + this->dateemmission_commande + "', '" + this->datepayement_commande + "', '" + this->datelivraison_commande + "', " + this->ptrid_client +");";
 }
 
 String^ NS_Comp_Mappage::commande::modifier(void) {
-	return "UPDATE [dbo].[commande] SET soldereglement_commande = '" + this->soldereglement_commande + "', moyenpayement_commande = '" + this->moyenpayement_commande + "', dateemmission_commande = '" + this->dateemmission_commande + "', datepayement_commande = '" + this->datepayement_commande + "', datelivraison_commande = '" + this->datelivraison_commande + "' WHERE [id_commande] = " + this->id_commande +";";
+	return "UPDATE [dbo].[commande] SET soldereglement_commande = '" + this->soldereglement_commande->Replace(",", ".") + "', moyenpayement_commande = '" + this->moyenpayement_commande + "', dateemmission_commande = '" + this->dateemmission_commande + "', datepayement_commande = '" + this->datepayement_commande + "', datelivraison_commande = '" + this->datelivraison_commande + "' WHERE [id_commande] = " + this->id_commande +";";
 }
 
 String^ NS_Comp_Mappage::commande::supprimer(void) {
@@ -24,6 +24,11 @@ String^ NS_Comp_Mappage::commande::compteurCommande(void) {
 
 String^ NS_Comp_Mappage::commande::selectId(void) {
 	return "SELECT [id_commande] FROM [dbo].[commande] WHERE [soldereglement_commande] = " + this->soldereglement_commande + " AND [moyenpayement_commande] LIKE '" + this->moyenpayement_commande + "' AND [dateemmission_commande] LIKE '" + this->dateemmission_commande + "' AND [datepayement_commande] LIKE '" + this->datepayement_commande + "' AND [datelivraison_commande] LIKE '" + this->datelivraison_commande + "' AND [id_client] = " + this->ptrid_client;
+}
+
+System::String^ NS_Comp_Mappage::commande::afficherallcommande(void)
+{
+	return "SELECT * FROM [dbo].[commande];";
 }
 
 void NS_Comp_Mappage::commande::setid_commande(int^ id_commande) {
