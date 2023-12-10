@@ -6,6 +6,7 @@ namespace POO_JAG {
     using namespace System;
     using namespace System::ComponentModel;
     using namespace System::Windows::Forms;
+    using namespace System::Data::SqlClient;
 
     public ref class ajoutercommande : public System::Windows::Forms::Form
     {
@@ -210,6 +211,10 @@ namespace POO_JAG {
             MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (!VerifierExistenceidarticle(textBox7->Text)) {
+            MessageBox::Show("L'id article indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         oSvcCommande->ajouterArticle(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text), System::Convert::ToInt32(textBox7->Text), System::Convert::ToInt32(textBox8->Text));
     }
     private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -218,5 +223,24 @@ private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+       bool VerifierExistenceidarticle(String^ idarticle) {
+           try {
+               String^ connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True";
+               SqlConnection^ connection = gcnew SqlConnection(connectionString);
+
+               String^ query = "SELECT COUNT(*) FROM [dbo].[article] WHERE id_article = @idarticle";
+               SqlCommand^ command = gcnew SqlCommand(query, connection);
+               command->Parameters->Add(gcnew SqlParameter("@idarticle", idarticle));
+
+               connection->Open();
+               int rowCount = Convert::ToInt32(command->ExecuteScalar());
+               connection->Close();
+
+               return rowCount > 0;
+           }
+           catch (Exception^ ex) {
+               return false;
+           }
+       }
 };
 }

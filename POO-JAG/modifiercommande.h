@@ -102,7 +102,7 @@ namespace POO_JAG {
         }
         double textBox1Value;
         if (!double::TryParse(textBox1->Text, textBox1Value)) {
-            MessageBox::Show("Veuillez remplir ID du client en tant que décimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Veuillez remplir ID de Commande en tant que entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
 
