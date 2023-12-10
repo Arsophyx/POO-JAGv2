@@ -96,7 +96,15 @@ namespace POO_JAG {
         }
 
         if (textBox1->Text->Length > 32) {
-            MessageBox::Show("Le nom client de la Commande ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le nom client ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox1->Text->Length < 2) {
+            MessageBox::Show("Le nom client ne peut pas faire moins que 2 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox2->Text->Length < 2) {
+            MessageBox::Show("La prénom client ne peut pas faire moins que 2 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox2->Text->Length > 32) {

@@ -90,6 +90,7 @@ namespace POO_JAG {
         this->textBox2->Name = L"textBox2";
         this->textBox2->Size = System::Drawing::Size(200, 20);
         this->textBox2->TabIndex = 3;
+        this->textBox2->TextChanged += gcnew System::EventHandler(this, &modifierclient::textBox2_TextChanged);
         // 
         // label3
         // 
