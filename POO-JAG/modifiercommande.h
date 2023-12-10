@@ -107,35 +107,35 @@ namespace POO_JAG {
         }
 
         if (textBox2->Text->Length > 32) {
-            MessageBox::Show("Le moyen de payement de la Commande ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le moyen de payement de la Commande ne peut pas faire plus que 32 caracteres.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length > 10) {
-            MessageBox::Show("La date émission de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date emission de la Commande ne peut pas faire plus que 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length > 10) {
-            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox5->Text->Length > 10) {
-            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length < 10) {
-            MessageBox::Show("La date émission de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date émission de la Commande ne peut pas faire plus que 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length < 10) {
-            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox5->Text->Length < 10) {
-            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caracteres et doit etre ecrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox1->Text->Length > 11) {
-            MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caracteres ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         this->oSvcCommande->modifiercommande(textBox7->Text, textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text));
