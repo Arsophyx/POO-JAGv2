@@ -52,6 +52,11 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir : ID du Personnel.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        int textBox3Value;
+        if (!int::TryParse(textBox3->Text, textBox3Value)) {
+            MessageBox::Show("Veuillez remplir ID du personnel en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcperso->supprimerPersonnel(this->textBox3->Text);
     }
     private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {

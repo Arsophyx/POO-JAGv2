@@ -73,7 +73,31 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
-
+        int textBox1Value;
+        if (!int::TryParse(textBox1->Text, textBox1Value)) {
+            MessageBox::Show("Veuillez remplir ID de l'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        float textBox3Value;
+        if (!float::TryParse(textBox3->Text, textBox3Value)) {
+            MessageBox::Show("Veuillez remplir Prix de l'Article Hors Taxe en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        float textBox4Value;
+        if (!float::TryParse(textBox4->Text, textBox4Value)) {
+            MessageBox::Show("Veuillez remplir TVA de l'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox5Value;
+        if (!int::TryParse(textBox5->Text, textBox5Value)) {
+            MessageBox::Show("Veuillez remplir Seuil de Réapprovisionement de l'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox6Value;
+        if (!int::TryParse(textBox6->Text, textBox6Value)) {
+            MessageBox::Show("Veuillez remplir Stock de l'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcarticle->modifierarticle(this->textBox1->Text, this->textBox2->Text, this->textBox3->Text, this->textBox4->Text, this->textBox5->Text, this->textBox6->Text);
     }
     };

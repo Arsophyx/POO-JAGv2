@@ -20,6 +20,7 @@
 #include "serviceperso.h"
 #include "servicecommande.h"
 #include "servicearticle.h"
+#include "test.h"
 
 namespace POO {
 
@@ -56,6 +57,8 @@ namespace POO {
             supprimerArticleFormIsOpen = false;
             modifierArticleFormIsOpen = false;
             afficherArticleFormIsOpen = false;
+
+            TestFormIsOpen = false;
         }
 
     protected:
@@ -87,6 +90,8 @@ namespace POO {
         POO_JAG::supprimerarticle^ supprimerArticleForm;
         POO_JAG::ajouterarticle^ ajouterArticleForm;
         POO_JAG::afficherarticle^ afficherArticleForm;
+
+        POO_JAG::test^ TestForm;
 
         System::Windows::Forms::TabControl^ tabControl1;
         System::Windows::Forms::DataGridView^ dataGridView1;
@@ -132,6 +137,8 @@ namespace POO {
            bool modifierArticleFormIsOpen;
            bool afficherArticleFormIsOpen;
 
+           bool TestFormIsOpen;
+
     private: System::Windows::Forms::Button^ button10;
     private: System::Windows::Forms::Button^ button12;
     private: System::Windows::Forms::Button^ button13;
@@ -155,6 +162,22 @@ private: System::Windows::Forms::Button^ button27;
 private: System::Windows::Forms::Button^ button26;
 private: System::Windows::Forms::Button^ button25;
 private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Button^ button30;
+private: System::Windows::Forms::Button^ button31;
+private: System::Windows::Forms::Button^ button32;
+private: System::Windows::Forms::Button^ button33;
+private: System::Windows::Forms::Button^ button34;
+private: System::Windows::Forms::Button^ button35;
+private: System::Windows::Forms::Button^ button36;
+private: System::Windows::Forms::Button^ button37;
+private: System::Windows::Forms::Button^ button38;
+private: System::Windows::Forms::Button^ button39;
+private: System::Windows::Forms::Button^ button40;
+private: System::Windows::Forms::Button^ button41;
+private: System::Windows::Forms::Button^ button42;
+private: System::Windows::Forms::Button^ button43;
+private: System::Windows::Forms::Button^ button44;
+private: System::Windows::Forms::Button^ button45;
 
 private: System::Windows::Forms::TextBox^ textBox2;
 
@@ -192,24 +215,40 @@ public:
                this->button1 = (gcnew System::Windows::Forms::Button());
                this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
                this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+               this->button30 = (gcnew System::Windows::Forms::Button());
+               this->button31 = (gcnew System::Windows::Forms::Button());
+               this->button32 = (gcnew System::Windows::Forms::Button());
+               this->button33 = (gcnew System::Windows::Forms::Button());
                this->button5 = (gcnew System::Windows::Forms::Button());
                this->button4 = (gcnew System::Windows::Forms::Button());
                this->button3 = (gcnew System::Windows::Forms::Button());
                this->button2 = (gcnew System::Windows::Forms::Button());
                this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
                this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+               this->button34 = (gcnew System::Windows::Forms::Button());
+               this->button35 = (gcnew System::Windows::Forms::Button());
+               this->button36 = (gcnew System::Windows::Forms::Button());
+               this->button37 = (gcnew System::Windows::Forms::Button());
                this->button6 = (gcnew System::Windows::Forms::Button());
                this->button7 = (gcnew System::Windows::Forms::Button());
                this->button8 = (gcnew System::Windows::Forms::Button());
                this->button9 = (gcnew System::Windows::Forms::Button());
                this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
                this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+               this->button38 = (gcnew System::Windows::Forms::Button());
+               this->button39 = (gcnew System::Windows::Forms::Button());
+               this->button40 = (gcnew System::Windows::Forms::Button());
+               this->button41 = (gcnew System::Windows::Forms::Button());
                this->button10 = (gcnew System::Windows::Forms::Button());
                this->button12 = (gcnew System::Windows::Forms::Button());
                this->button13 = (gcnew System::Windows::Forms::Button());
                this->button14 = (gcnew System::Windows::Forms::Button());
                this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
                this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+               this->button42 = (gcnew System::Windows::Forms::Button());
+               this->button43 = (gcnew System::Windows::Forms::Button());
+               this->button44 = (gcnew System::Windows::Forms::Button());
+               this->button45 = (gcnew System::Windows::Forms::Button());
                this->button11 = (gcnew System::Windows::Forms::Button());
                this->button15 = (gcnew System::Windows::Forms::Button());
                this->button16 = (gcnew System::Windows::Forms::Button());
@@ -370,6 +409,10 @@ public:
                // tabPage2
                // 
                this->tabPage2->BackColor = System::Drawing::Color::White;
+               this->tabPage2->Controls->Add(this->button30);
+               this->tabPage2->Controls->Add(this->button31);
+               this->tabPage2->Controls->Add(this->button32);
+               this->tabPage2->Controls->Add(this->button33);
                this->tabPage2->Controls->Add(this->button5);
                this->tabPage2->Controls->Add(this->button4);
                this->tabPage2->Controls->Add(this->button3);
@@ -381,6 +424,62 @@ public:
                this->tabPage2->TabIndex = 1;
                this->tabPage2->Text = L"Personnel";
                this->tabPage2->Visible = false;
+               // 
+               // button30
+               // 
+               this->button30->BackColor = System::Drawing::Color::SkyBlue;
+               this->button30->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button30->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button30->Location = System::Drawing::Point(784, 315);
+               this->button30->Margin = System::Windows::Forms::Padding(2);
+               this->button30->Name = L"button30";
+               this->button30->Size = System::Drawing::Size(206, 66);
+               this->button30->TabIndex = 9;
+               this->button30->Text = L"Afficher les articles";
+               this->button30->UseVisualStyleBackColor = false;
+               this->button30->Click += gcnew System::EventHandler(this, &Form1::button30_Click);
+               // 
+               // button31
+               // 
+               this->button31->BackColor = System::Drawing::Color::SkyBlue;
+               this->button31->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button31->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button31->Location = System::Drawing::Point(784, 215);
+               this->button31->Margin = System::Windows::Forms::Padding(2);
+               this->button31->Name = L"button31";
+               this->button31->Size = System::Drawing::Size(206, 66);
+               this->button31->TabIndex = 8;
+               this->button31->Text = L"Afficher les commandes";
+               this->button31->UseVisualStyleBackColor = false;
+               this->button31->Click += gcnew System::EventHandler(this, &Form1::button31_Click);
+               // 
+               // button32
+               // 
+               this->button32->BackColor = System::Drawing::Color::SkyBlue;
+               this->button32->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button32->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button32->Location = System::Drawing::Point(784, 113);
+               this->button32->Margin = System::Windows::Forms::Padding(2);
+               this->button32->Name = L"button32";
+               this->button32->Size = System::Drawing::Size(206, 66);
+               this->button32->TabIndex = 7;
+               this->button32->Text = L"Afficher les clients";
+               this->button32->UseVisualStyleBackColor = false;
+               this->button32->Click += gcnew System::EventHandler(this, &Form1::button32_Click);
+               // 
+               // button33
+               // 
+               this->button33->BackColor = System::Drawing::Color::SkyBlue;
+               this->button33->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button33->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button33->Location = System::Drawing::Point(784, 16);
+               this->button33->Margin = System::Windows::Forms::Padding(2);
+               this->button33->Name = L"button33";
+               this->button33->Size = System::Drawing::Size(206, 66);
+               this->button33->TabIndex = 6;
+               this->button33->Text = L"Afficher le personnel";
+               this->button33->UseVisualStyleBackColor = false;
+               this->button33->Click += gcnew System::EventHandler(this, &Form1::button33_Click);
                // 
                // button5
                // 
@@ -458,6 +557,10 @@ public:
                // tabPage3
                // 
                this->tabPage3->BackColor = System::Drawing::Color::White;
+               this->tabPage3->Controls->Add(this->button34);
+               this->tabPage3->Controls->Add(this->button35);
+               this->tabPage3->Controls->Add(this->button36);
+               this->tabPage3->Controls->Add(this->button37);
                this->tabPage3->Controls->Add(this->button6);
                this->tabPage3->Controls->Add(this->button7);
                this->tabPage3->Controls->Add(this->button8);
@@ -470,6 +573,62 @@ public:
                this->tabPage3->Text = L"Clients";
                this->tabPage3->Visible = false;
                this->tabPage3->Click += gcnew System::EventHandler(this, &Form1::tabPage3_Click);
+               // 
+               // button34
+               // 
+               this->button34->BackColor = System::Drawing::Color::SkyBlue;
+               this->button34->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button34->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button34->Location = System::Drawing::Point(779, 315);
+               this->button34->Margin = System::Windows::Forms::Padding(2);
+               this->button34->Name = L"button34";
+               this->button34->Size = System::Drawing::Size(206, 66);
+               this->button34->TabIndex = 13;
+               this->button34->Text = L"Afficher les articles";
+               this->button34->UseVisualStyleBackColor = false;
+               this->button34->Click += gcnew System::EventHandler(this, &Form1::button34_Click);
+               // 
+               // button35
+               // 
+               this->button35->BackColor = System::Drawing::Color::SkyBlue;
+               this->button35->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button35->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button35->Location = System::Drawing::Point(779, 215);
+               this->button35->Margin = System::Windows::Forms::Padding(2);
+               this->button35->Name = L"button35";
+               this->button35->Size = System::Drawing::Size(206, 66);
+               this->button35->TabIndex = 12;
+               this->button35->Text = L"Afficher les commandes";
+               this->button35->UseVisualStyleBackColor = false;
+               this->button35->Click += gcnew System::EventHandler(this, &Form1::button35_Click);
+               // 
+               // button36
+               // 
+               this->button36->BackColor = System::Drawing::Color::SkyBlue;
+               this->button36->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button36->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button36->Location = System::Drawing::Point(779, 113);
+               this->button36->Margin = System::Windows::Forms::Padding(2);
+               this->button36->Name = L"button36";
+               this->button36->Size = System::Drawing::Size(206, 66);
+               this->button36->TabIndex = 11;
+               this->button36->Text = L"Afficher les clients";
+               this->button36->UseVisualStyleBackColor = false;
+               this->button36->Click += gcnew System::EventHandler(this, &Form1::button36_Click);
+               // 
+               // button37
+               // 
+               this->button37->BackColor = System::Drawing::Color::SkyBlue;
+               this->button37->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button37->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button37->Location = System::Drawing::Point(779, 16);
+               this->button37->Margin = System::Windows::Forms::Padding(2);
+               this->button37->Name = L"button37";
+               this->button37->Size = System::Drawing::Size(206, 66);
+               this->button37->TabIndex = 10;
+               this->button37->Text = L"Afficher le personnel";
+               this->button37->UseVisualStyleBackColor = false;
+               this->button37->Click += gcnew System::EventHandler(this, &Form1::button37_Click);
                // 
                // button6
                // 
@@ -544,6 +703,10 @@ public:
                // tabPage4
                // 
                this->tabPage4->BackColor = System::Drawing::Color::White;
+               this->tabPage4->Controls->Add(this->button38);
+               this->tabPage4->Controls->Add(this->button39);
+               this->tabPage4->Controls->Add(this->button40);
+               this->tabPage4->Controls->Add(this->button41);
                this->tabPage4->Controls->Add(this->button10);
                this->tabPage4->Controls->Add(this->button12);
                this->tabPage4->Controls->Add(this->button13);
@@ -556,6 +719,62 @@ public:
                this->tabPage4->Text = L"Commandes";
                this->tabPage4->Visible = false;
                this->tabPage4->Click += gcnew System::EventHandler(this, &Form1::tabPage4_Click);
+               // 
+               // button38
+               // 
+               this->button38->BackColor = System::Drawing::Color::SkyBlue;
+               this->button38->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button38->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button38->Location = System::Drawing::Point(779, 315);
+               this->button38->Margin = System::Windows::Forms::Padding(2);
+               this->button38->Name = L"button38";
+               this->button38->Size = System::Drawing::Size(206, 66);
+               this->button38->TabIndex = 13;
+               this->button38->Text = L"Afficher les articles";
+               this->button38->UseVisualStyleBackColor = false;
+               this->button38->Click += gcnew System::EventHandler(this, &Form1::button38_Click);
+               // 
+               // button39
+               // 
+               this->button39->BackColor = System::Drawing::Color::SkyBlue;
+               this->button39->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button39->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button39->Location = System::Drawing::Point(779, 215);
+               this->button39->Margin = System::Windows::Forms::Padding(2);
+               this->button39->Name = L"button39";
+               this->button39->Size = System::Drawing::Size(206, 66);
+               this->button39->TabIndex = 12;
+               this->button39->Text = L"Afficher les commandes";
+               this->button39->UseVisualStyleBackColor = false;
+               this->button39->Click += gcnew System::EventHandler(this, &Form1::button39_Click);
+               // 
+               // button40
+               // 
+               this->button40->BackColor = System::Drawing::Color::SkyBlue;
+               this->button40->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button40->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button40->Location = System::Drawing::Point(779, 113);
+               this->button40->Margin = System::Windows::Forms::Padding(2);
+               this->button40->Name = L"button40";
+               this->button40->Size = System::Drawing::Size(206, 66);
+               this->button40->TabIndex = 11;
+               this->button40->Text = L"Afficher les clients";
+               this->button40->UseVisualStyleBackColor = false;
+               this->button40->Click += gcnew System::EventHandler(this, &Form1::button40_Click);
+               // 
+               // button41
+               // 
+               this->button41->BackColor = System::Drawing::Color::SkyBlue;
+               this->button41->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button41->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button41->Location = System::Drawing::Point(779, 16);
+               this->button41->Margin = System::Windows::Forms::Padding(2);
+               this->button41->Name = L"button41";
+               this->button41->Size = System::Drawing::Size(206, 66);
+               this->button41->TabIndex = 10;
+               this->button41->Text = L"Afficher le personnel";
+               this->button41->UseVisualStyleBackColor = false;
+               this->button41->Click += gcnew System::EventHandler(this, &Form1::button41_Click);
                // 
                // button10
                // 
@@ -633,6 +852,10 @@ public:
                // tabPage5
                // 
                this->tabPage5->BackColor = System::Drawing::Color::White;
+               this->tabPage5->Controls->Add(this->button42);
+               this->tabPage5->Controls->Add(this->button43);
+               this->tabPage5->Controls->Add(this->button44);
+               this->tabPage5->Controls->Add(this->button45);
                this->tabPage5->Controls->Add(this->button11);
                this->tabPage5->Controls->Add(this->button15);
                this->tabPage5->Controls->Add(this->button16);
@@ -644,6 +867,62 @@ public:
                this->tabPage5->TabIndex = 4;
                this->tabPage5->Text = L"Stock";
                this->tabPage5->Visible = false;
+               // 
+               // button42
+               // 
+               this->button42->BackColor = System::Drawing::Color::SkyBlue;
+               this->button42->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button42->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button42->Location = System::Drawing::Point(779, 315);
+               this->button42->Margin = System::Windows::Forms::Padding(2);
+               this->button42->Name = L"button42";
+               this->button42->Size = System::Drawing::Size(206, 66);
+               this->button42->TabIndex = 13;
+               this->button42->Text = L"Afficher les articles";
+               this->button42->UseVisualStyleBackColor = false;
+               this->button42->Click += gcnew System::EventHandler(this, &Form1::button42_Click);
+               // 
+               // button43
+               // 
+               this->button43->BackColor = System::Drawing::Color::SkyBlue;
+               this->button43->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button43->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button43->Location = System::Drawing::Point(779, 215);
+               this->button43->Margin = System::Windows::Forms::Padding(2);
+               this->button43->Name = L"button43";
+               this->button43->Size = System::Drawing::Size(206, 66);
+               this->button43->TabIndex = 12;
+               this->button43->Text = L"Afficher les commandes";
+               this->button43->UseVisualStyleBackColor = false;
+               this->button43->Click += gcnew System::EventHandler(this, &Form1::button43_Click);
+               // 
+               // button44
+               // 
+               this->button44->BackColor = System::Drawing::Color::SkyBlue;
+               this->button44->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button44->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button44->Location = System::Drawing::Point(779, 113);
+               this->button44->Margin = System::Windows::Forms::Padding(2);
+               this->button44->Name = L"button44";
+               this->button44->Size = System::Drawing::Size(206, 66);
+               this->button44->TabIndex = 11;
+               this->button44->Text = L"Afficher les clients";
+               this->button44->UseVisualStyleBackColor = false;
+               this->button44->Click += gcnew System::EventHandler(this, &Form1::button44_Click);
+               // 
+               // button45
+               // 
+               this->button45->BackColor = System::Drawing::Color::SkyBlue;
+               this->button45->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+               this->button45->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+               this->button45->Location = System::Drawing::Point(779, 16);
+               this->button45->Margin = System::Windows::Forms::Padding(2);
+               this->button45->Name = L"button45";
+               this->button45->Size = System::Drawing::Size(206, 66);
+               this->button45->TabIndex = 10;
+               this->button45->Text = L"Afficher le personnel";
+               this->button45->UseVisualStyleBackColor = false;
+               this->button45->Click += gcnew System::EventHandler(this, &Form1::button45_Click);
                // 
                // button11
                // 
@@ -755,6 +1034,7 @@ public:
                this->button29->TabIndex = 26;
                this->button29->Text = L"Test de Remise";
                this->button29->UseVisualStyleBackColor = false;
+               this->button29->Click += gcnew System::EventHandler(this, &Form1::button29_Click);
                // 
                // button28
                // 
@@ -1060,58 +1340,28 @@ public:
 
        private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
             this->dataGridView2->Refresh();
-            this->dataGridView3->Refresh();
-            this->dataGridView4->Refresh();
-            this->dataGridView5->Refresh();
-            this->dataGridView6->Refresh();
+
             this->oDs = this->oSvcperso->afficherallpersonnel("Personnel");
             this->dataGridView2->DataSource = this->oDs;
             this->dataGridView2->DataMember = "Personnel";
-            this->dataGridView3->DataSource = this->oDs;
-            this->dataGridView3->DataMember = "Personnel";
-            this->dataGridView4->DataSource = this->oDs;
-            this->dataGridView4->DataMember = "Personnel";
-            this->dataGridView5->DataSource = this->oDs;
-            this->dataGridView5->DataMember = "Personnel";
-            this->dataGridView6->DataSource = this->oDs;
-            this->dataGridView6->DataMember = "Personnel";
+
         }
 
         private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
             this->dataGridView2->Refresh();
-            this->dataGridView3->Refresh();
-            this->dataGridView4->Refresh();
-            this->dataGridView5->Refresh();
-            this->dataGridView6->Refresh();
+
             this->oDs = this->oSvcClient->affichertable("Clients");
             this->dataGridView2->DataSource = this->oDs;
             this->dataGridView2->DataMember = "Clients";
-            this->dataGridView3->DataSource = this->oDs;
-            this->dataGridView3->DataMember = "Clients";
-            this->dataGridView4->DataSource = this->oDs;
-            this->dataGridView4->DataMember = "Clients";
-            this->dataGridView5->DataSource = this->oDs;
-            this->dataGridView5->DataMember = "Clients";
-            this->dataGridView6->DataSource = this->oDs;
-            this->dataGridView6->DataMember = "Clients";
+
         }
                private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
                    this->dataGridView2->Refresh();
-                   this->dataGridView3->Refresh();
-                   this->dataGridView4->Refresh();
-                   this->dataGridView5->Refresh();
-                   this->dataGridView6->Refresh();
+  
                    this->oDs = this->oSvcarticle->afficherallarticle("Article");
                    this->dataGridView2->DataSource = this->oDs;
                    this->dataGridView2->DataMember = "Article";
-                   this->dataGridView3->DataSource = this->oDs;
-                   this->dataGridView3->DataMember = "Article";
-                   this->dataGridView4->DataSource = this->oDs;
-                   this->dataGridView4->DataMember = "Article";
-                   this->dataGridView5->DataSource = this->oDs;
-                   this->dataGridView5->DataMember = "Article";
-                   this->dataGridView6->DataSource = this->oDs;
-                   this->dataGridView6->DataMember = "Article";
+      
                }
 
     private: System::Void tabPage1_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -1303,6 +1553,19 @@ public:
                                   System::Void afficherarticleFormClosed(System::Object^ sender, FormClosedEventArgs^ e) {
                                       afficherArticleFormIsOpen = false;
                                   }
+                                  private: System::Void button29_Click(System::Object^ sender, System::EventArgs^ e) {
+                                      if (!TestFormIsOpen) {
+                                          TestForm = gcnew POO_JAG::test();
+                                          TestFormIsOpen = true;
+                                          TestForm->Show();
+                                          TestForm->FormClosed += gcnew FormClosedEventHandler(this, &Form1::testFormClosed);
+                                      }
+                                  }
+                                          System::Void testFormClosed(System::Object ^ sender, FormClosedEventArgs ^ e) {
+                                              TestFormIsOpen = false;
+                                          
+                                      
+                                  }
 
 private: System::Void contextMenuStrip1_Opening(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
 }
@@ -1392,5 +1655,125 @@ private: System::Void textBox1_TextChanged(System::Object^ sender, System::Event
 }
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void button33_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView3->Refresh();
+
+    this->oDs = this->oSvcperso->afficherallpersonnel("Personnel");
+    this->dataGridView3->DataSource = this->oDs;
+    this->dataGridView3->DataMember = "Personnel";
+}
+private: System::Void button32_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView3->Refresh();
+
+    this->oDs = this->oSvcClient->affichertable("Client");
+    this->dataGridView3->DataSource = this->oDs;
+    this->dataGridView3->DataMember = "Client";
+}
+private: System::Void button31_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+}
+private: System::Void button30_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView3->Refresh();
+
+    this->oDs = this->oSvcarticle->afficherallarticle("Article");
+    this->dataGridView3->DataSource = this->oDs;
+    this->dataGridView3->DataMember = "Article";
+}
+
+
+
+
+private: System::Void button37_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView4->Refresh();
+
+    this->oDs = this->oSvcperso->afficherallpersonnel("Personnel");
+    this->dataGridView4->DataSource = this->oDs;
+    this->dataGridView4->DataMember = "Personnel";
+}
+
+private: System::Void button36_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView4->Refresh();
+
+    this->oDs = this->oSvcClient->affichertable("Client");
+    this->dataGridView4->DataSource = this->oDs;
+    this->dataGridView4->DataMember = "Client";
+}
+private: System::Void button35_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+
+
+}
+private: System::Void button34_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+    this->dataGridView4->Refresh();
+
+    this->oDs = this->oSvcarticle->afficherallarticle("Article");
+    this->dataGridView4->DataSource = this->oDs;
+    this->dataGridView4->DataMember = "Article";
+}
+private: System::Void button41_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView5->Refresh();
+
+    this->oDs = this->oSvcperso->afficherallpersonnel("Personnel");
+    this->dataGridView5->DataSource = this->oDs;
+    this->dataGridView5->DataMember = "Personnel";
+}
+
+private: System::Void button40_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView5->Refresh();
+
+    this->oDs = this->oSvcClient->affichertable("Client");
+    this->dataGridView5->DataSource = this->oDs;
+    this->dataGridView5->DataMember = "Client";
+}
+private: System::Void button39_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+
+
+}
+private: System::Void button38_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView5->Refresh();
+
+    this->oDs = this->oSvcarticle->afficherallarticle("Article");
+    this->dataGridView5->DataSource = this->oDs;
+    this->dataGridView5->DataMember = "Article";
+
+
+}
+private: System::Void button45_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView6->Refresh();
+
+    this->oDs = this->oSvcperso->afficherallpersonnel("Personnel");
+    this->dataGridView6->DataSource = this->oDs;
+    this->dataGridView6->DataMember = "Personnel";
+
+}
+private: System::Void button44_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView6->Refresh();
+
+    this->oDs = this->oSvcClient->affichertable("Client");
+    this->dataGridView6->DataSource = this->oDs;
+    this->dataGridView6->DataMember = "Client";
+}
+private: System::Void button43_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+
+}
+private: System::Void button42_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->dataGridView6->Refresh();
+
+    this->oDs = this->oSvcarticle->afficherallarticle("Article");
+    this->dataGridView6->DataSource = this->oDs;
+    this->dataGridView6->DataMember = "Article";
+}
+
 };
 }

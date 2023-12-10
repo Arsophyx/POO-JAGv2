@@ -1,4 +1,6 @@
 #pragma once
+
+
 #include "servicearticle.h"
 namespace POO_JAG {
 
@@ -70,7 +72,35 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        Single textBox2Value;
+
+        if (!Single::TryParse(textBox2->Text, textBox2Value)) {
+            MessageBox::Show("Veuillez remplir le Prix de l'article en tant que décimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        Single textBox3Value;
+
+        if (!Single::TryParse(textBox3->Text, textBox3Value)) {
+            MessageBox::Show("Veuillez remplir la TVA en tant que décimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox4Value;
+        if (!int::TryParse(textBox4->Text, textBox4Value)) {
+            MessageBox::Show("Veuillez remplir le Seuil de Réapprovisionement de l'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        int textBox5Value;
+        if (!int::TryParse(textBox5->Text, textBox5Value)) {
+            MessageBox::Show("Veuillez remplir Stock en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (textBox1->Text->Length > 128) {
+            MessageBox::Show("Le nom de l'article ne peut pas faire plus que 128 caractères", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcarticle->creerarticle(this->textBox1->Text, this->textBox2->Text, this->textBox3->Text, this->textBox4->Text, this->textBox5->Text);
+    }
+    private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     };
 }

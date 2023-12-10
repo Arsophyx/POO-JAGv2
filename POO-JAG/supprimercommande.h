@@ -54,6 +54,11 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir :  ID de Commande.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        int textBox1Value;
+        if (!int::TryParse(textBox1->Text, textBox1Value)) {
+            MessageBox::Show("Veuillez remplir ID de la commande en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
 
         this->oSvcCommande->supprimercommande(textBox1->Text);
     }
