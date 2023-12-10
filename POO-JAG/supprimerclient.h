@@ -57,7 +57,7 @@ namespace POO_JAG {
             return;
         }
         if (!VerifierExistencecommande(textBox1->Text)) {
-            MessageBox::Show("Impossible de supprimer le client car des commandes sont associées.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Impossible de supprimer le client car des commandes sont associees.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         oSvcClient->supprimerclient(textBox1->Text);
