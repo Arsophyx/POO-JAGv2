@@ -46,6 +46,10 @@ namespace POO_JAG {
     private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir : ID du Client.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         oSvcClient->supprimerclient(textBox1->Text);
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {

@@ -453,6 +453,7 @@ public:
                this->dataGridView3->RowTemplate->Height = 24;
                this->dataGridView3->Size = System::Drawing::Size(476, 417);
                this->dataGridView3->TabIndex = 1;
+               this->dataGridView3->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView3_CellContentClick);
                // 
                // tabPage3
                // 
@@ -627,6 +628,7 @@ public:
                this->dataGridView5->RowTemplate->Height = 24;
                this->dataGridView5->Size = System::Drawing::Size(476, 417);
                this->dataGridView5->TabIndex = 1;
+               this->dataGridView5->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView5_CellContentClick);
                // 
                // tabPage5
                // 
@@ -714,6 +716,7 @@ public:
                this->dataGridView6->RowTemplate->Height = 24;
                this->dataGridView6->Size = System::Drawing::Size(476, 417);
                this->dataGridView6->TabIndex = 1;
+               this->dataGridView6->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView6_CellContentClick);
                // 
                // tabPage6
                // 
@@ -832,6 +835,7 @@ public:
                this->textBox2->Name = L"textBox2";
                this->textBox2->Size = System::Drawing::Size(145, 27);
                this->textBox2->TabIndex = 20;
+               this->textBox2->TextChanged += gcnew System::EventHandler(this, &Form1::textBox2_TextChanged);
                // 
                // button24
                // 
@@ -873,7 +877,7 @@ public:
                this->label1->Name = L"label1";
                this->label1->Size = System::Drawing::Size(72, 15);
                this->label1->TabIndex = 17;
-               this->label1->Text = L"Mois/Année";
+               this->label1->Text = L"Mois/Annee";
                // 
                // textBox1
                // 
@@ -882,6 +886,7 @@ public:
                this->textBox1->Name = L"textBox1";
                this->textBox1->Size = System::Drawing::Size(145, 27);
                this->textBox1->TabIndex = 16;
+               this->textBox1->TextChanged += gcnew System::EventHandler(this, &Form1::textBox1_TextChanged);
                // 
                // button22
                // 
@@ -1055,22 +1060,58 @@ public:
 
        private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
             this->dataGridView2->Refresh();
+            this->dataGridView3->Refresh();
+            this->dataGridView4->Refresh();
+            this->dataGridView5->Refresh();
+            this->dataGridView6->Refresh();
             this->oDs = this->oSvcperso->afficherallpersonnel("Personnel");
             this->dataGridView2->DataSource = this->oDs;
             this->dataGridView2->DataMember = "Personnel";
+            this->dataGridView3->DataSource = this->oDs;
+            this->dataGridView3->DataMember = "Personnel";
+            this->dataGridView4->DataSource = this->oDs;
+            this->dataGridView4->DataMember = "Personnel";
+            this->dataGridView5->DataSource = this->oDs;
+            this->dataGridView5->DataMember = "Personnel";
+            this->dataGridView6->DataSource = this->oDs;
+            this->dataGridView6->DataMember = "Personnel";
         }
 
         private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
             this->dataGridView2->Refresh();
+            this->dataGridView3->Refresh();
+            this->dataGridView4->Refresh();
+            this->dataGridView5->Refresh();
+            this->dataGridView6->Refresh();
             this->oDs = this->oSvcClient->affichertable("Clients");
             this->dataGridView2->DataSource = this->oDs;
             this->dataGridView2->DataMember = "Clients";
+            this->dataGridView3->DataSource = this->oDs;
+            this->dataGridView3->DataMember = "Clients";
+            this->dataGridView4->DataSource = this->oDs;
+            this->dataGridView4->DataMember = "Clients";
+            this->dataGridView5->DataSource = this->oDs;
+            this->dataGridView5->DataMember = "Clients";
+            this->dataGridView6->DataSource = this->oDs;
+            this->dataGridView6->DataMember = "Clients";
         }
                private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
                    this->dataGridView2->Refresh();
+                   this->dataGridView3->Refresh();
+                   this->dataGridView4->Refresh();
+                   this->dataGridView5->Refresh();
+                   this->dataGridView6->Refresh();
                    this->oDs = this->oSvcarticle->afficherallarticle("Article");
                    this->dataGridView2->DataSource = this->oDs;
                    this->dataGridView2->DataMember = "Article";
+                   this->dataGridView3->DataSource = this->oDs;
+                   this->dataGridView3->DataMember = "Article";
+                   this->dataGridView4->DataSource = this->oDs;
+                   this->dataGridView4->DataMember = "Article";
+                   this->dataGridView5->DataSource = this->oDs;
+                   this->dataGridView5->DataMember = "Article";
+                   this->dataGridView6->DataSource = this->oDs;
+                   this->dataGridView6->DataMember = "Article";
                }
 
     private: System::Void tabPage1_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -1281,10 +1322,15 @@ private: System::Void button10_Click_1(System::Object^ sender, System::EventArgs
 private: System::Void tabPage4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (String::IsNullOrEmpty(textBox1->Text)) {
+        MessageBox::Show("Veuillez remplir : Mois/Annes.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+        return;
+    }
     this->dataGridView7->Refresh();
     this->oDs = this->oSvcStats->afficherChiffreAffairesMois(textBox1->Text, "Chiffre d'affaires du mois");
     this->dataGridView7->DataSource = this->oDs;
     this->dataGridView7->DataMember = "Chiffre d'affaires du mois";
+
 }
 private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
     this->dataGridView7->Refresh();
@@ -1323,6 +1369,10 @@ private: System::Void button28_Click(System::Object^ sender, System::EventArgs^ 
     this->dataGridView7->DataMember = "Valeur d'achat du Stock";
 }
 private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (String::IsNullOrEmpty(textBox2->Text)) {
+        MessageBox::Show("Veuillez remplir : ID du client.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+        return;
+    }
     this->dataGridView7->Refresh();
     this->oDs = this->oSvcStats->afficherMontantTotalAchats(textBox2->Text, "Montant total des achats");
     this->dataGridView7->DataSource = this->oDs;
@@ -1331,6 +1381,16 @@ private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ 
 
 
 private: System::Void dataGridView7_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void dataGridView3_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void dataGridView5_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void dataGridView6_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

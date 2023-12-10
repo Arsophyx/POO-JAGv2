@@ -14,7 +14,7 @@ String^ NS_Comp_Mappage::client::supprimer(void) {
 }
 
 String^ NS_Comp_Mappage::client::afficher(void) {
-	return "SELECT [c].[id_client], [c].[nom_client], [c].[prenom_client] ,[c].[anniversaire_client], [c].[anniversairepa_client], [a1].[nom_adresse] AS [adresse de facturation], [v1].[nom_ville] AS [ville de facturation], [a1].[nom_adresse] AS [adresse de livraison], [v1].[nom_ville] AS [ville de livraison] FROM (SELECT [id_client], [nom_client], [prenom_client], [anniversaire_client], [anniversairepa_client] FROM [dbo].[client] WHERE [nom_client] LIKE '" + this->nom_client +"') AS [c] INNER JOIN [dbo].[adresse_facturation] AS [af] ON [c].[id_client] = [af].[id_client] INNER JOIN [dbo].[adresse] AS [a1] ON [af].[id_adresse] = [a1].[id_adresse] INNER JOIN [dbo].[ville] AS [v1] ON [a1].[id_ville] = [v1].[id_ville] INNER JOIN [dbo].[adresse_livraison] AS [al] ON [c].id_client = [al].id_client INNER JOIN [dbo].[adresse] AS [a2] ON [al].[id_adresse] = [a2].[id_adresse] INNER JOIN [dbo].[ville] AS [v2] ON [a2].[id_ville] = [v2].[id_ville]";
+	return "SELECT * FROM [dbo].[client];";
 }
 
 String^ NS_Comp_Mappage::client::selectId(void) {

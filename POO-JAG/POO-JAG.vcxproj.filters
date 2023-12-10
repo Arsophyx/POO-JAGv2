@@ -16,6 +16,15 @@
     <Filter Include="Header Files\Head">
       <UniqueIdentifier>{1ffc95e2-9193-44dc-b8fc-c777e03771b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\service">
+      <UniqueIdentifier>{16b035e2-ab2f-444d-84eb-668870d25381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LIEE au winform">
+      <UniqueIdentifier>{62bcc611-bf2b-4c56-bd6c-feef6f8581d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\service">
+      <UniqueIdentifier>{24a69c32-8088-4e1f-8391-be3b9799caef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -110,9 +119,6 @@
     <ClInclude Include="ville.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="statistiques.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="modifierpersonnel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -140,18 +146,30 @@
     <ClInclude Include="integrer.h">
       <Filter>Header Files\Head</Filter>
     </ClInclude>
+    <ClInclude Include="servicearticle.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="serviceclient.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="servicecommande.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="serviceperso.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="servicestats.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="statistiques.h">
+      <Filter>Header Files\Head</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CppCLR_WinFormsProject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Form1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="client.cpp">
@@ -167,9 +185,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="statistiques.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CLservices.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Personnel.cpp">
@@ -191,52 +206,76 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="afficherarticle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="afficherclient.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="affichercommande.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="afficherpersonnel.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="ajouterarticle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="ajouterclient.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="ajoutercommande.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="Ajouterpersonnel.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="modifierarticle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="modifierclient.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="modifiercommande.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="modifierpersonnel.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="supprimerarticle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="supprimerclient.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="supprimercommande.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
+    </ClCompile>
+    <ClCompile Include="supprimerclient.cpp">
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
     <ClCompile Include="supprimerpersonnel.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\LIEE au winform</Filter>
+    </ClCompile>
+    <ClCompile Include="servicearticle.cpp">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="serviceclient.cpp">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="servicecommande.cpp">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="serviceperso.cpp">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="servicestats.cpp">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="CLservices.cpp">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="CppCLR_WinFormsProject.cpp">
+      <Filter>Source Files\LIEE au winform</Filter>
+    </ClCompile>
+    <ClCompile Include="Form1.cpp">
+      <Filter>Source Files\LIEE au winform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

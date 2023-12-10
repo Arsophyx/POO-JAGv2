@@ -116,12 +116,35 @@ void NS_Comp_Svc_client::serviceclient::supprimerclient(System::String^ id_clien
 	this->oCad->actionRows(sql);
 }
 
-System::Data::DataSet^ NS_Comp_Svc_client::serviceclient::afficherclient(System::String^ nom_client,System::String^ datatablename) {
-	System::String^ sql;
-	this->client->setnom_client(nom_client);
-	sql = this->client->afficher();
+System::Data::DataSet^ NS_Comp_Svc_client::serviceclient::afficherclient(System::String^ id, System::String^ nom, System::String^ prenom, System::String^ anniversaire, System::String^ anniversairePA, System::String^ datatablename){
+	System::String^ sql = "SELECT * FROM [dbo].[client] WHERE ";
+	if (!String::IsNullOrEmpty(id)) {
+		sql += "(id_client LIKE '%" + id + "%') AND ";
+	}
+
+	if (!String::IsNullOrEmpty(nom)) {
+		sql += "(nom_client LIKE '%" + nom + "%') AND ";
+	}
+
+	if (!String::IsNullOrEmpty(prenom)) {
+		sql += "(prenom_client '%" + prenom + "%') AND ";
+	}
+
+	if (!String::IsNullOrEmpty(anniversaire)) {
+		sql += "(anniversaire_client LIKE '%" + anniversaire + "%') AND ";
+	}
+
+	if (!String::IsNullOrEmpty(anniversairePA)) {
+		sql += "(anniversairepa_client LIKE '%" + anniversairePA + "%') AND ";
+	}
+
+
+
+	sql = sql->Substring(0, sql->Length - 5);
+
 	return this->oCad->getRows(sql, datatablename);
 }
+
 
 System::Data::DataSet^ NS_Comp_Svc_client::serviceclient::affichertable(System::String^ datatablename) {
 	System::String^ sql;

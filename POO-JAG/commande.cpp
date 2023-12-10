@@ -14,7 +14,7 @@ String^ NS_Comp_Mappage::commande::supprimer(void) {
 }
 
 String^ NS_Comp_Mappage::commande::afficher(void) {
-	return"SELECT * FROM TB_P6;";
+	return "SELECT * FROM [dbo].[commande];";
 }
 
 String^ NS_Comp_Mappage::commande::compteurCommande(void) {

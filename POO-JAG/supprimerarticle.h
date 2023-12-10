@@ -43,6 +43,7 @@ namespace POO_JAG {
     private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void supprimerarticle_Load(System::Object^ sender, System::EventArgs^ e) {
+
         this->oSvcarticle = gcnew NS_Comp_Svc_article::servicearticle();
     }
     private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -54,6 +55,10 @@ namespace POO_JAG {
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir : ID de l'Article.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcarticle->supprimerarticle(this->textBox1->Text);
     }
     };
