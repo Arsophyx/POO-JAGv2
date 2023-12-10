@@ -122,7 +122,7 @@ namespace POO_JAG {
             MessageBox::Show("Veuillez remplir Valeur de l'augmentation en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
-        System::String^ val = this->oSvcStats->afficherAugmentation(label2->Text->Substring(24), textBox2->Text);
+        System::String^ val = this->oSvcStats->afficherAugmentation(label2->Text->Substring(24), textBox3->Text);
         label2->Text = "Valeur de la commande : ";
         label2->Text += val;
     }
