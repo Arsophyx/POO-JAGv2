@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "servicestats.h"
 
-typedef float^ (*event)(float, float);
+typedef System::Double ^ (*event)(System::String^, System::String^);
 event evt;
 
 NS_Comp_Svc_Stats::servicestats::servicestats(void) {
@@ -67,11 +67,11 @@ System::String^ NS_Comp_Svc_Stats::servicestats::afficherValeurCommande(System::
 }
 
 System::String^ NS_Comp_Svc_Stats::servicestats::afficherReduction(System::String^ val_commande, System::String^ taux) {
-	evt = &NS_Comp_Map_Stats::statistiques::reduction;
-	return System::Convert::ToString(evt(System::Convert::ToSingle(val_commande), System::Convert::ToSingle(taux)));
+	evt = &NS_Comp_Map_Stats::remise::reduction;
+	return System::Convert::ToString(evt(val_commande, taux));
 }
 
 System::String^ NS_Comp_Svc_Stats::servicestats::afficherAugmentation(System::String^ val_commande, System::String^ taux) {
-	evt = &NS_Comp_Map_Stats::statistiques::augmentation;
-	return System::Convert::ToString(evt(System::Convert::ToSingle(val_commande), System::Convert::ToSingle(taux)));
+	evt = &NS_Comp_Map_Stats::remise::augmentation;
+	return System::Convert::ToString(evt(val_commande, taux));
 }
