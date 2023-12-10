@@ -86,37 +86,41 @@ namespace POO_JAG {
 
         double textBox1Value;
         if (!double::TryParse(textBox1->Text, textBox1Value)) {
-            MessageBox::Show("Veuillez remplir Solde Reglement de la Commande en tant que décimal/entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Veuillez remplir Solde Reglement de la Commande en tant que dÃ©cimal/entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
 
 
         if (textBox2->Text->Length > 32) {
-            MessageBox::Show("Le moyen de payement de la Commande ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le moyen de payement de la Commande ne peut pas faire plus que 32 caractÃ¨res.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length > 10) {
-            MessageBox::Show("La date émission de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Ã©mission de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length > 10) {
-            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox5->Text->Length > 10) {
-            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length < 10) {
-            MessageBox::Show("La date émission de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Ã©mission de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length < 10) {
-            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox5->Text->Length < 10) {
-            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (!VerifierExistenceidclient(textBox6->Text)) {
+            MessageBox::Show("L'id du Client indiquÃ©e n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         oSvcCommande->creercommande(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text));
@@ -170,7 +174,7 @@ namespace POO_JAG {
         }
         double textBox1Value;
         if (!double::TryParse(textBox1->Text, textBox1Value)) {
-            MessageBox::Show("Veuillez remplir Solde Reglement de la Commande en tant que décimal/entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Veuillez remplir Solde Reglement de la Commande en tant que dÃ©cimal/entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         int textBox6Value;
@@ -180,42 +184,60 @@ namespace POO_JAG {
         }
 
         if (textBox2->Text->Length > 32) {
-            MessageBox::Show("Le moyen de payement de la Commande ne peut pas faire plus que 32 caractères.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le moyen de payement de la Commande ne peut pas faire plus que 32 caractÃ¨res.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length > 10) {
-            MessageBox::Show("La date émission de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Ã©mission de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length > 10) {
-            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox5->Text->Length > 10) {
-            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox3->Text->Length < 10) {
-            MessageBox::Show("La date émission de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Ã©mission de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length < 10) {
-            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Payement de la Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox5->Text->Length < 10) {
-            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La date Livraison Commande ne peut pas faire plus que 10 caractÃ¨res et doit Ãªtre Ã©crit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox1->Text->Length > 11) {
-            MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caractÃ¨res ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (!VerifierExistenceidarticle(textBox7->Text)) {
-            MessageBox::Show("L'id article indiquée n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("L'id article indiquÃ©e n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
-        oSvcCommande->ajouterArticle(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text), System::Convert::ToInt32(textBox7->Text), System::Convert::ToInt32(textBox8->Text));
+        if (!VerifierExistenceidclient(textBox6->Text)) {
+            MessageBox::Show("L'id du Client indiquÃ©e n'existe pas.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (!VerifierExistencearticledouble(textBox7->Text)) {
+            MessageBox::Show("L'id article indiquÃ©e Ã  dÃ©jÃ  Ã©tÃ© ajoutÃ© Ã  la commande.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (this->oSvcCommande->verifierStock(textBox7->Text, textBox8->Text) == 0) {
+            MessageBox::Show("Il n'y a pas assez d'articles en stock pour le nombre d'articles rentrÃ©.");
+        }
+        else {
+            if (this->oSvcCommande->verifierIntegrer(textBox7->Text, textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text) == 1) {
+                oSvcCommande->ajouterArticle(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, System::Convert::ToInt32(textBox6->Text), System::Convert::ToInt32(textBox7->Text), System::Convert::ToInt32(textBox8->Text));
+            }
+            else {
+                MessageBox::Show("Cet article existe dÃ©jÃ  dans la commande");
+            }
+        }
     }
     private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
@@ -240,6 +262,46 @@ private: System::Void textBox1_TextChanged(System::Object^ sender, System::Event
            }
            catch (Exception^ ex) {
                return false;
+           }
+       }
+       bool VerifierExistenceidclient(String^ idclient) {
+           try {
+               String^ connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True";
+               SqlConnection^ connection = gcnew SqlConnection(connectionString);
+
+               String^ query = "SELECT COUNT(*) FROM [dbo].[client] WHERE id_client = @idclient";
+               SqlCommand^ command = gcnew SqlCommand(query, connection);
+               command->Parameters->Add(gcnew SqlParameter("@idclient", idclient));
+
+               connection->Open();
+               int rowCount = Convert::ToInt32(command->ExecuteScalar());
+               connection->Close();
+
+               return rowCount > 0;
+           }
+           catch (Exception^ ex) {
+               return false;
+           }
+       }
+       bool VerifierExistencearticledouble(String^ integrer) {
+               try {
+                   String^ connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDD-POO-JAG;Integrated Security=True";
+                   SqlConnection^ connection = gcnew SqlConnection(connectionString);
+
+                   String^ query = "SELECT TOP 2 2 FROM [dbo].[integrer] WHERE id_article = @integrer";
+                   SqlCommand^ command = gcnew SqlCommand(query, connection);
+                   command->Parameters->Add(gcnew SqlParameter("@integrer", integrer));
+
+                   connection->Open();
+                   SqlDataReader^ reader = command->ExecuteReader();
+                   bool integrerExists = reader->Read();
+                   connection->Close();
+
+                   return integrerExists;
+               }
+               catch (Exception^ ex) {
+
+                   return false;
            }
        }
 };

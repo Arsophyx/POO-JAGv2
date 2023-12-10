@@ -26,9 +26,8 @@ String^ NS_Comp_Mappage::commande::selectId(void) {
 	return "SELECT [id_commande] FROM [dbo].[commande] WHERE [soldereglement_commande] = " + this->soldereglement_commande + " AND [moyenpayement_commande] LIKE '" + this->moyenpayement_commande + "' AND [dateemmission_commande] LIKE '" + this->dateemmission_commande + "' AND [datepayement_commande] LIKE '" + this->datepayement_commande + "' AND [datelivraison_commande] LIKE '" + this->datelivraison_commande + "' AND [id_client] = " + this->ptrid_client;
 }
 
-System::String^ NS_Comp_Mappage::commande::afficherallcommande(void)
-{
-	return "SELECT * FROM [dbo].[commande];";
+String^ NS_Comp_Mappage::commande::afficherTable(void) {
+	return "SELECT [c].[id_commande], [c].[reference_commande], [c].[soldereglement_commande], [c].[moyenpayement_commande], [c].[dateemmission_commande], [c].[datepayement_commande], [c].[datelivraison_commande], [c].[id_client], [i].[nombre_article], [a].[id_article], [a].[ht_article], [a].[tva_article] FROM [dbo].[commande] AS [c] INNER JOIN [dbo].[integrer] AS [i] ON [c].[id_commande] = [i].[id_commande] INNER JOIN [dbo].[article] AS [a] ON [i].[id_article] = [a].[id_article]";
 }
 
 void NS_Comp_Mappage::commande::setid_commande(int^ id_commande) {

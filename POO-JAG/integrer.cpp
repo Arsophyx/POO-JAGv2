@@ -9,6 +9,10 @@ System::String^ NS_Comp_Mappage::integrer::supprimer(void) {
 	return "DELETE FROM [dbo].[integrer] WHERE [id_commande] = " + this->id_commande;
 }
 
+System::String^ NS_Comp_Mappage::integrer::compteur(void) {
+	return "SELECT COUNT(*) FROM [dbo].[integrer] WHERE [id_commande] = " + this->id_commande + " AND [id_article] = " + this->id_article;
+}
+
 void NS_Comp_Mappage::integrer::setptrid_commande(int^ id_commande) {
 	this->id_commande = id_commande;
 }
