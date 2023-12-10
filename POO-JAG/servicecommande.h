@@ -1,12 +1,16 @@
 #pragma once
 #include"commande.h"
 #include"CAD.h"
+#include "client.h"
+#include "integrer.h"
 using namespace System;
 namespace NS_Comp_Svc_commande {
 	ref class servicecommande {
 	private:
 		NS_Comp_Data::CLcad^ oCad;
 		NS_Comp_Mappage::commande^ commande;
+		NS_Comp_Mappage::client^ client;
+		NS_Comp_Mappage::integrer^ integrer;
 	public:
 		servicecommande(void);
 		void creercommande(System::String^ reference_commande, int^ soldereglement_commande, System::String^ moyenpayement_commande, System::String^ dateemmission_commande, System::String^ datepayement_commande, System::String^ datelivraison_commande,NS_Comp_Mappage::client^ ptrid_client);

@@ -2,30 +2,39 @@
 #include "commande.h"
 
 String^ NS_Comp_Mappage::commande::ajouter(void) {
-	return "INSERT INTO [dbo].[commande] (soldereglement_commande, moyen_de_payement, dateemission_commande, datepayement_commande, datelivraison_commande) VALUES('" + this->soldereglement_commande + "','" + this->moyenpayement_commande + "','" + this->dateemmission_commande + "','" + this->datepayement_commande + "','" + this->datelivraison_commande + "');";
+	return "INSERT INTO [dbo].[commande] (reference_commande, soldereglement_commande, moyenpayement_commande, dateemmission_commande, datepayement_commande, datelivraison_commande, id_client) VALUES('" + this->reference_commande + "','" + this->soldereglement_commande + "', '" + this->moyenpayement_commande + "', '" + this->dateemmission_commande + "', '" + this->datepayement_commande + "', '" + this->datelivraison_commande + "', " + this->ptrid_client +");";
 }
 
 String^ NS_Comp_Mappage::commande::modifier(void) {
-	return "UPDATE [dbo].[commande] SET soldereglement_commande' " + this->soldereglement_commande + "',moyenpayement_commande='" + this->moyenpayement_commande + "', dateemission_commande='" + this->dateemmission_commande + "'datepayement_commande='" + this->datepayement_commande + "'datelivraison_commande='" + this->datelivraison_commande + ";";
+	return "UPDATE [dbo].[commande] SET soldereglement_commande = '" + this->soldereglement_commande + "', moyenpayement_commande = '" + this->moyenpayement_commande + "', dateemmission_commande = '" + this->dateemmission_commande + "', datepayement_commande = '" + this->datepayement_commande + "', datelivraison_commande = '" + this->datelivraison_commande + "' WHERE [id_commande] = " + this->id_commande +";";
 }
 
 String^ NS_Comp_Mappage::commande::supprimer(void) {
-	return"DELETE FROM [dbo].[commande] where id_commande=" + this->id_commande + ";";
+	return"DELETE FROM [dbo].[commande] WHERE id_commande = " + this->id_commande + ";";
 }
 
 String^ NS_Comp_Mappage::commande::afficher(void) {
 	return "SELECT * FROM [dbo].[commande];";
 }
 
+String^ NS_Comp_Mappage::commande::compteurCommande(void) {
+	return "SELECT COUNT(*) FROM [dbo].[commande] WHERE [id_client] = " + this->ptrid_client;
+}
+
+
+String^ NS_Comp_Mappage::commande::selectId(void) {
+	return "SELECT [id_commande] FROM [dbo].[commande] WHERE [soldereglement_commande] = " + this->soldereglement_commande + " AND [moyenpayement_commande] LIKE '" + this->moyenpayement_commande + "' AND [dateemmission_commande] LIKE '" + this->dateemmission_commande + "' AND [datepayement_commande] LIKE '" + this->datepayement_commande + "' AND [datelivraison_commande] LIKE '" + this->datelivraison_commande + "' AND [id_client] = " + this->ptrid_client;
+}
+
 void NS_Comp_Mappage::commande::setid_commande(int^ id_commande) {
 	this->id_commande = id_commande;
 }
 
-void NS_Comp_Mappage::commande::setsoldereglement_commande(int^) {
+void NS_Comp_Mappage::commande::setsoldereglement_commande(String^ soldereglement_commande) {
 	this->soldereglement_commande = soldereglement_commande;
 }
 
-void NS_Comp_Mappage::commande::setptrid_client(client^ ptrid_client) {
+void NS_Comp_Mappage::commande::setptrid_client(int^ ptrid_client) {
 	this->ptrid_client = ptrid_client;
 }
 
@@ -53,11 +62,11 @@ int^ NS_Comp_Mappage::commande::getid_commande(void) {
 	return this->id_commande;
 }
 
-int^ NS_Comp_Mappage::commande::getsoldereglement_commande(void) {
+String^ NS_Comp_Mappage::commande::getsoldereglement_commande(void) {
 	return this->soldereglement_commande;
 }
 
-NS_Comp_Mappage::client^ NS_Comp_Mappage::commande::getptrid_client(void) {
+int^ NS_Comp_Mappage::commande::getptrid_client(void) {
 	return this->ptrid_client;
 }
 
