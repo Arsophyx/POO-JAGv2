@@ -107,6 +107,10 @@ namespace POO_JAG {
             MessageBox::Show("L'anniversaire du client ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
+        if (textBox3->Text->Length < 10) {
+            MessageBox::Show("L'anniversaire du client ne peut pas faire plus que 10 caractères et doit être écrit sur ce format : JJ/MM/AAAA.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         if (textBox4->Text->Length > 64) {
             MessageBox::Show("L'adresse de livraison du client ne peut pas faire plus que 64", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
