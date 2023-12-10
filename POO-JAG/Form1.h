@@ -1797,13 +1797,5 @@ private: System::Void button42_Click(System::Object^ sender, System::EventArgs^ 
     this->dataGridView6->DataSource = this->oDs;
     this->dataGridView6->DataMember = "Article";
 }
-
-private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->dataGridView2->Refresh();
-
-    this->oDs = this->oSvccommande->afficherallcommande("Commandes");
-    this->dataGridView2->DataSource = this->oDs;
-    this->dataGridView2->DataMember = "Commandes";
-}
 };
 }
