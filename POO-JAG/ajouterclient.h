@@ -57,6 +57,34 @@ namespace POO_JAG {
     private: System::Void label6_Click_1(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox2->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox3->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox4->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox5->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox6->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox7->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcClient->creerclient(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox5->Text, textBox6->Text, textBox7->Text);
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {

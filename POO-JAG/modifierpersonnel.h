@@ -54,6 +54,34 @@ namespace POO_JAG {
     private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox2->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox3->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox4->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox5->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox6->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox7->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcperso->modifierPersonnel(this->textBox7->Text, this->textBox1->Text, this->textBox2->Text, this->textBox3->Text, this->textBox4->Text, this->textBox5->Text, this->textBox6->Text);
     }
     private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {

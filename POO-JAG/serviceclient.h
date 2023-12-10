@@ -20,7 +20,7 @@ namespace NS_Comp_Svc_client {
 		void creerclient(System::String^ nom_client, System::String^ prenom_client, System::String^ anniversaire_client, System::String^ adresse_facturation_client, System::String^ adresse_livraison_client, System::String^ ville_adresse_livraison, System::String^ ville_adresse_facturation);
 		void modifierclient(System::String^ id_client, System::String^ nom_client, System::String^ prenom_client, System::String^ anniversaire_client, System::String^ adresse_facturation_client, System::String^ adresse_livraison_client, System::String^ ville_adresse_livraison, System::String^ ville_adresse_facturation);
 		void supprimerclient(System::String^ id_client);
-		System::Data::DataSet^ afficherclient(System::String^, System::String^);
+		System::Data::DataSet^ afficherclient(System::String^ id, System::String^ nom, System::String^ prenom, System::String^ anniversaire, System::String^ anniversairePA, System::String^ datatablename);
 		System::Data::DataSet^ affichertable(System::String^);
 	};
 

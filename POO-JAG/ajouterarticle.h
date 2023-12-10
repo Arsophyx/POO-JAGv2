@@ -50,6 +50,26 @@ namespace POO_JAG {
     private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
     }
     private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (String::IsNullOrEmpty(textBox1->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox2->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox3->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox4->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+        if (String::IsNullOrEmpty(textBox5->Text)) {
+            MessageBox::Show("Veuillez remplir Toutes les informations.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
         this->oSvcarticle->creerarticle(this->textBox1->Text, this->textBox2->Text, this->textBox3->Text, this->textBox4->Text, this->textBox5->Text);
     }
     };
