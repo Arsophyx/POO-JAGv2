@@ -80,17 +80,17 @@ namespace POO_JAG {
         }
         double textBox3Value;
         if (!double::TryParse(textBox3->Text, textBox3Value)) {
-            MessageBox::Show("Veuillez remplir Prix de l'Article Hors Taxe en tant que décimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Veuillez remplir Prix de l'Article Hors Taxe en tant que decimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         double textBox4Value;
         if (!double::TryParse(textBox4->Text, textBox4Value)) {
-            MessageBox::Show("Veuillez remplir TVA de l'Article en tant que décimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Veuillez remplir TVA de l'Article en tant que decimal.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         int textBox5Value;
         if (!int::TryParse(textBox5->Text, textBox5Value)) {
-            MessageBox::Show("Veuillez remplir Seuil de Réapprovisionement de l'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Veuillez remplir Seuil de Reapprovisionement de l'Article en tant qu'entier.", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         int textBox6Value;
@@ -99,11 +99,11 @@ namespace POO_JAG {
             return;
         }
         if (textBox3->Text->Length > 11) {
-            MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caractères ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("Le prix Article Hors Taxe ne peut pas faire plus que 11 caracteres ", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         if (textBox4->Text->Length > 6) {
-            MessageBox::Show("La TVA de l'Article ne peut pas faire plus que 4 caractères et doit être écrit sous ce format : CCC,CC", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            MessageBox::Show("La TVA de l'Article ne peut pas faire plus que 4 caracteres et doit etre ecrit sous ce format : CCC,CC", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
             return;
         }
         this->oSvcarticle->modifierarticle(this->textBox1->Text, this->textBox2->Text, this->textBox3->Text, this->textBox4->Text, this->textBox5->Text, this->textBox6->Text);
